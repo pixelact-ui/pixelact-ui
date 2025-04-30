@@ -4,3 +4,4 @@ export * from './components/PixelUnorderedList';
 export * from './components/PixelListItem';
 export * from './components/PixelOrderedList';
 export * from './components/PixelInput';
+export * from './components/PixelLabel';

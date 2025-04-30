@@ -1,8 +1,5 @@
 .pixel__input {
   box-shadow: var(--pixel-art-box-shadow);
-}
-
-.pixel__input {
   &.disabled {
     opacity: 0.4;
   }
