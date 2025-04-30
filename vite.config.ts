@@ -24,7 +24,14 @@ export default defineConfig({
           react: 'React',
           'react-dom': 'ReactDOM',
         },
+        assetFileNames: (assetInfo) => {
+          if (/\.(woff2?|ttf|eot|otf)$/.test((Array.isArray(assetInfo.names) ? assetInfo.names.join('') : assetInfo.names) ?? '')) {
+            return 'assets/fonts/[name]-[hash][extname]';
+          }
+          return 'assets/[name]-[hash][extname]';
+        },
       },
     },
   },
+  assetsInclude: ['**/*.woff', '**/*.woff2', '**/*.ttf', '**/*.eot', '**/*.otf'],
 })
