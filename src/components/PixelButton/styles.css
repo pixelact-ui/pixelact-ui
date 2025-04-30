@@ -1,0 +1,117 @@
+.pixel__button {
+  position: relative;
+  box-shadow: -5px 0 0 0 black, 5px 0 0 0 black, 0 5px 0 0 black,
+    0 -5px 0 0 black;
+}
+
+.pixel__button::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.pixel-default__button {
+  color: black;
+}
+
+.pixel-default__button::after {
+  border-right: 4px solid color-mix(in hsl, white 70%, rgb(0, 0, 0));
+  border-bottom: 4px solid color-mix(in hsl, white 70%, rgb(0, 0, 0));
+}
+
+.pixel-default__button:active {
+  background-color: color-mix(in hsl, white 70%, rgb(0, 0, 0));
+}
+
+.pixel-success__button {
+  color: white;
+}
+
+.pixel-success__button::after {
+  border-right: 4px solid
+    color-mix(in hsl, var(--color-success) 70%, rgb(0, 0, 0));
+  border-bottom: 4px solid
+    color-mix(in hsl, var(--color-success) 70%, rgb(0, 0, 0));
+}
+
+.pixel-success__button:active {
+  background-color: color-mix(in hsl, var(--color-success) 70%, rgb(0, 0, 0));
+}
+
+.pixel-destructive__button {
+  color: white;
+}
+
+.pixel-destructive__button::after {
+  border-right: 4px solid
+    color-mix(in hsl, var(--color-destructive) 70%, rgb(0, 0, 0));
+  border-bottom: 4px solid
+    color-mix(in hsl, var(--color-destructive) 70%, rgb(0, 0, 0));
+}
+
+.pixel-destructive__button:active {
+  background-color: color-mix(
+    in hsl,
+    var(--color-destructive) 70%,
+    rgb(0, 0, 0)
+  );
+}
+
+.pixel-warning__button {
+  color: black;
+}
+
+.pixel-warning__button::after {
+  border-right: 4px solid
+    color-mix(in hsl, var(--color-warning) 70%, rgb(0, 0, 0));
+  border-bottom: 4px solid
+    color-mix(in hsl, var(--color-warning) 70%, rgb(0, 0, 0));
+}
+
+.pixel-warning__button:active {
+  background-color: color-mix(in hsl, var(--color-warning) 70%, rgb(0, 0, 0));
+}
+
+.pixel-secondary__button {
+  color: black;
+}
+
+.pixel-secondary__button::after {
+  border-right: 4px solid
+    color-mix(in hsl, var(--color-secondary) 70%, rgb(0, 0, 0));
+  border-bottom: 4px solid
+    color-mix(in hsl, var(--color-secondary) 70%, rgb(0, 0, 0));
+}
+
+.pixel-secondary__button:active {
+  background-color: color-mix(in hsl, var(--color-secondary) 70%, rgb(0, 0, 0));
+}
+
+.pixel-ghost__button {
+  color: white;
+  box-shadow: none;
+  background-color: color-mix(in hsl, var(--color-accent) 70%, rgb(0, 0, 0));
+}
+
+.pixel-ghost__button::after {
+  border-right: 4px solid
+    color-mix(in hsl, var(--color-accent) 70%, rgb(0, 0, 0));
+  border-bottom: 4px solid
+    color-mix(in hsl, var(--color-accent) 70%, rgb(0, 0, 0));
+}
+
+.pixel-ghost__button:active {
+  color: black;
+  background-color: color-mix(
+    in hsl,
+    var(--color-accent) 70%,
+    rgb(255, 255, 255)
+  );
+}
+
+.pixel-link__button {
+  box-shadow: none;
+}

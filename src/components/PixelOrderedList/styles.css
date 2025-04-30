@@ -1,0 +1,5 @@
+.pixel__ordered-list {
+  position: relative;
+  list-style-position: inside;
+  list-style-type: decimal;
+}
