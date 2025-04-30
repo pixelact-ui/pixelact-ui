@@ -1,4 +1,5 @@
 import { PixelButton } from "./components/PixelButton/PixelButton";
+import { PixelInput } from "./components/PixelInput/PixelInput";
 import { PixelListItem } from "./components/PixelListItem/PixelListItem";
 import { PixelOrderedList } from "./components/PixelOrderedList/PixelOrderedList";
 import { PixelTextArea } from "./components/PixelTextArea/PixelTextArea";
@@ -48,6 +49,11 @@ function App() {
         <PixelListItem>Item 2</PixelListItem>
         <PixelListItem>Item 3</PixelListItem>
       </PixelOrderedList>
+
+      <p className="text-lg mt-5">Input</p>
+      <hr className="border border-black" />
+      <PixelInput className="p-2" placeholder="Pixel input" />
+      <PixelInput className="p-2" placeholder="Pixel disabled input" disabled />
     </div>
   );
 }

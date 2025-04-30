@@ -2,10 +2,6 @@
   position: relative;
 }
 
-ol .pixel__list-item::marker {
-  width: 10px;
-}
-
 ul .pixel__list-item--arrow::marker {
   font-size: 10px;
 }
