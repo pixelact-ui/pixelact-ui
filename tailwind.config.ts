@@ -6,9 +6,6 @@ const config: Config = {
     ],
     theme: {
         extend: {
-            backgroundImage: {
-                'home': "url('/src/assets/images/home-bg.jpg')",
-            },
         },
 
     },

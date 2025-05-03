@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "PixelFont";
+  src: url("./assets/fonts/PressStart2P-Regular.ttf") format("truetype");
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -116,5 +121,5 @@
 }
 
 body {
-  font-family: "Press Start 2P", system-ui;
+  font-family: "PixelFont", system-ui;
 }

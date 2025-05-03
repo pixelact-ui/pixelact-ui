@@ -1,7 +1,8 @@
-export * from './components/PixelButton';
-export * from './components/PixelTextArea';
-export * from './components/PixelUnorderedList';
-export * from './components/PixelListItem';
-export * from './components/PixelOrderedList';
-export * from './components/PixelInput';
-export * from './components/PixelLabel';
+import './styles.css';
+export { PixelButton } from './components/PixelButton';
+export { PixelTextArea } from './components/PixelTextArea';
+export { PixelUnorderedList } from './components/PixelUnorderedList';
+export { PixelListItem } from './components/PixelListItem';
+export { PixelOrderedList } from './components/PixelOrderedList';
+export { PixelInput } from './components/PixelInput';
+export { PixelLabel } from './components/PixelLabel';

@@ -1,25 +1,28 @@
 {
-  "name": "pixelcn",
-  "version": "0.0.0",
+  "name": "pixelui",
+  "version": "1.0.0",
   "type": "module",
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "npx tsc -p tsconfig.build.json && vite build && node scripts/move-styles-file-postbuild.js && node scripts/copy-font-postbuild.js",
     "lint": "eslint .",
     "preview": "vite preview"
   },
-  "main": "./dist/pixelcn.umd.js",
-  "module": "./dist/pixelcn.es.js",
-  "types": "./dist/types/index.d.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
   "exports": {
     ".": {
-      "types": "./dist/types/index.d.ts",
-      "import": "./dist/pixelcn.es.js",
-      "require": "./dist/pixelcn.umd.js"
-    }
+      "style": "./dist/styles.css",
+      "types": "./dist/index.d.ts",
+      "import": "./dist/pixelui.es.js",
+      "require": "./dist/pixelui.cjs.js"
+    },
+    "./styles.css": "./dist/styles.css"
   },
   "dependencies": {
     "@radix-ui/react-label": "^2.1.4",
@@ -28,8 +31,6 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.503.0",
-    "react": "^18.2.0 || ^19.0.0",
-    "react-dom": "^18.2.0 || ^19.0.0",
     "tailwind-merge": "^3.2.0",
     "tailwind-variants": "^1.0.0",
     "tailwindcss": "^4.1.4"
@@ -50,6 +51,11 @@
   },
   "peerDependencies": {
     "react": "^18.2.0 || ^19.0.0",
-    "react-dom": "^18.2.0 || ^19.0.0"
+    "react-dom": "^18.2.0 || ^19.0.0",
+    "class-variance-authority": "^0.7.1",
+    "@radix-ui/react-slot": "^1.2.0",
+    "@radix-ui/react-label": "^2.1.4",
+    "tailwind-merge": "^3.2.0",
+    "clsx": "^2.1.1"
   }
 }

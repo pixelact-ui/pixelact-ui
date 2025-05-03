@@ -4,6 +4,10 @@
     0 -5px 0 0 black;
 }
 
+.box-shadow-margin {
+  margin: 5px;
+}
+
 .pixel__button::after {
   content: "";
   position: absolute;

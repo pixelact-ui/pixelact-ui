@@ -1,12 +1,13 @@
+import React from "react";
 import { Input as ShadInput } from "@/components/ui/input";
 import "./styles.css";
 import { cn } from "@/lib/utils";
 
-export function PixelInput({
+export const PixelInput = ({
   className,
   disabled,
   ...props
-}: React.ComponentProps<typeof ShadInput>) {
+}: React.ComponentProps<typeof ShadInput>) => {
   const disabledClass = disabled ? "disabled" : "";
   return (
     <input
@@ -15,4 +16,4 @@ export function PixelInput({
       {...props}
     />
   );
-}
+};

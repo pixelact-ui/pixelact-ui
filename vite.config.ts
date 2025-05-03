@@ -14,9 +14,11 @@ export default defineConfig({
   build: {
     lib: {
       entry: path.resolve(__dirname, 'src/index.ts'),
-      name: 'Pixelcn',
-      fileName: (format) => `pixelcn.${format}.js`,
+      name: 'pixelui',
+      fileName: (format) => `pixelui.${format}.js`,
+      formats: ['es', 'cjs'],
     },
+    cssCodeSplit: true,
     rollupOptions: {
       external: ['react', 'react-dom'],
       output: {

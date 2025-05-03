@@ -3,10 +3,10 @@ import { Textarea as ShadTextArea } from "../ui/textarea";
 import { cn } from "@/lib/utils";
 import "./styles.css";
 
-export function PixelTextArea({
+export const PixelTextArea = ({
   className,
   ...props
-}: React.ComponentProps<typeof ShadTextArea>) {
+}: React.ComponentProps<typeof ShadTextArea>) => {
   return (
     <ShadTextArea
       data-slot="textarea"
@@ -14,4 +14,4 @@ export function PixelTextArea({
       {...props}
     />
   );
-}
+};
