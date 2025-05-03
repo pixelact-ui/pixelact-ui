@@ -14,8 +14,8 @@ export default defineConfig({
   build: {
     lib: {
       entry: path.resolve(__dirname, 'src/index.ts'),
-      name: 'pixelui',
-      fileName: (format) => `pixelui.${format}.js`,
+      name: 'pixelact',
+      fileName: (format) => `pixelact.${format}.js`,
       formats: ['es', 'cjs'],
     },
     cssCodeSplit: true,

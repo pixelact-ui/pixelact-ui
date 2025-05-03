@@ -1,5 +1,5 @@
 {
-  "name": "pixelui",
+  "name": "pixelact-ui",
   "version": "1.0.0",
   "type": "module",
   "license": "MIT",
@@ -19,8 +19,8 @@
     ".": {
       "style": "./dist/styles.css",
       "types": "./dist/index.d.ts",
-      "import": "./dist/pixelui.es.js",
-      "require": "./dist/pixelui.cjs.js"
+      "import": "./dist/pixelact.es.js",
+      "require": "./dist/pixelact.cjs.js"
     },
     "./styles.css": "./dist/styles.css"
   },
