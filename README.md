@@ -26,7 +26,7 @@ import "pixelact-ui/styles.css";
 
 ```tsx
 import { PixelButton } from "pixelact-ui";
-s;
+
 export default function App() {
   return <PixelButton variant="default">Press Start</PixelButton>;
 }

@@ -19,8 +19,8 @@
     ".": {
       "style": "./dist/styles.css",
       "types": "./dist/index.d.ts",
-      "import": "./dist/pixelact.es.js",
-      "require": "./dist/pixelact.cjs.js"
+      "import": "./dist/pixelact-ui.es.js",
+      "require": "./dist/pixelact-ui.cjs.js"
     },
     "./styles.css": "./dist/styles.css"
   },

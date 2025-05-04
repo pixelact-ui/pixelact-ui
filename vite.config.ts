@@ -14,8 +14,8 @@ export default defineConfig({
   build: {
     lib: {
       entry: path.resolve(__dirname, 'src/index.ts'),
-      name: 'pixelact',
-      fileName: (format) => `pixelact.${format}.js`,
+      name: 'pixelact-ui',
+      fileName: (format) => `pixelact-ui.${format}.js`,
       formats: ['es', 'cjs'],
     },
     cssCodeSplit: true,
