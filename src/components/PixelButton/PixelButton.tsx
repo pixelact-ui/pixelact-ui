@@ -8,18 +8,18 @@ const buttonVariants = cva("pixel__button rounded-none cursor-pointer", {
   variants: {
     variant: {
       default:
-        "pixel-default__button box-shadow-margin bg-white hover:bg-black/10",
+        "pixel-default__button box-shadow-margin bg-white text-black hover:bg-black/20",
       warning:
-        "pixel-warning__button box-shadow-margin bg-warning hover:bg-warning/70",
+        "pixel-warning__button box-shadow-margin bg-warning text-warning-foreground hover:bg-warning/70",
       success:
-        "pixel-success__button box-shadow-margin bg-success hover:bg-success/70",
+        "pixel-success__button box-shadow-margin bg-success text-success-foreground hover:bg-success/70",
       destructive:
-        "pixel-destructive__button box-shadow-margin bg-destructive hover:bg-destructive/70",
+        "pixel-destructive__button box-shadow-margin bg-destructive text-destructive-foreground hover:bg-destructive/70",
       outline:
-        "pixel-default__button box-shadow-margin bg-white hover:bg-black/10",
+        "pixel-outline__button box-shadow-margin bg-white text-black hover:bg-black/20",
       secondary:
-        "pixel-secondary__button box-shadow-margin bg-secondary hover:bg-secondary/70",
-      ghost: "pixel-ghost__button",
+        "pixel-secondary__button box-shadow-margin bg-secondary text-secondary-foreground hover:bg-secondary/70",
+      ghost: "pixel-ghost__button text-white",
       link: "pixel-link__button bg-transparent text-primary underline-offset-4 hover:underline hover:bg-transparent",
     },
   },
