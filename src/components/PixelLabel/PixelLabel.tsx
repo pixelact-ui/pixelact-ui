@@ -5,5 +5,10 @@ export const PixelLabel = ({
   className,
   ...props
 }: React.ComponentPropsWithoutRef<typeof ShadLabel>) => {
-  return <ShadLabel className={`pixel__label mb-2 ${className}`} {...props} />;
+  return (
+    <ShadLabel
+      className={`pixel__label mb-2 mt-4 box-shadow-margin ${className}`}
+      {...props}
+    />
+  );
 };
