@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 import { cva, VariantProps } from "class-variance-authority";
 
 const buttonVariants = cva(
-  "pixel__button rounded-none cursor-pointer box-shadow-margin",
+  "pixel__button font-pixel rounded-none cursor-pointer box-shadow-margin",
   {
     variants: {
       variant: {

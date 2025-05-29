@@ -10,7 +10,7 @@ export const PixelTextArea = ({
   return (
     <ShadTextArea
       data-slot="textarea"
-      className={cn("pixel__textarea rounded-none", className)}
+      className={cn("pixel__textarea font-pixel rounded-none", className)}
       {...props}
     />
   );

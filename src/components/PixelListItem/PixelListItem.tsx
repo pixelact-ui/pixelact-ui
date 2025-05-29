@@ -11,5 +11,9 @@ export const PixelListItem = ({ children, bulletType }: PixelListItemProps) => {
     ? `pixel__list-item--${bulletType}`
     : "pixel__list-item--disc";
 
-  return <li className={cn("pixel__list-item", bulletClass)}>{children}</li>;
+  return (
+    <li className={cn("pixel__list-item font-pixel", bulletClass)}>
+      {children}
+    </li>
+  );
 };
