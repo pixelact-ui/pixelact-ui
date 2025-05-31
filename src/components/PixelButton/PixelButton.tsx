@@ -36,8 +36,9 @@ export const PixelButton = ({
   variant,
   size,
   ...props
-}: React.ComponentProps<typeof ShadButton> &
+}: React.ComponentProps<"button"> &
   VariantProps<typeof buttonVariants> & {
+    size?: "default" | "sm" | "lg";
     asChild?: boolean;
   }) => {
   return (

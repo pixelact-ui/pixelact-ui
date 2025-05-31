@@ -6,7 +6,7 @@ import "./styles.css";
 export const PixelTextArea = ({
   className,
   ...props
-}: React.ComponentProps<typeof ShadTextArea>) => {
+}: React.ComponentProps<"textarea">) => {
   return (
     <ShadTextArea
       data-slot="textarea"
