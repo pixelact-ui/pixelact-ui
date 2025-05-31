@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 import { cva, VariantProps } from "class-variance-authority";
 
 const buttonVariants = cva(
-  "pixel__button font-pixel rounded-none cursor-pointer box-shadow-margin",
+  "pixel__button pixel-font rounded-none cursor-pointer box-shadow-margin",
   {
     variants: {
       variant: {
@@ -20,7 +20,7 @@ const buttonVariants = cva(
         secondary:
           "pixel-secondary__button box-shadow-margin bg-secondary text-secondary-foreground hover:bg-secondary/70",
         ghost: "pixel-ghost__button text-white",
-        link: "pixel-link__button bg-transparent text-link underline-offset-4 underline hover:bg-transparent",
+        link: "pixel-link__button bg-transparent text-link underline-offset-4 underline hover:bg-transparent hover:text-link/70",
       },
     },
     defaultVariants: {

@@ -8,7 +8,7 @@ import { PixelUnorderedList } from "./components/PixelUnorderedList/PixelUnorder
 
 function App() {
   return (
-    <div className="p-8 flex flex-col gap-4 pixel-font">
+    <div className="p-8 flex flex-col gap-4 pixel-font bg-background">
       <p className="text-lg">Buttons</p>
       <hr className="border border-black" />
       <div className="gap-4 flex flex-wrap">

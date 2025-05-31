@@ -1,6 +1,6 @@
 {
   "name": "pixelact-ui",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "Playful pixel art style components built on top of shadcn/ui.",
   "type": "module",
   "license": "MIT",
@@ -10,7 +10,7 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "npx tsc -p tsconfig.build.json && vite build && node scripts/move-styles-file-postbuild.js && node scripts/copy-font-postbuild.js",
+    "build": "vite build && npx tsc -p tsconfig.build.json && node scripts/move-styles-file-postbuild.js && node scripts/copy-font-postbuild.js",
     "lint": "eslint .",
     "preview": "vite preview"
   },

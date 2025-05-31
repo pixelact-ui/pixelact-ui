@@ -1,7 +1,6 @@
 .pixel__button {
   position: relative;
-  box-shadow: -5px 0 0 0 black, 5px 0 0 0 black, 0 5px 0 0 black,
-    0 -5px 0 0 black;
+  box-shadow: var(--pixel-box-shadow);
 
   &::after {
     content: "";
@@ -15,44 +14,40 @@
 
 .pixel-default__button {
   &::after {
-    border-right: 4px solid
-      color-mix(in hsl, var(--color-border) 70%, rgba(0, 0, 0));
-    border-bottom: 4px solid
-      color-mix(in hsl, var(--color-border) 70%, rgba(0, 0, 0));
+    border-right: 4px solid color-mix(in hsl, var(--border) 70%, rgba(0, 0, 0));
+    border-bottom: 4px solid color-mix(in hsl, var(--border) 70%, rgba(0, 0, 0));
   }
   &:hover {
     background-color: rgb(200, 200, 200);
   }
 
   &:active {
-    background-color: color-mix(in hsl, var(--color-border) 70%, rgb(0, 0, 0));
+    background-color: color-mix(in hsl, var(--border) 70%, rgb(0, 0, 0));
   }
 }
 
 .pixel-success__button {
   &::after {
-    border-right: 4px solid
-      color-mix(in hsl, var(--color-success) 70%, rgb(0, 0, 0));
-    border-bottom: 4px solid
-      color-mix(in hsl, var(--color-success) 70%, rgb(0, 0, 0));
+    border-right: 4px solid color-mix(in hsl, var(--success) 70%, rgb(0, 0, 0));
+    border-bottom: 4px solid color-mix(in hsl, var(--success) 70%, rgb(0, 0, 0));
   }
   &:active {
-    background-color: color-mix(in hsl, var(--color-success) 70%, rgb(0, 0, 0));
+    background-color: color-mix(in hsl, var(--success) 70%, rgb(0, 0, 0));
   }
 }
 
 .pixel-destructive__button {
   &::after {
     border-right: 4px solid
-      color-mix(in hsl, var(--color-destructive) 70%, rgb(77, 77, 77));
+      color-mix(in hsl, var(--destructive) 70%, rgb(77, 77, 77));
     border-bottom: 4px solid
-      color-mix(in hsl, var(--color-destructive) 70%, rgb(77, 77, 77));
+      color-mix(in hsl, var(--destructive) 70%, rgb(77, 77, 77));
   }
 
   &:active {
     background-color: color-mix(
       in hsl,
-      var(--color-destructive) 70%,
+      var(--destructive) 70%,
       rgb(77, 77, 77)
     );
   }
@@ -61,33 +56,25 @@
 .pixel-warning__button {
   &::after {
     border-right: 4px solid
-      color-mix(in hsl, var(--color-warning) 70%, rgb(32, 32, 32));
+      color-mix(in hsl, var(--warning) 70%, rgb(32, 32, 32));
     border-bottom: 4px solid
-      color-mix(in hsl, var(--color-warning) 70%, rgb(32, 32, 32));
+      color-mix(in hsl, var(--warning) 70%, rgb(32, 32, 32));
   }
   &:active {
-    background-color: color-mix(
-      in hsl,
-      var(--color-warning) 70%,
-      rgb(32, 32, 32)
-    );
+    background-color: color-mix(in hsl, var(--warning) 70%, rgb(32, 32, 32));
   }
 }
 
 .pixel-secondary__button {
   &:after {
     border-right: 4px solid
-      color-mix(in hsl, var(--color-secondary) 70%, rgb(0, 0, 0));
+      color-mix(in hsl, var(--secondary) 70%, rgb(0, 0, 0));
     border-bottom: 4px solid
-      color-mix(in hsl, var(--color-secondary) 70%, rgb(0, 0, 0));
+      color-mix(in hsl, var(--secondary) 70%, rgb(0, 0, 0));
   }
 
   &:active {
-    background-color: color-mix(
-      in hsl,
-      var(--color-secondary) 70%,
-      rgb(0, 0, 0)
-    );
+    background-color: color-mix(in hsl, var(--secondary) 70%, rgb(0, 0, 0));
   }
 }
 
@@ -114,18 +101,12 @@
 
 .pixel-outline__button {
   &::after {
-    border-right: 4px solid
-      color-mix(in hsl, var(--color-border) 70%, rgb(0, 0, 0));
-    border-bottom: 4px solid
-      color-mix(in hsl, var(--color-border) 70%, rgb(0, 0, 0));
+    border-right: 4px solid color-mix(in hsl, var(--border) 70%, rgb(0, 0, 0));
+    border-bottom: 4px solid color-mix(in hsl, var(--border) 70%, rgb(0, 0, 0));
   }
 
   &:active {
-    background-color: color-mix(
-      in hsl,
-      var(--color-secondary) 70%,
-      rgb(0, 0, 0)
-    );
+    background-color: color-mix(in hsl, var(--secondary) 70%, rgb(0, 0, 0));
   }
   &:hover {
     background-color: rgb(200, 200, 200);
