@@ -1,6 +1,7 @@
 .pixel__button {
   position: relative;
   box-shadow: var(--pixel-box-shadow);
+  color: var(--color-black);
 
   &::after {
     content: "";
@@ -27,6 +28,7 @@
 }
 
 .pixel-success__button {
+  background-color: var(--success);
   &::after {
     border-right: 4px solid color-mix(in hsl, var(--success) 70%, rgb(0, 0, 0));
     border-bottom: 4px solid color-mix(in hsl, var(--success) 70%, rgb(0, 0, 0));
@@ -37,6 +39,7 @@
 }
 
 .pixel-destructive__button {
+  background-color: var(--destructive);
   &::after {
     border-right: 4px solid
       color-mix(in hsl, var(--destructive) 70%, rgb(77, 77, 77));
@@ -54,6 +57,7 @@
 }
 
 .pixel-warning__button {
+  background-color: var(--warning);
   &::after {
     border-right: 4px solid
       color-mix(in hsl, var(--warning) 70%, rgb(32, 32, 32));
@@ -65,50 +69,19 @@
   }
 }
 
-.pixel-secondary__button {
-  &:after {
-    border-right: 4px solid
-      color-mix(in hsl, var(--secondary) 70%, rgb(0, 0, 0));
-    border-bottom: 4px solid
-      color-mix(in hsl, var(--secondary) 70%, rgb(0, 0, 0));
-  }
-
-  &:active {
-    background-color: color-mix(in hsl, var(--secondary) 70%, rgb(0, 0, 0));
-  }
-}
-
-.pixel-ghost__button {
-  box-shadow: none;
-  background-color: color-mix(in hsl, var(--color-accent) 70%, rgb(0, 0, 0));
-
-  &::after {
-    border-right: 4px solid
-      color-mix(in hsl, var(--color-accent) 50%, rgb(0, 0, 0));
-    border-bottom: 4px solid
-      color-mix(in hsl, var(--color-accent) 50%, rgb(0, 0, 0));
-  }
-
-  &:active {
-    background-color: color-mix(in hsl, var(--color-accent) 50%, rgb(0, 0, 0));
-    color: var(--color-foreground);
-  }
-}
-
 .pixel-link__button {
   box-shadow: none;
-}
 
-.pixel-outline__button {
-  &::after {
-    border-right: 4px solid color-mix(in hsl, var(--border) 70%, rgb(0, 0, 0));
-    border-bottom: 4px solid color-mix(in hsl, var(--border) 70%, rgb(0, 0, 0));
+  &:hover {
+    background-color: transparent;
+    color: color-mix(in hsl, var(--link) 100%, rgb(0, 0, 0));
   }
 
   &:active {
-    background-color: color-mix(in hsl, var(--secondary) 70%, rgb(0, 0, 0));
+    color: color-mix(in hsl, var(--link) 100%, rgb(0, 0, 0));
   }
-  &:hover {
-    background-color: rgb(200, 200, 200);
+
+  &:visited {
+    color: color-mix(in hsl, var(--link) 100%, rgb(0, 0, 0));
   }
 }

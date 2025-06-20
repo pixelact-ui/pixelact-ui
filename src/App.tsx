@@ -16,9 +16,6 @@ function App() {
         <PixelButton variant="destructive">Destructive</PixelButton>
         <PixelButton variant="warning">Warning</PixelButton>
         <PixelButton variant="success">Success</PixelButton>
-        <PixelButton variant="secondary">Secondary</PixelButton>
-        <PixelButton variant="outline">Outline</PixelButton>
-        <PixelButton variant="ghost">Ghost</PixelButton>
         <PixelButton variant="link">Link</PixelButton>
       </div>
 

@@ -11,16 +11,12 @@ const buttonVariants = cva(
       variant: {
         default: "pixel-default__button box-shadow-margin bg-white text-black",
         warning:
-          "pixel-warning__button box-shadow-margin bg-warning text-warning-foreground hover:bg-warning/70",
+          "pixel-warning__button box-shadow-margin  text-p-warning-foreground ",
         success:
-          "pixel-success__button box-shadow-margin bg-success text-success-foreground hover:bg-success/70",
+          "pixel-success__button box-shadow-margin  text-success-foreground ",
         destructive:
-          "pixel-destructive__button box-shadow-margin bg-destructive text-destructive-foreground hover:bg-destructive/70",
-        outline: "pixel-outline__button box-shadow-margin bg-white text-black",
-        secondary:
-          "pixel-secondary__button box-shadow-margin bg-secondary text-secondary-foreground hover:bg-secondary/70",
-        ghost: "pixel-ghost__button text-white",
-        link: "pixel-link__button bg-transparent text-link underline-offset-4 underline hover:bg-transparent hover:text-link/70",
+          "pixel-destructive__button box-shadow-margin bg-destructive text-destructive-foreground",
+        link: "pixel-link__button bg-transparent text-link underline-offset-4 underline",
       },
     },
     defaultVariants: {
