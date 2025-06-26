@@ -31,10 +31,16 @@
 
 .pixel-success__button {
   background-color: var(--success);
+
   &::after {
     border-right: 4px solid color-mix(in hsl, var(--success) 70%, rgb(0, 0, 0));
     border-bottom: 4px solid color-mix(in hsl, var(--success) 70%, rgb(0, 0, 0));
   }
+
+  &:hover {
+    background-color: color-mix(in hsl, var(--success) 70%, rgb(0, 0, 0));
+  }
+
   &:active {
     background-color: color-mix(in hsl, var(--success) 70%, rgb(0, 0, 0));
   }
@@ -42,11 +48,20 @@
 
 .pixel-destructive__button {
   background-color: var(--destructive);
+
   &::after {
     border-right: 4px solid
       color-mix(in hsl, var(--destructive) 70%, rgb(77, 77, 77));
     border-bottom: 4px solid
       color-mix(in hsl, var(--destructive) 70%, rgb(77, 77, 77));
+  }
+
+  &:hover {
+    background-color: color-mix(
+      in hsl,
+      var(--destructive) 70%,
+      rgb(77, 77, 77)
+    );
   }
 
   &:active {
@@ -60,12 +75,18 @@
 
 .pixel-warning__button {
   background-color: var(--warning);
+
   &::after {
     border-right: 4px solid
       color-mix(in hsl, var(--warning) 70%, rgb(32, 32, 32));
     border-bottom: 4px solid
       color-mix(in hsl, var(--warning) 70%, rgb(32, 32, 32));
   }
+
+  &:hover {
+    background-color: color-mix(in hsl, var(--warning) 70%, rgb(32, 32, 32));
+  }
+
   &:active {
     background-color: color-mix(in hsl, var(--warning) 70%, rgb(32, 32, 32));
   }
@@ -73,6 +94,9 @@
 
 .pixel-link__button {
   box-shadow: none;
+  color: var(--link);
+  margin: 0;
+  padding: 0;
 
   &:hover {
     background-color: transparent;
