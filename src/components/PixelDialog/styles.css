@@ -1,0 +1,5 @@
+.pixel-dialog {
+  box-shadow: var(--pixel-box-shadow);
+  border-radius: 0;
+  background-color: var(--background);
+}

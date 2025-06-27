@@ -11,7 +11,7 @@ export const PixelInput = ({
   return (
     <input
       className={cn(
-        "pixel__input pixel-font shadow-pixel-box-shadow disabled:opacity-40",
+        "pixel__input pixel-font shadow-pixel-box-shadow box-shadow-margin disabled:opacity-40",
         disabledClass,
         className
       )}

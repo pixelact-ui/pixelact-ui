@@ -6,3 +6,4 @@ export { PixelListItem } from './components/PixelListItem';
 export { PixelOrderedList } from './components/PixelOrderedList';
 export { PixelInput } from './components/PixelInput';
 export { PixelLabel } from './components/PixelLabel';
+export { PixelDialog } from './components/PixelDialog';
