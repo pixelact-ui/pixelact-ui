@@ -12,7 +12,7 @@ import { DialogClose, DialogFooter } from "./components/ui/dialog";
 function App() {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   return (
-    <div className="p-8 flex flex-col gap-4 pixel-font bg-background">
+    <div className="p-8 flex flex-col gap-4 pixel-font text-foreground bg-background">
       <p className="text-lg">Buttons</p>
       <hr className="border border-black" />
       <div className="gap-4 flex flex-wrap">
@@ -85,9 +85,9 @@ function App() {
         open={isDialogOpen}
       >
         <div className="flex flex-col gap-4">
-          <p className="text-lg pixel-font">Dialog Content</p>
+          <p className="text-lg pixel-font text-white">Dialog Content</p>
           <hr className="border border-black" />
-          <PixelInput className="p-2" placeholder="Dialog input" />
+          <PixelInput placeholder="Dialog input" />
           <PixelTextArea />
           <DialogFooter>
             <DialogClose asChild>

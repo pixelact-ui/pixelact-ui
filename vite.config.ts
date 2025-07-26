@@ -18,7 +18,7 @@ export default defineConfig({
       fileName: (format) => `pixelact-ui.${format}.js`,
       formats: ['es', 'cjs'],
     },
-    cssCodeSplit: true,
+    cssCodeSplit: false,
     rollupOptions: {
       external: ['react', 'react-dom'],
       output: {
