@@ -1,6 +1,6 @@
 {
   "name": "pixelact-ui",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Playful pixel art style components built on top of shadcn/ui.",
   "homepage": "pixelact-ui-frontend.vercel.app",
   "type": "module",
