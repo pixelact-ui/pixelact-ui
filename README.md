@@ -39,10 +39,7 @@ export default function App() {
 - `PixelButton`
 - `PixelInput`
 - `PixelTextArea`
-- `PixelUnorderedList`
-- `PixelOrderedList`
-- `PixelListItem`
-- `PixelLabel`
+- `PixelDialog`
 
 > More coming soon — contributions welcome!
 
@@ -64,4 +61,4 @@ You are welcome! Fork, clone, and open a PR to suggest new pixel components or e
 
 ## 📄 License
 
-MIT © 2025 Pixelact UI
+MIT

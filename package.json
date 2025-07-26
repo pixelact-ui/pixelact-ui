@@ -2,7 +2,7 @@
   "name": "pixelact-ui",
   "version": "1.0.10",
   "description": "Playful pixel art style components built on top of shadcn/ui.",
-  "homepage": "pixelact-ui-frontend.vercel.app",
+  "homepage": "https://pixelactui.com",
   "type": "module",
   "license": "MIT",
   "repository": {
