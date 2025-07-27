@@ -1,6 +1,6 @@
 {
   "name": "pixelact-ui",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "Playful pixel art style components built on top of shadcn/ui.",
   "homepage": "https://pixelactui.com",
   "type": "module",
