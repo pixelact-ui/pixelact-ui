@@ -61,13 +61,9 @@ function App() {
           placeholder="Pixel disabled input"
           disabled
         />
-        <div>
+        <div className="w-50 border">
           <PixelLabel htmlFor="pixel-input">With label</PixelLabel>
-          <PixelInput
-            className="p-2"
-            placeholder="Pixel input"
-            id="pixel-input"
-          />
+          <PixelInput className="p-2" placeholder="Pixel" id="pixel-input" />
         </div>
         <div>
           <PixelLabel htmlFor="file">File input</PixelLabel>

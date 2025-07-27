@@ -13,6 +13,8 @@
 }
 
 .pixel-default__button {
+  background-color: white;
+  color: black;
   &::after {
     border-right: 4px solid
       color-mix(in hsl, var(--default-inner-border-color) 70%, rgba(0, 0, 0));
@@ -80,6 +82,7 @@
 
 .pixel-warning__button {
   background-color: var(--warning);
+  color: var(--warning-foreground);
 
   &::after {
     border-right: 4px solid
@@ -105,7 +108,7 @@
 
   &:hover {
     background-color: transparent;
-    color: color-mix(in hsl, var(--link) 100%, rgb(0, 0, 0));
+    color: color-mix(in hsl, var(--link) 70%, rgb(0, 0, 0));
   }
 
   &:active {
