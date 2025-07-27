@@ -14,7 +14,7 @@
     "build": "vite build && npx tsc -p tsconfig.build.json && node scripts/move-styles-file-postbuild.js && node scripts/copy-font-postbuild.js",
     "lint": "eslint .",
     "preview": "vite preview",
-    "publish": "npm run build && npm publish"
+    "release": "npm run build && npm publish"
   },
   "main": "./dist/index.js",
   "module": "./dist/index.js",
