@@ -1,0 +1,113 @@
+import { Input } from "@/components/ui/pixelact-ui/input/input";
+import { Label } from "@/components/ui/pixelact-ui/label/label";
+
+## Input
+
+A pixel art styled input component with retro styling and multiple variants. Features pixel font styling and full support for all HTML input attributes.
+
+### Installation
+
+Add the Input component to your project using the shadcn CLI:
+
+```bash
+npx shadcn@latest add https://pixelactui.com/r/pixelact-input.json
+```
+
+This will automatically install the component and its dependencies to your project.
+
+### Basic Input
+
+<CodePreview 
+  language="tsx"
+  code={`import { Input } from "@/components/ui/pixelact-ui/input/input";
+
+export function BasicInput() {
+  return (
+    <Input 
+      placeholder="Enter your text..."
+      type="text"
+    />
+  );
+}`}
+>
+  <Input className="w-full md:w-auto" placeholder="Enter your text..." />
+</CodePreview>
+
+### Input Types
+
+<CodePreview 
+  language="tsx"
+  code={`import { Input } from "@/components/ui/pixelact-ui/input/input";
+
+export function InputTypes() {
+  return (
+    <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+      <Input type="text" placeholder="Text input" />
+      <Input type="password" placeholder="Password input" />
+      <Input type="email" placeholder="Email input" />
+      <Input type="number" placeholder="Number input" />
+    </div>
+  );
+}`}
+>
+  <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+    <Input className="w-full md:w-auto" type="text" placeholder="Text input" />
+    <Input className="w-full md:w-auto" type="password" placeholder="Password input" />
+    <Input className="w-full md:w-auto" type="email" placeholder="Email input" />
+    <Input className="w-full md:w-auto" type="number" placeholder="Number input" />
+    <Input className="w-full md:w-auto" type="date" placeholder="Date input" />
+    <Input className="w-full md:w-auto" type="file" placeholder="File input" />
+
+  </div>
+</CodePreview>
+
+### With Label
+
+<CodePreview 
+  language="tsx"
+  code={`import { Input } from "@/components/ui/pixelact-ui/input/input";
+import { Label } from "@/components/ui/pixelact-ui/label/label";
+
+export function LabeledInput() {
+  return (
+    <div style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
+      <Label htmlFor="email">Email</Label>
+      <Input 
+        id="email"
+        type="email"
+        placeholder="Enter your email"
+        required
+      />
+    </div>
+  );
+}`}
+>
+  <div style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
+    <Label htmlFor="email">Email</Label>
+    <Input 
+      className="w-full md:w-auto"
+      id="email"
+      type="email"
+      placeholder="Enter your email"
+      required
+    />
+  </div>
+</CodePreview>
+
+### Disabled Input
+
+<CodePreview 
+  language="tsx"
+  code={`import { Input } from "@/components/ui/pixelact-ui/input/input";
+
+export function DisabledInput() {
+  return (
+    <Input 
+      disabled
+      placeholder="This input is disabled"
+    />
+  );
+}`}
+>
+  <Input className="w-full md:w-auto" disabled placeholder="This input is disabled" />
+</CodePreview>

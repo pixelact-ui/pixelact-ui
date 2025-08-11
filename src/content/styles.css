@@ -1,0 +1,7 @@
+table {
+  th,
+  td {
+    border: 1px solid var(--foreground);
+    padding: 8px 16px;
+  }
+}

@@ -1,0 +1,76 @@
+import { Button } from "@/components/ui/pixelact-ui/button/button";
+
+## Button
+
+A pixel art styled button component built on top of shadcn/ui's Button component. Features retro styling with multiple variants and full support for all underlying button props.
+
+### Installation
+
+Add the Button component to your project using the shadcn CLI:
+
+
+```bash
+npx shadcn@latest add https://pixelactui.com/r/pixelact-button.json
+```
+
+This will automatically install the component and its dependencies to your project.
+
+### Basic Button
+
+<CodePreview 
+  language="tsx"
+  code={`import { Button } from "@/components/ui/pixelact-ui/button/button";
+
+export function BasicButton() {
+  return (
+    <Button>
+      Click Me!
+    </Button>
+  );
+}`}
+>
+  <Button>Click Me!</Button>
+</CodePreview>
+
+### Button Variants
+
+<CodePreview 
+  language="tsx"
+  code={`import { Button } from "@/components/ui/pixelact-ui/button/button";
+
+export function ButtonVariants() {
+  return (
+    <div>
+      <Button variant="default">Default</Button>
+      <Button variant="warning">Warning</Button>
+      <Button variant="success">Success</Button>
+      <Button variant="destructive">Destructive</Button>
+      <Button variant="link">Link</Button>
+    </div>
+  );
+}`}
+>
+  <div style={{ display: "flex", gap: "8px", flexWrap: "wrap", alignItems: "center" }}>
+    <Button variant="default">Default</Button>
+    <Button variant="warning">Warning</Button>
+    <Button variant="success">Success</Button>
+    <Button variant="destructive">Destructive</Button>
+    <Button variant="link">Link</Button>
+  </div>
+</CodePreview>
+
+### Disabled Button
+
+<CodePreview 
+  code={`import { Button } from "@/components/ui/pixelact-ui/button/button";
+
+export function DisabledButton() {
+  return (
+    <Button disabled>
+      Disabled
+    </Button>
+  );
+}`}
+>
+  <Button disabled>Disabled</Button> 
+</CodePreview>

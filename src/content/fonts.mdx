@@ -1,0 +1,45 @@
+import './styles.css';
+
+## Fonts
+
+By default, the pixel art style font ([Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P)) is only applied to Pixelact UI's components. This font only supports Latin characters, below you can find other pixel art fonts that support other languages:
+
+<table className='text-foreground'>
+  <thead>
+    <tr>
+      <th>Language</th>
+      <th>Fonts</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>English</td>
+      <td><a href='https://www.dafont.com/kongtext.font' target='__blank' className='text-link underline font-bold'>Kongtext</a></td>
+    </tr>
+    <tr>
+      <td>Japanese</td>
+      <td><a href='https://littlelimit.net/misaki.htm' target='__blank' className='text-link underline font-bold'>美咲フォント</a></td>
+    </tr>
+    <tr>
+      <td>Japanese</td>
+      <td><a href='https://kokagem.sakura.ne.jp/font/mochi/' target='__blank' className='text-link underline font-bold'>Nu もち</a></td>
+    </tr>
+      <tr>
+          <td>Korean</td>
+          <td><a href='https://cactus.tistory.com/193' target='__blank' className='text-link underline font-bold'>둥근모꼴</a></td>
+      </tr>
+      <tr>
+          <td>Chinese</td>
+          <td><a href='https://github.com/SolidZORO/zpix-pixel-font' target='__blank' className='text-link underline font-bold'>Zpix (最像素)</a></td>
+      </tr>
+  </tbody>
+</table>
+<br/>
+
+#### Font override
+You can override the default font by modifying the CSS class that is used to apply the font to the components.
+```css
+.pixel-font {
+  font-family: 'Your Custom Font';
+}
+```

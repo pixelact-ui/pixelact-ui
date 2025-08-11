@@ -1,0 +1,122 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "Pixelact UI",
+  "homepage": "https://pixelactui.com",
+  "items": [
+    {
+      "name": "pixelact-button",
+      "type": "registry:component",
+      "title": "Pixelact Button",
+      "description": "A simple button component.",
+      "registryDependencies": ["button"],
+      "files": [
+        {
+          "path": "components/ui/pixelact-ui/button/button.tsx",
+          "type": "registry:component",
+          "target": "components/ui/pixelact-ui/button/button.tsx"
+        },
+        {
+          "path": "components/ui/pixelact-ui/button/button.css",
+          "type": "registry:style",
+          "target": "components/ui/pixelact-ui/button/button.css"
+        },
+        {
+          "path": "components/ui/pixelact-ui/styles/styles.css",
+          "type": "registry:style",
+          "target": "components/ui/pixelact-ui/styles/styles.css"
+        }
+      ]
+    },
+    {
+      "name": "pixelact-dialog",
+      "type": "registry:component",
+      "title": "Pixelact Dialog",
+      "description": "A simple dialog component.",
+      "registryDependencies": ["dialog"],
+      "files": [
+        {
+          "path": "components/ui/pixelact-ui/dialog/dialog.tsx",
+          "type": "registry:component",
+          "target": "components/ui/pixelact-ui/dialog/dialog.tsx"
+        },
+        {
+          "path": "components/ui/pixelact-ui/dialog/dialog.css",
+          "type": "registry:style",
+          "target": "components/ui/pixelact-ui/dialog/dialog.css"
+        },
+        {
+          "path": "components/ui/pixelact-ui/styles/styles.css",
+          "type": "registry:style",
+          "target": "components/ui/pixelact-ui/styles/styles.css"
+        }
+      ]
+    },
+    {
+      "name": "pixelact-input",
+      "type": "registry:component",
+      "title": "Pixelact Input",
+      "description": "A simple input component.",
+      "registryDependencies": ["input"],
+      "files": [
+        {
+          "path": "components/ui/pixelact-ui/input/input.tsx",
+          "type": "registry:component",
+          "target": "components/ui/pixelact-ui/input/input.tsx"
+        },
+        {
+          "path": "components/ui/pixelact-ui/input/input.css",
+          "type": "registry:style",
+          "target": "components/ui/pixelact-ui/input/input.css"
+        },
+        {
+          "path": "components/ui/pixelact-ui/styles/styles.css",
+          "type": "registry:style",
+          "target": "components/ui/pixelact-ui/styles/styles.css"
+        }
+      ]
+    },
+    {
+      "name": "pixelact-textarea",
+      "type": "registry:component",
+      "title": "Pixelact Textarea",
+      "description": "A simple textarea component.",
+      "registryDependencies": ["textarea"],
+      "files": [
+        {
+          "path": "components/ui/pixelact-ui/textarea/textarea.tsx",
+          "type": "registry:component",
+          "target": "components/ui/pixelact-ui/textarea/textarea.tsx"
+        },
+        {
+          "path": "components/ui/pixelact-ui/textarea/textarea.css",
+          "type": "registry:style",
+          "target": "components/ui/pixelact-ui/textarea/textarea.css"
+        },
+        {
+          "path": "components/ui/pixelact-ui/styles/styles.css",
+          "type": "registry:style",
+          "target": "components/ui/pixelact-ui/styles/styles.css"
+        }
+      ]
+    },
+    {
+      "name": "pixelact-label",
+      "type": "registry:component",
+      "title": "Pixelact Label",
+      "description": "A simple label component.",
+      "registryDependencies": ["label"],
+      "files": [
+        {
+          "path": "components/ui/pixelact-ui/label/label.tsx",
+          "type": "registry:component",
+          "target": "components/ui/pixelact-ui/label/label.tsx"
+        },
+        {
+          "path": "components/ui/pixelact-ui/styles/styles.css",
+          "type": "registry:style",
+          "target": "components/ui/pixelact-ui/styles/styles.css"
+        }
+      ]
+    }
+  ]
+}

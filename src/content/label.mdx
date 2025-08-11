@@ -1,0 +1,142 @@
+import { Label } from "@/components/ui/pixelact-ui/label/label";
+import { Input } from "@/components/ui/pixelact-ui/input/input";
+import { Textarea } from "@/components/ui/pixelact-ui/textarea/textarea";
+
+## Label
+
+A pixel art styled label component built on top of shadcn/ui's Label component. Features retro pixel font styling and full support for all HTML label attributes and accessibility features.
+
+### Installation
+
+Add the Label component to your project using the shadcn CLI:
+
+```bash
+npx shadcn@latest add https://pixelactui.com/r/pixelact-label.json
+```
+
+This will automatically install the component and its dependencies to your project.
+
+### Basic Label
+
+<CodePreview 
+  language="tsx"
+  code={`import { Label } from "@/components/ui/pixelact-ui/label/label";
+
+export function BasicLabel() {
+  return (
+    <Label>
+      Username
+    </Label>
+  );
+}`}
+>
+  <Label>Username</Label>
+</CodePreview>
+
+### Label with Input
+
+<CodePreview 
+  language="tsx"
+  code={`import { Label } from "@/components/ui/pixelact-ui/label/label";
+import { Input } from "@/components/ui/pixelact-ui/input/input";
+
+export function LabelWithInput() {
+  return (
+    <div style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
+      <Label htmlFor="username">Username</Label>
+      <Input 
+        id="username"
+        type="text"
+        placeholder="Enter your username"
+      />
+    </div>
+  );
+}`}
+>
+  <div style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
+    <Label htmlFor="username">Username</Label>
+    <Input 
+      className="w-full md:w-auto"
+      id="username"
+      type="text"
+      placeholder="Enter your username"
+    />
+  </div>
+</CodePreview>
+
+### Form Example
+
+<CodePreview 
+  language="tsx"
+  code={`import { Label } from "@/components/ui/pixelact-ui/label/label";
+import { Input } from "@/components/ui/pixelact-ui/input/input";
+import { Textarea } from "@/components/ui/pixelact-ui/textarea/textarea";
+
+export function FormExample() {
+  return (
+    <form style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
+      <div style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
+        <Label htmlFor="name">Full Name</Label>
+        <Input 
+          id="name"
+          type="text"
+          placeholder="John Doe"
+          required
+        />
+      </div>
+      
+      <div style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
+        <Label htmlFor="email">Email Address</Label>
+        <Input 
+          id="email"
+          type="email"
+          placeholder="john@example.com"
+          required
+        />
+      </div>
+      
+      <div style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
+        <Label htmlFor="feedback">Feedback</Label>
+        <Textarea 
+          id="feedback"
+          placeholder="Tell us what you think..."
+          rows={3}
+        />
+      </div>
+    </form>
+  );
+}`}
+>
+  <form style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
+    <div style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
+      <Label htmlFor="name">Full Name</Label>
+      <Input 
+        className="w-full md:w-auto"
+        id="name"
+        type="text"
+        placeholder="John Doe"
+        required
+      />
+    </div>
+    
+    <div style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
+      <Label htmlFor="email">Email Address</Label>
+      <Input 
+        className="w-full md:w-auto"
+        id="email"
+        type="email"
+        placeholder="john@example.com"
+        required
+      />
+    </div>
+    
+    <div style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
+      <Label htmlFor="feedback">Feedback</Label>
+      <Textarea 
+        id="feedback"
+        placeholder="Tell us what you think..."
+        rows={3}
+      />
+    </div>
+  </form>
+</CodePreview>

@@ -1,0 +1,9 @@
+.pixel__input {
+  box-shadow: var(--pixel-box-shadow);
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+}
+
+.box-shadow-margin {
+  margin: var(--box-shadow-width);
+}

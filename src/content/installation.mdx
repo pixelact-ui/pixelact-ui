@@ -1,0 +1,45 @@
+import "highlight.js/styles/github-dark.css";
+
+## Prerequisites
+Make sure you have **shadcn/ui** set up in your project first. If you haven't installed it yet:
+
+```bash
+npx shadcn@latest init
+```
+
+Follow the shadcn/ui setup guide if you need help with the initial setup.
+
+<br />
+
+#### Getting started
+**Pixelact UI** is available as a shadcn registry. You can install individual components using the shadcn CLI.
+
+```bash 
+npx shadcn@latest add https://pixelactui.com/r/"pixelact-component".json
+```
+
+This will automatically install the components and their dependencies to your project.
+
+<br />
+
+#### Usage
+To use **Pixelact UI** components, import them from your components directory:
+
+```jsx
+import { Button } from "@/components/ui/pixelact-ui/button/button";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/pixelact-ui/dialog/dialog";
+
+function MyComponent() {
+  return (
+    <Button variant="default">Click me</Button>
+  );
+}
+```
+
+<br />
+
+#### Styling
+Pixelact UI components are built on top of **shadcn/ui** components and use CSS custom properties for theming. The pixel styling is applied through CSS classes and custom properties defined in the component styles.
+
+#### Theme support
+The components are designed to work with both light and dark themes. You can easily override the styles by changing the CSS variables in your global CSS file or by customizing the component classes directly.

@@ -1,39 +1,18 @@
 import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 import path from 'path'
+import mdx from '@mdx-js/rollup'
+import rehypeHighlight from 'rehype-highlight';
 
+// https://vite.dev/config/
 export default defineConfig({
-  plugins: [
-    tailwindcss(),
-  ],
+  plugins: [react(), tailwindcss(), mdx({
+    rehypePlugins: [rehypeHighlight]
+  }),],
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src"),
+      "@": path.resolve(__dirname, "./"),
     },
   },
-  build: {
-    lib: {
-      entry: path.resolve(__dirname, 'src/index.ts'),
-      name: 'pixelact-ui',
-      fileName: (format) => `pixelact-ui.${format}.js`,
-      formats: ['es', 'cjs'],
-    },
-    cssCodeSplit: false,
-    rollupOptions: {
-      external: ['react', 'react-dom'],
-      output: {
-        globals: {
-          react: 'React',
-          'react-dom': 'ReactDOM',
-        },
-        assetFileNames: (assetInfo) => {
-          if (/\.(woff2?|ttf|eot|otf)$/.test((Array.isArray(assetInfo.names) ? assetInfo.names.join('') : assetInfo.names) ?? '')) {
-            return 'assets/fonts/[name]-[hash][extname]';
-          }
-          return 'assets/[name]-[hash][extname]';
-        },
-      },
-    },
-  },
-  assetsInclude: ['**/*.woff', '**/*.woff2', '**/*.ttf', '**/*.eot', '**/*.otf'],
 })

@@ -1,105 +1,117 @@
-import { useState } from "react";
-import { PixelButton } from "./components/PixelButton/PixelButton";
-import { PixelDialog } from "./components/PixelDialog";
-import { PixelInput } from "./components/PixelInput/PixelInput";
-import { PixelLabel } from "./components/PixelLabel/PixelLabel";
-import { PixelListItem } from "./components/PixelListItem/PixelListItem";
-import { PixelOrderedList } from "./components/PixelOrderedList/PixelOrderedList";
-import { PixelTextArea } from "./components/PixelTextArea/PixelTextArea";
-import { PixelUnorderedList } from "./components/PixelUnorderedList/PixelUnorderedList";
-import { DialogClose, DialogFooter } from "./components/ui/dialog";
+import React, { Suspense, useState } from "react";
+import "pixelact-ui/styles.css";
+import "highlight.js/styles/github-dark.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { routes } from "@/src/utils";
+import { DocsLayout } from "./layouts/DocsLayout";
+import Layout from "./layouts/Layout";
+import Spinner from "./components/Spinner";
+import mdxComponents from "./components/MdxComponents";
+import { PostHogProvider } from "posthog-js/react";
+import posthog from "posthog-js";
+import CookiesBanner from "./components/CookiesBanner";
+
+const LazyHomepage = React.lazy(() => import("./pages/Homepage"));
+const LazyNotFound = React.lazy(() => import("./pages/NotFound"));
+const LazyShowcase = React.lazy(() => import("./pages/Showcase"));
+
+const contentModules = import.meta.glob("./content/*.mdx");
+
+const contentRoutes = Object.entries(contentModules).map(([path, loader]) => {
+  const name = path.match(/\.\/content\/(.*)\.mdx$/)?.[1];
+  const Component = React.lazy(
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    loader as () => Promise<{ default: React.ComponentType<any> }>
+  );
+  return {
+    path: `/docs/${name}`,
+    element: (
+      <Suspense fallback={<Spinner />}>
+        <Component components={mdxComponents} />
+      </Suspense>
+    ),
+  };
+});
+
+const SuspenseLoader = () => (
+  <div className="absolute top-0 bg-background flex items-center justify-center h-full w-full">
+    <Spinner />
+  </div>
+);
+
+const RoutesComponent = () => (
+  <BrowserRouter>
+    <Routes>
+      <Route
+        path={routes.root}
+        element={
+          <Suspense fallback={<SuspenseLoader />}>
+            <Layout />
+          </Suspense>
+        }
+      >
+        <Route
+          path={routes.root}
+          element={
+            <Suspense fallback={<SuspenseLoader />}>
+              <LazyHomepage />
+            </Suspense>
+          }
+        />
+        <Route element={<DocsLayout />}>
+          {contentRoutes.map((route) => (
+            <Route key={route.path} path={route.path} element={route.element} />
+          ))}
+        </Route>
+        <Route
+          path={routes.showcase}
+          element={
+            <Suspense fallback={<SuspenseLoader />}>
+              <LazyShowcase />
+            </Suspense>
+          }
+        />
+      </Route>
+      <Route
+        path={routes.notFound}
+        element={
+          <Suspense fallback={<SuspenseLoader />}>
+            <LazyNotFound />
+          </Suspense>
+        }
+      />
+    </Routes>
+  </BrowserRouter>
+);
 
 function App() {
-  const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [posthogClient, setPosthogClient] = useState<typeof posthog | null>(
+    null
+  );
+
+  const initPostHog = () => {
+    posthog.init(import.meta.env.VITE_PUBLIC_POSTHOG_KEY, {
+      api_host: import.meta.env.VITE_PUBLIC_POSTHOG_HOST,
+      disable_session_recording: true,
+      debug: import.meta.env.MODE === "development",
+      capture_exceptions: true,
+    });
+    setPosthogClient(posthog);
+  };
+
   return (
-    <div className="p-8 flex flex-col gap-4 pixel-font text-foreground bg-background">
-      <p className="text-lg">Buttons</p>
-      <hr className="border border-black" />
-      <div className="gap-4 flex flex-wrap">
-        <PixelButton>Button</PixelButton>
-        <PixelButton variant="destructive">Destructive</PixelButton>
-        <PixelButton variant="warning">Warning</PixelButton>
-        <PixelButton variant="success">Success</PixelButton>
-        <PixelButton variant="link">Link</PixelButton>
-      </div>
-
-      <p className="text-lg mt-5">Text area</p>
-      <hr className="border border-black" />
-      <PixelTextArea />
-
-      <p>Unordered list</p>
-      <hr className="border border-black" />
-      <PixelUnorderedList>
-        <PixelListItem>Item 1</PixelListItem>
-        <PixelListItem>Item 2</PixelListItem>
-        <PixelListItem>Item 3</PixelListItem>
-        <PixelListItem bulletType="circle">Item 4</PixelListItem>
-        <PixelListItem bulletType="circle">Item 5</PixelListItem>
-        <PixelListItem bulletType="circle">Item 6</PixelListItem>
-        <PixelListItem bulletType="square">Item 7</PixelListItem>
-        <PixelListItem bulletType="square">Item 8</PixelListItem>
-        <PixelListItem bulletType="square">Item 9</PixelListItem>
-        <PixelListItem bulletType="none">Item 10</PixelListItem>
-        <PixelListItem bulletType="none">Item 11</PixelListItem>
-        <PixelListItem bulletType="none">Item 12</PixelListItem>
-      </PixelUnorderedList>
-
-      <p className="text-lg mt-5">Ordered list</p>
-      <hr className="border border-black" />
-      <PixelOrderedList>
-        <PixelListItem>Item 1</PixelListItem>
-        <PixelListItem>Item 2</PixelListItem>
-        <PixelListItem>Item 3</PixelListItem>
-      </PixelOrderedList>
-
-      <p className="text-lg mt-5">Input</p>
-      <hr className="border border-black" />
-      <div className="flex gap-8 flex-col">
-        <PixelInput className="p-2" placeholder="Pixel input" />
-        <PixelInput
-          className="p-2"
-          placeholder="Pixel disabled input"
-          disabled
-        />
-        <div className="w-50 border">
-          <PixelLabel htmlFor="pixel-input">With label</PixelLabel>
-          <PixelInput className="p-2" placeholder="Pixel" id="pixel-input" />
-        </div>
-        <div>
-          <PixelLabel htmlFor="file">File input</PixelLabel>
-          <PixelInput className="p-2" type="file" id="file" />
-        </div>
-        <div>
-          <PixelLabel htmlFor="date">Date input</PixelLabel>
-          <PixelInput className="p-2" type="date" id="date" />
-        </div>
-      </div>
-
-      <PixelDialog
-        trigger={<PixelButton className="w-fit">Open Dialog</PixelButton>}
-        onOpenChange={setIsDialogOpen}
-        open={isDialogOpen}
-      >
-        <div className="flex flex-col gap-4">
-          <p className="text-lg pixel-font text-white">Dialog Content</p>
-          <hr className="border border-black" />
-          <PixelInput placeholder="Dialog input" />
-          <PixelTextArea />
-          <DialogFooter>
-            <DialogClose asChild>
-              <PixelButton>Cancel</PixelButton>
-            </DialogClose>
-            <PixelButton
-              variant="success"
-              type="submit"
-              onClick={() => setIsDialogOpen(false)}
-            >
-              Save changes
-            </PixelButton>
-          </DialogFooter>
-        </div>
-      </PixelDialog>
-    </div>
+    <>
+      {posthogClient ? (
+        <PostHogProvider client={posthogClient}>
+          <RoutesComponent />
+        </PostHogProvider>
+      ) : (
+        <RoutesComponent />
+      )}
+      {!posthog.__loaded && (
+        <CookiesBanner onAccept={() => initPostHog()} onDecline={() => {}} />
+      )}
+    </>
   );
 }
 

@@ -2,17 +2,78 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- SEO Meta Tags -->
+    <title>Pixelact UI - Pixel art flavored React Component Library</title>
+    <meta
+      name="description"
+      content="A modern pixel art styled React component library built on shadcn/ui. Open source, customizable, and perfect for retro-themed applications."
+    />
+    <meta
+      name="keywords"
+      content="react, components, pixel art, ui library, shadcn, typescript, tailwind css, open source, pixel art react components, pixel art react library"
+    />
+    <meta name="author" content="Pixelact UI" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://pixelactui.com" />
+    <meta
+      property="og:title"
+      content="Pixelact UI - Pixel-Flavored React Component Library"
+    />
+    <meta
+      property="og:description"
+      content="A modern pixel art styled React component library built on shadcn/ui. Open source, customizable, and perfect for retro-themed applications."
+    />
+    <meta property="og:image" content="https://pixelactui.com/og-image.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:url" content="https://pixelactui.com" />
+    <meta
+      property="twitter:title"
+      content="Pixelact UI - Pixel art flavored React Component Library"
+    />
+    <meta
+      property="twitter:description"
+      content="A modern pixel art styled React component library built on shadcn/ui. Open source, customizable, and perfect for retro-themed applications."
+    />
+    <meta
+      property="twitter:image"
+      content="https://pixelactui.com/og-image.png"
+    />
+
+    <!-- Additional SEO -->
+    <link rel="canonical" href="https://pixelactui.com" />
+    <meta name="theme-color" content="#000000" />
+
     <link
-      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <title>Pixelact UI</title>
+    <script>
+      (function () {
+        try {
+          const selectedTheme = localStorage.getItem("theme");
+          if (selectedTheme) {
+            document.documentElement.classList.add(selectedTheme);
+          } else if (
+            window.matchMedia("(prefers-color-scheme: dark)").matches
+          ) {
+            document.documentElement.classList.add("dark");
+            localStorage.setItem("theme", "dark");
+          } else {
+            document.documentElement.classList.add("light");
+            localStorage.setItem("theme", "light");
+          }
+        } catch (e) {}
+      })();
+    </script>
   </head>
-  <body class="pixelact">
+  <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

@@ -1,0 +1,53 @@
+import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/pixelact-ui/dialog/dialog";
+import { Button } from "@/components/ui/pixelact-ui/button/button";
+import React from "react";
+
+## Dialog
+
+A pixel art styled dialog component built on top of shadcn/ui's Dialog component. Features retro styling with multiple variants and full support for all underlying dialog props.
+
+### Installation
+
+Add the Dialog component to your project using the shadcn CLI:
+
+```bash
+npx shadcn@latest add https://pixelactui.com/r/pixelact-dialog.json
+```
+
+This will automatically install the component and its dependencies to your project.
+
+### Basic Dialog
+
+<CodePreview 
+  language="tsx"
+  code={`import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/pixelact-ui/dialog/dialog";
+import { Button } from "@/components/ui/pixelact-ui/button/button";
+
+export function BasicDialog() {
+  return (
+    <Dialog>
+      <DialogTrigger asChild>
+        <Button>Open Dialog</Button>
+      </DialogTrigger>
+      <DialogContent>
+        <DialogTitle>Welcome!</DialogTitle>
+        <DialogDescription>
+          This is a pixel art styled dialog.
+        </DialogDescription>
+      </DialogContent>
+    </Dialog>
+  );
+}`}
+>
+  <Dialog>
+    <DialogTrigger asChild>
+      <Button className="w-fit">Open Dialog</Button>
+    </DialogTrigger>
+    <DialogContent>
+      <DialogTitle>Welcome!</DialogTitle>
+      <DialogDescription>
+        This is a pixel art styled dialog.
+      </DialogDescription>
+    </DialogContent>
+  </Dialog>
+</CodePreview>

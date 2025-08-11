@@ -1,0 +1,52 @@
+import { Textarea } from "@/components/ui/pixelact-ui/textarea/textarea";
+
+## Textarea
+
+A pixel art styled textarea component built on top of shadcn/ui's Textarea component. Features retro styling with multiple variants and full support for all HTML textarea attributes.
+
+### Installation
+
+Add the Textarea component to your project using the shadcn CLI:
+
+```bash
+npx shadcn@latest add https://pixelactui.com/r/pixelact-textarea.json
+```
+
+This will automatically install the component and its dependencies to your project.
+
+### Basic Textarea
+
+<CodePreview 
+  language="tsx"
+  code={`import { Textarea } from "@/components/ui/pixelact-ui/textarea/textarea";
+
+export function BasicTextarea() {
+  return (
+    <Textarea 
+      placeholder="Enter your message..."
+      rows={4}
+    />
+  );
+}`}
+>
+  <Textarea placeholder="Enter your message..." rows={4} />
+</CodePreview>
+
+### Disabled Textarea
+
+<CodePreview 
+  language="tsx"
+  code={`import { Textarea } from "@/components/ui/pixelact-ui/textarea/textarea";
+
+export function DisabledTextarea() {
+  return (
+    <Textarea 
+      disabled
+      placeholder="This textarea is disabled"
+      rows={3}
+    />
+  );
+}`}
+>
+  <Textarea disabled placeholder="This textarea is disabled" rows={3} />
+</CodePreview>

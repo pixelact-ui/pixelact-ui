@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "pixelact-label",
+  "type": "registry:component",
+  "title": "Pixelact Label",
+  "description": "A simple label component.",
+  "registryDependencies": [
+    "label"
+  ],
+  "files": [
+    {
+      "path": "components/ui/pixelact-ui/label/label.tsx",
+      "content": "\"use client\";\r\n\r\nimport * as React from \"react\";\r\nimport * as LabelPrimitive from \"@radix-ui/react-label\";\r\nimport { cn } from \"@/lib/utils\";\r\nimport { Label as ShadcnLabel } from \"@/components/ui/label\";\r\n\r\nimport \"@/components/ui/pixelact-ui/styles/styles.css\";\r\n\r\ninterface PixelLabelProps\r\n  extends React.ComponentProps<typeof LabelPrimitive.Root> {\r\n  asChild?: boolean;\r\n}\r\n\r\nfunction Label({ className, ...props }: PixelLabelProps) {\r\n  return <ShadcnLabel className={cn(\"pixel-font\", className)} {...props} />;\r\n}\r\n\r\nexport { Label };\r\n",
+      "type": "registry:component",
+      "target": "components/ui/pixelact-ui/label/label.tsx"
+    },
+    {
+      "path": "components/ui/pixelact-ui/styles/styles.css",
+      "content": "@import url(\"https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap\");\r\n\r\n.pixel-font {\r\n  font-family: \"Press Start 2P\", system-ui, -apple-system, sans-serif;\r\n  line-height: 1.5;\r\n  letter-spacing: 0.5px;\r\n}\r\n\r\n.box-shadow-margin {\r\n  margin: var(--box-shadow-width);\r\n}\r\n",
+      "type": "registry:style",
+      "target": "components/ui/pixelact-ui/styles/styles.css"
+    }
+  ]
+}
