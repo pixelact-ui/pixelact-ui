@@ -1,5 +1,5 @@
+import { Button } from "@/components/ui/pixelact-ui/button/button";
 import { useIsMobile } from "@/hooks/use-mobile";
-import { PixelButton } from "pixelact-ui";
 import { useState } from "react";
 
 interface CookiesBannerProps {
@@ -18,7 +18,7 @@ const CookiesBanner = ({ onAccept, onDecline }: CookiesBannerProps) => {
       </p>
 
       <div className="flex items-center gap-2">
-        <PixelButton
+        <Button
           variant="success"
           size={isMobile ? "sm" : "default"}
           onClick={() => {
@@ -27,8 +27,8 @@ const CookiesBanner = ({ onAccept, onDecline }: CookiesBannerProps) => {
           }}
         >
           Accept
-        </PixelButton>
-        <PixelButton
+        </Button>
+        <Button
           size={isMobile ? "sm" : "default"}
           onClick={() => {
             onDecline();
@@ -36,7 +36,7 @@ const CookiesBanner = ({ onAccept, onDecline }: CookiesBannerProps) => {
           }}
         >
           Decline
-        </PixelButton>
+        </Button>
       </div>
     </div>
   );

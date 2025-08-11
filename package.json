@@ -1,8 +1,15 @@
 {
-  "name": "pixelact-ui-frontend",
+  "name": "Pixelact UI",
   "private": true,
   "version": "2.0.0",
   "type": "module",
+  "description": "Playful pixel art style components built on top of shadcn/ui.",
+  "homepage": "https://pixelactui.com",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pixelact-ui/pixelact-ui"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",

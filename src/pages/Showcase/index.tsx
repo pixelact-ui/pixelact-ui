@@ -1,4 +1,4 @@
-import { PixelButton } from "pixelact-ui";
+import { Button } from "@/components/ui/pixelact-ui/button/button";
 import React from "react";
 
 const Showcase: React.FC = () => {
@@ -10,14 +10,14 @@ const Showcase: React.FC = () => {
           On this page will be showcased projects that have used Pixelact UI.
         </p>
       </div>
-      <PixelButton
+      <Button
         variant="link"
         onClick={() =>
           window.open("https://forms.gle/siLoaLuoFgPWRd5CA", "_blank")
         }
       >
         Submit your project
-      </PixelButton>
+      </Button>
     </div>
   );
 };
