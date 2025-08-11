@@ -1,5 +1,4 @@
 import React, { Suspense, useState } from "react";
-import "pixelact-ui/styles.css";
 import "highlight.js/styles/github-dark.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { routes } from "@/src/utils";
