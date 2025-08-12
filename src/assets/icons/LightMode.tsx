@@ -14,15 +14,15 @@ const LightMode = (props: IconProps) => {
       stroke-linejoin="round"
       {...props}
     >
-      <circle cx="12" cy="12" r="4" color={props.color} />
-      <path d="M12 2v2" color={props.color} />
-      <path d="M12 20v2" color={props.color} />
-      <path d="m4.93 4.93 1.41 1.41" color={props.color} />
-      <path d="m17.66 17.66 1.41 1.41" color={props.color} />
-      <path d="M2 12h2" />
-      <path d="M20 12h2" />
-      <path d="m6.34 17.66-1.41 1.41" color={props.color} />
-      <path d="m19.07 4.93-1.41 1.41" color={props.color} />
+      <circle cx="12" cy="12" r="4" color="currentColor" />
+      <path d="M12 2v2" color="currentColor" />
+      <path d="M12 20v2" color="currentColor" />
+      <path d="m4.93 4.93 1.41 1.41" color="currentColor" />
+      <path d="m17.66 17.66 1.41 1.41" color="currentColor" />
+      <path d="M2 12h2" color="currentColor" />
+      <path d="M20 12h2" color="currentColor" />
+      <path d="m6.34 17.66-1.41 1.41" color="currentColor" />
+      <path d="m19.07 4.93-1.41 1.41" color="currentColor" />
     </svg>
   );
 };

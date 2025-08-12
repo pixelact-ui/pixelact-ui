@@ -60,11 +60,6 @@
   --border: oklch(0.922 0 0);
   --input: oklch(0.922 0 0 / 15%);
   --ring: oklch(0.708 0 0);
-  --box-shadow-width: 4px;
-  --pixel-box-shadow: calc(-1 * (var(--box-shadow-width))) 0 0 0 black,
-    var(--box-shadow-width) 0 0 0 black, 0 var(--box-shadow-width) 0 0 black,
-    0 calc(-1 * (var(--box-shadow-width))) 0 0 black;
-  --default-inner-border-color: rgb(200, 200, 200);
 }
 
 .dark {
@@ -82,9 +77,6 @@
   --border: oklch(1 0 0 / 10%);
   --input: oklch(1 0 0 / 15%);
   --ring: oklch(0.556 0 0);
-  --pixel-box-shadow: calc(-1 * (var(--box-shadow-width))) 0 0 0 #aaaaaa,
-    var(--box-shadow-width) 0 0 0 #aaaaaa, 0 var(--box-shadow-width) 0 0 #aaaaaa,
-    0 calc(-1 * (var(--box-shadow-width))) 0 0 #aaaaaa;
 }
 
 body {

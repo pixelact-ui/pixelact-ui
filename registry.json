@@ -40,11 +40,6 @@
           "target": "components/ui/pixelact-ui/dialog/dialog.tsx"
         },
         {
-          "path": "components/ui/pixelact-ui/dialog/dialog.css",
-          "type": "registry:style",
-          "target": "components/ui/pixelact-ui/dialog/dialog.css"
-        },
-        {
           "path": "components/ui/pixelact-ui/styles/styles.css",
           "type": "registry:style",
           "target": "components/ui/pixelact-ui/styles/styles.css"
@@ -64,11 +59,6 @@
           "target": "components/ui/pixelact-ui/input/input.tsx"
         },
         {
-          "path": "components/ui/pixelact-ui/input/input.css",
-          "type": "registry:style",
-          "target": "components/ui/pixelact-ui/input/input.css"
-        },
-        {
           "path": "components/ui/pixelact-ui/styles/styles.css",
           "type": "registry:style",
           "target": "components/ui/pixelact-ui/styles/styles.css"
@@ -86,11 +76,6 @@
           "path": "components/ui/pixelact-ui/textarea/textarea.tsx",
           "type": "registry:component",
           "target": "components/ui/pixelact-ui/textarea/textarea.tsx"
-        },
-        {
-          "path": "components/ui/pixelact-ui/textarea/textarea.css",
-          "type": "registry:style",
-          "target": "components/ui/pixelact-ui/textarea/textarea.css"
         },
         {
           "path": "components/ui/pixelact-ui/styles/styles.css",

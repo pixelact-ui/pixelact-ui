@@ -5,10 +5,9 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 import { Textarea as ShadcnTextarea } from "@/components/ui/textarea";
 import "@/components/ui/pixelact-ui/styles/styles.css";
-import "./textarea.css";
 
 const pixelTextAreaVariants = cva(
-  "pixel__textarea pixel-font rounded-none transition-colors",
+  "pixel__textarea pixel-font rounded-none shadow-(--pixel-box-shadow) m-(--box-shadow-width) transition-colors",
   {
     variants: {
       variant: {

@@ -3,7 +3,6 @@
 import * as React from "react";
 import { cn } from "@/lib/utils";
 import "@/components/ui/pixelact-ui/styles/styles.css";
-import "./input.css";
 
 export interface PixelInputProps
   extends React.InputHTMLAttributes<HTMLInputElement> {
@@ -16,7 +15,7 @@ const Input = React.forwardRef<HTMLInputElement, PixelInputProps>(
     return (
       <input
         className={cn(
-          "pixel__input pixel-font max-w-full outline-none p-2 bg-background text-foreground placeholder:text-sm md:placeholder:text-base box-shadow-margin disabled:opacity-40",
+          "pixel__input pixel-font max-w-full outline-none p-2 bg-background text-foreground shadow-(--pixel-box-shadow) placeholder:text-sm md:placeholder:text-base box-shadow-margin disabled:opacity-40",
           disabled && "disabled:opacity-40 disabled:cursor-not-allowed",
           className
         )}
