@@ -45,16 +45,23 @@ function AccordionTrigger({
   );
 }
 
+interface AccordionContentProps
+  extends React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Content> {
+  font?: "normal" | "pixel";
+}
+
 function AccordionContent({
   className,
   children,
+  font,
   ...props
-}: React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Content>) {
+}: AccordionContentProps) {
   return (
     <div className="relative">
       <ShadcnAccordionContent
         className={cn(
-          "pixel-font overflow-hidden text-sm data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down",
+          "overflow-hidden text-sm data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down",
+          font === "pixel" && "pixel-font",
           className
         )}
         {...props}
