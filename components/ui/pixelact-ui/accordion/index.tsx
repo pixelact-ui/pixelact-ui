@@ -23,7 +23,7 @@ function AccordionItem({
   return (
     <ShadcnAccordionItem
       className={cn(
-        "border-dashed border-b-4 border-foreground dark:border-ring relative",
+        "border-dashed text-foreground border-b-4 border-foreground dark:border-ring relative",
         className
       )}
       {...props}
