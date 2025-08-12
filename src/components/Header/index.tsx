@@ -30,9 +30,11 @@ const mobileNavigationItems: { name: string; items: NavigationItem[] }[] = [
     name: "Components",
     items: [
       { name: "Button", path: routes.docs.components.button },
-      // { name: "Dialog", path: routes.docs.components.dialog },
+      { name: "Dialog", path: routes.docs.components.dialog },
       { name: "Input", path: routes.docs.components.input },
       { name: "Text Area", path: routes.docs.components.textarea },
+      { name: "Label", path: routes.docs.components.label },
+      { name: "More coming soon...", path: "/", disabled: true },
     ],
   },
 ];
@@ -134,14 +136,20 @@ const Header = () => {
                         {section.items.map((subItem) => (
                           <li
                             key={subItem.path}
-                            onClick={() => setIsOpen(false)}
+                            onClick={() =>
+                              !subItem.disabled && setIsOpen(false)
+                            }
                           >
-                            <a
-                              href={subItem.path}
-                              className="text-foreground/40"
-                            >
-                              {subItem.name}
-                            </a>
+                            {subItem.disabled ? (
+                              <span className="opacity-40">{subItem.name}</span>
+                            ) : (
+                              <a
+                                href={subItem.path}
+                                className="text-foreground/40"
+                              >
+                                {subItem.name}
+                              </a>
+                            )}
                           </li>
                         ))}
                       </ul>

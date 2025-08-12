@@ -35,6 +35,11 @@ const navItems: {
       path: routes.docs.components.textarea,
       workInProgress: false,
     },
+    {
+      name: "More coming soon",
+      path: "/",
+      workInProgress: true,
+    },
   ],
 };
 
