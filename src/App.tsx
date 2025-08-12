@@ -107,9 +107,15 @@ function App() {
       ) : (
         <RoutesComponent />
       )}
-      {!posthog.__loaded && (
-        <CookiesBanner onAccept={() => initPostHog()} onDecline={() => {}} />
-      )}
+      {!posthog.__loaded &&
+        localStorage.getItem("posthog_opt_in") !== "false" && (
+          <CookiesBanner
+            onAccept={() => initPostHog()}
+            onDecline={() => {
+              localStorage.setItem("posthog_opt_in", "false");
+            }}
+          />
+        )}
     </>
   );
 }
