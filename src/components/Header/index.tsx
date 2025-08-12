@@ -14,7 +14,7 @@ interface NavigationItem {
 
 const navigationItems: NavigationItem[] = [
   { name: "Docs", path: routes.docs.installation },
-  { name: "Components", path: routes.docs.components.button },
+  { name: "Components", path: routes.docs.components.accordion },
   { name: "Showcase", path: routes.showcase },
 ];
 const mobileNavigationItems: { name: string; items: NavigationItem[] }[] = [

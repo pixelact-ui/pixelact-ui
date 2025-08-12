@@ -7,7 +7,7 @@ const ComponentsShowcase = () => {
     <section className=" border-t-4 border-dashed text-foreground pixel-font p-8 md:p-12 xl:p-24">
       <div className="text-2xl mb-8 md:text-center">Components showcase</div>
       <div className="flex flex-wrap gap-12 md:gap-4">
-        <div className="w-full md:w-fit flex-1 p-4  border-4 border-dashed flex flex-col gap-4">
+        <div className="dark:bg-foreground/10 w-full md:w-fit flex-1 p-4  border-4 border-dashed flex flex-col gap-4">
           <h4 className="text-xl mb-4 text-center">Login</h4>
           <div>
             <Label
@@ -38,7 +38,7 @@ const ComponentsShowcase = () => {
           </div>
           <Button className="w-full">Login</Button>
         </div>
-        <div className="flex-1 p-4 w-fit  border-4 border-dashed flex flex-col gap-4">
+        <div className="dark:bg-foreground/10 flex-1 p-4 w-fit  border-4 border-dashed flex flex-col gap-4">
           <h4 className="text-xl mb-4 text-center">Register</h4>
           <div>
             <Label htmlFor="email" className="text-foreground leading-normal">
@@ -99,7 +99,7 @@ const ComponentsShowcase = () => {
           </div>
           <Button className="w-full">Register</Button>
         </div>
-        <div className="flex-1 p-4 w-fit border-4 border-dashed flex flex-col gap-4">
+        <div className="dark:bg-foreground/10 flex-1 p-4 w-fit border-4 border-dashed flex flex-col gap-4">
           <h4 className="text-xl mb-4 text-center">Button</h4>
           <Button className="w-full">Default</Button>
           <Button variant="destructive" className="w-full">
