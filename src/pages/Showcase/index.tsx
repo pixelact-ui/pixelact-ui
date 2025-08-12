@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/pixelact-ui/button/button";
+import { Button } from "@/components/ui/pixelact-ui/button";
 import React from "react";
 
 const Showcase: React.FC = () => {

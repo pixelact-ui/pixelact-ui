@@ -1,0 +1,135 @@
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/pixelact-ui/accordion";
+
+## Accordion
+
+A pixel art styled accordion component built on top of shadcn/ui's Accordion component. Features retro styling with dashed borders and pixel fonts for collapsible content sections.
+
+### Installation
+
+Add the Accordion component to your project using the shadcn CLI:
+
+```bash
+npx shadcn@latest add https://pixelactui.com/r/pixelact-accordion.json
+```
+
+This will automatically install the component and its dependencies to your project.
+
+### Basic Items
+
+<CodePreview 
+  language="tsx"
+  code={`import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/pixelact-ui/accordion";
+
+export function MultipleAccordion() {
+  return (
+    <Accordion type="single" collapsible>
+      <AccordionItem value="item-1">
+        <AccordionTrigger>Getting Started</AccordionTrigger>
+        <AccordionContent>
+          Install components using the shadcn CLI and start building retro interfaces with pixel-perfect styling.
+        </AccordionContent>
+      </AccordionItem>
+      
+      <AccordionItem value="item-2">
+        <AccordionTrigger>Customization</AccordionTrigger>
+        <AccordionContent>
+          All components are fully customizable using Tailwind CSS classes and CSS custom properties for theming.
+        </AccordionContent>
+      </AccordionItem>
+      
+      <AccordionItem value="item-3">
+        <AccordionTrigger>Components</AccordionTrigger>
+        <AccordionContent>
+          Available components include Button, Input, Textarea, Dialog, Label, and Accordion with more coming soon.
+        </AccordionContent>
+      </AccordionItem>
+    </Accordion>
+  );
+}`}
+>
+  <Accordion type="single" className="w-full md:mx-16" collapsible>
+    <AccordionItem value="item-1">
+      <AccordionTrigger>Getting Started</AccordionTrigger>
+      <AccordionContent>
+        Install components using the shadcn CLI and start building retro interfaces with pixel-perfect styling.
+      </AccordionContent>
+    </AccordionItem>
+    
+    <AccordionItem value="item-2">
+      <AccordionTrigger>Customization</AccordionTrigger>
+      <AccordionContent>
+        All components are fully customizable using Tailwind CSS classes and CSS custom properties for theming.
+      </AccordionContent>
+    </AccordionItem>
+    
+    <AccordionItem value="item-3">
+      <AccordionTrigger>Components</AccordionTrigger>
+      <AccordionContent>
+        Available components include Button, Input, Textarea, Dialog, Label, and Accordion with more coming soon.
+      </AccordionContent>
+    </AccordionItem>
+  </Accordion>
+</CodePreview>
+
+### Multiple Open Items
+
+<CodePreview 
+  language="tsx"
+  code={`import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/pixelact-ui/accordion";
+
+export function MultipleOpenAccordion() {
+  return (
+    <Accordion type="multiple">
+      <AccordionItem value="item-1">
+        <AccordionTrigger>Features</AccordionTrigger>
+        <AccordionContent>
+          • Pixel-perfect retro styling
+          • Built on shadcn/ui foundation
+          • Fully customizable with Tailwind CSS
+          • Accessible by default
+        </AccordionContent>
+      </AccordionItem>
+      
+      <AccordionItem value="item-2">
+        <AccordionTrigger>Installation</AccordionTrigger>
+        <AccordionContent>
+          Use the shadcn CLI to install individual components as needed for your project.
+        </AccordionContent>
+      </AccordionItem>
+      
+      <AccordionItem value="item-3">
+        <AccordionTrigger>Support</AccordionTrigger>
+        <AccordionContent>
+          Check our documentation or open an issue on GitHub for help and feature requests.
+        </AccordionContent>
+      </AccordionItem>
+    </Accordion>
+  );
+}`}
+>
+  <Accordion type="multiple" className="w-full md:mx-16">
+    <AccordionItem value="item-1">
+      <AccordionTrigger>Features</AccordionTrigger>
+      <AccordionContent>
+        • Pixel-perfect retro styling<br/>
+        • Built on shadcn/ui foundation<br/>
+        • Fully customizable with Tailwind CSS<br/>
+        • Accessible by default
+      </AccordionContent>
+    </AccordionItem>
+    
+    <AccordionItem value="item-2">
+      <AccordionTrigger>Installation</AccordionTrigger>
+      <AccordionContent>
+        Use the shadcn CLI to install individual components as needed for your project.
+      </AccordionContent>
+    </AccordionItem>
+    
+    <AccordionItem value="item-3">
+      <AccordionTrigger>Support</AccordionTrigger>
+      <AccordionContent>
+        Check our documentation or open an issue on GitHub for help and feature requests.
+      </AccordionContent>
+    </AccordionItem>
+  </Accordion>
+</CodePreview>

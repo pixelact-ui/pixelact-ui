@@ -10,6 +10,7 @@ interface Routes {
       input: string;
       dialog: string;
       label: string;
+      accordion: string;
     };
   };
   showcase: string;
@@ -27,6 +28,7 @@ const routes: Routes = {
       input: "/docs/input",
       dialog: "/docs/dialog",
       label: "/docs/label",
+      accordion: "/docs/accordion",
     }
   },
   showcase: "/showcase",

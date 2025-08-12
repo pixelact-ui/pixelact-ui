@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/pixelact-ui/button/button";
+import { Button } from "@/components/ui/pixelact-ui/button";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { useState } from "react";
 

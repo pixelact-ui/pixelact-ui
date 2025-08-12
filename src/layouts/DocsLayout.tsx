@@ -1,7 +1,7 @@
 import { useIsMobile } from "@/hooks/use-mobile";
 import { cn } from "@/lib/utils";
 import { routes } from "@/src/utils";
-import { ConstructionIcon } from "lucide-react";
+import { ConstructionIcon, Sparkles } from "lucide-react";
 import { useState } from "react";
 import { NavLink, Outlet } from "react-router-dom";
 
@@ -10,6 +10,7 @@ const navItems: {
     name: string;
     path: string;
     workInProgress?: boolean;
+    isNew?: boolean;
   }[];
 } = {
   "Getting started": [
@@ -18,6 +19,7 @@ const navItems: {
     { name: "Contributing", path: routes.docs.contributing },
   ],
   Components: [
+    { name: "Accordion", path: routes.docs.components.accordion, isNew: true },
     { name: "Button", path: routes.docs.components.button },
     {
       name: "Dialog",
@@ -78,8 +80,13 @@ export function DocsLayout() {
                     <span className={cn(item.workInProgress && "opacity-50")}>
                       {item.name}
                     </span>
+                    {item.isNew && (
+                      <span className="flex gap-4 text-green-700 dark:text-green-500">
+                        <Sparkles />
+                      </span>
+                    )}
                     {item.workInProgress && (
-                      <ConstructionIcon className="text-yellow-300" />
+                      <ConstructionIcon className="text-yellow-500 dark:text-yellow-300" />
                     )}
                   </NavLink>
                 ))}

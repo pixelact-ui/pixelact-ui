@@ -1,6 +1,6 @@
-import { Button } from "@/components/ui/pixelact-ui/button/button";
-import { Input } from "@/components/ui/pixelact-ui/input/input";
-import { Label } from "@/components/ui/pixelact-ui/label/label";
+import { Button } from "@/components/ui/pixelact-ui/button";
+import { Input } from "@/components/ui/pixelact-ui/input";
+import { Label } from "@/components/ui/pixelact-ui/label";
 
 const ComponentsShowcase = () => {
   return (

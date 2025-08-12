@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "pixelact-accordion",
+  "type": "registry:component",
+  "title": "Pixelact Accordion",
+  "description": "A simple accordion component.",
+  "registryDependencies": [
+    "accordion"
+  ],
+  "files": [
+    {
+      "path": "components/ui/pixelact-ui/accordion/index.tsx",
+      "content": "import React from \"react\";\r\nimport * as AccordionPrimitive from \"@radix-ui/react-accordion\";\r\nimport { cn } from \"@/lib/utils\";\r\nimport {\r\n  Accordion,\r\n  AccordionContent as ShadcnAccordionContent,\r\n  AccordionItem as ShadcnAccordionItem,\r\n  AccordionTrigger as ShadcnAccordionTrigger,\r\n} from \"@/components/ui/accordion\";\r\n\r\nimport \"@/components/ui/pixelact-ui/styles/styles.css\";\r\n\r\nexport interface PixelAccordionItemProps\r\n  extends React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Item> {\r\n  asChild?: boolean;\r\n}\r\n\r\nfunction AccordionItem({\r\n  className,\r\n  children,\r\n  ...props\r\n}: PixelAccordionItemProps) {\r\n  return (\r\n    <ShadcnAccordionItem\r\n      className={cn(\r\n        \"border-dashed border-b-4 border-foreground dark:border-ring relative\",\r\n        className\r\n      )}\r\n      {...props}\r\n    >\r\n      {children}\r\n    </ShadcnAccordionItem>\r\n  );\r\n}\r\n\r\nfunction AccordionTrigger({\r\n  className,\r\n  children,\r\n  ...props\r\n}: React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>) {\r\n  return (\r\n    <ShadcnAccordionTrigger className={cn(\"pixel-font\", className)} {...props}>\r\n      {children}\r\n    </ShadcnAccordionTrigger>\r\n  );\r\n}\r\n\r\nfunction AccordionContent({\r\n  className,\r\n  children,\r\n  ...props\r\n}: React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Content>) {\r\n  return (\r\n    <div className=\"relative\">\r\n      <ShadcnAccordionContent\r\n        className={cn(\r\n          \"pixel-font overflow-hidden text-sm data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down\",\r\n          className\r\n        )}\r\n        {...props}\r\n      >\r\n        <div className=\"pb-4 pt-0 relative z-10 p-1\">{children}</div>\r\n      </ShadcnAccordionContent>\r\n\r\n      <AccordionPrimitive.Content asChild forceMount />\r\n    </div>\r\n  );\r\n}\r\n\r\nexport { Accordion, AccordionItem, AccordionTrigger, AccordionContent };\r\n",
+      "type": "registry:component",
+      "target": "components/ui/pixelact-ui/accordion.tsx"
+    },
+    {
+      "path": "components/ui/pixelact-ui/styles/styles.css",
+      "content": "@import url(\"https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap\");\r\n\r\n:root {\r\n  --box-shadow-width: 4px;\r\n  --pixel-box-shadow: calc(-1 * (var(--box-shadow-width))) 0 0 0 black,\r\n    var(--box-shadow-width) 0 0 0 black, 0 var(--box-shadow-width) 0 0 black,\r\n    0 calc(-1 * (var(--box-shadow-width))) 0 0 black;\r\n  --default-inner-border-color: rgb(200, 200, 200);\r\n}\r\n\r\n.pixel-font {\r\n  font-family: \"Press Start 2P\", system-ui, -apple-system, sans-serif;\r\n  line-height: 1.5;\r\n  letter-spacing: 0.5px;\r\n}\r\n\r\n.box-shadow-margin {\r\n  margin: var(--box-shadow-width);\r\n}\r\n",
+      "type": "registry:style",
+      "target": "components/ui/pixelact-ui/styles/styles.css"
+    }
+  ]
+}
