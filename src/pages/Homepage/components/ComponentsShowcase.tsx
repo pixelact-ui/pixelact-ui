@@ -4,7 +4,7 @@ import { Label } from "@/components/ui/pixelact-ui/label";
 
 const ComponentsShowcase = () => {
   return (
-    <section className=" border-t-4 border-dashed text-foreground pixel-font p-8 md:p-12 xl:p-24">
+    <section className=" border-t-4 border-dashed text-foreground pixel-font p-4 md:p-12 xl:p-24">
       <div className="text-2xl mb-8 md:text-center">Components showcase</div>
       <div className="flex flex-wrap gap-12 md:gap-4">
         <div className="dark:bg-foreground/10 w-full md:w-fit flex-1 p-4  border-4 border-dashed flex flex-col gap-4">

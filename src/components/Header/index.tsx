@@ -19,6 +19,10 @@ const navigationItems: NavigationItem[] = [
 ];
 const mobileNavigationItems: { name: string; items: NavigationItem[] }[] = [
   {
+    name: "",
+    items: [{ name: "Showcase", path: routes.showcase }],
+  },
+  {
     name: "Documentation",
     items: [
       { name: "Installation", path: routes.docs.installation },
@@ -29,6 +33,7 @@ const mobileNavigationItems: { name: string; items: NavigationItem[] }[] = [
   {
     name: "Components",
     items: [
+      { name: "Accordion", path: routes.docs.components.accordion },
       { name: "Button", path: routes.docs.components.button },
       { name: "Dialog", path: routes.docs.components.dialog },
       { name: "Input", path: routes.docs.components.input },
@@ -100,8 +105,8 @@ const Header = () => {
   }, [isDarkMode]);
 
   return (
-    <header>
-      <nav className="flex gap-12 justify-between items-center h-16 bg-foreground px-8 md:px-12 pixel-font xl:px-24">
+    <header className={cn("w-full z-50", isMobile && "fixed")}>
+      <nav className="flex gap-12 justify-between items-center h-16 bg-foreground px-4 md:px-12 pixel-font xl:px-24">
         <div className="flex items-center justify-between md:justify-normal w-full gap-12">
           <NavLink to={routes.root} className=" text-xs text-background">
             <Logo width={30} height={30} />
@@ -126,7 +131,7 @@ const Header = () => {
                     style={{ color: "var(--background)" }}
                   />
                 </DrawerTrigger>
-                <DrawerContent className="p-4 gap-6 overflow-auto">
+                <DrawerContent className="p-4 gap-6">
                   {mobileNavigationItems.map((section) => (
                     <div key={section.name}>
                       <div className="mb-2 text-lg text-foreground">
@@ -145,7 +150,7 @@ const Header = () => {
                             ) : (
                               <a
                                 href={subItem.path}
-                                className="text-foreground/40"
+                                className="text-foreground/60"
                               >
                                 {subItem.name}
                               </a>

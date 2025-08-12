@@ -9,7 +9,7 @@ const Hero = () => {
 
   return (
     <section
-      className={`relative flex flex-col  justify-center md:items-center p-8 md:p-12 xl:px-24 xl:py-36`}
+      className={`relative flex flex-col  justify-center md:items-center p-4 md:p-12 xl:px-24 xl:py-36`}
     >
       <AnimatedGridPattern
         numSquares={30}
@@ -23,15 +23,15 @@ const Hero = () => {
           "md:[mask-image:radial-gradient(800px_circle_at_center,white,transparent)]"
         )}
       />
-      <span className="text-foreground text-3xl xl:text-5xl border-dashed border-b-4 pixel-font">
+      <span className="text-foreground text-2xl md:text-3xl xl:text-5xl border-dashed border-b-4 pixel-font">
         Pixelact UI
       </span>
-      <p className="mt-4 max-w-2xl text-foreground/50 pixel-font md:text-center">
+      <p className="mt-4 max-w-2xl text-foreground md:text-center">
         A pixel art flavored component library.
       </p>
-      <div className="mt-6 flex max-sm:flex-col gap-6">
+      <div className="mt-6">
         <Button
-          className="md:min-w-fit"
+          className="w-full md:min-w-fit"
           onClick={() => navigate(routes.docs.installation)}
         >
           Documentation

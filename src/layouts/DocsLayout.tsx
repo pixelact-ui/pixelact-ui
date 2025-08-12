@@ -96,7 +96,12 @@ export function DocsLayout() {
         </aside>
       )}
 
-      <main className="p-8 md:px-12 md:py-12 w-full xl:max-w-4xl">
+      <main
+        className={cn(
+          "p-4 md:px-12 md:py-12 w-full xl:max-w-4xl",
+          isMobile && "mt-16"
+        )}
+      >
         <Outlet />
       </main>
     </div>
