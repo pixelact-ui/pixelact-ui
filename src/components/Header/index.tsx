@@ -2,7 +2,7 @@ import { useIsMobile } from "@/hooks/use-mobile";
 import { routes } from "@/src/utils";
 import { NavLink } from "react-router-dom";
 import { Drawer, DrawerContent, DrawerTrigger } from "@/components/ui/drawer";
-import { useCallback, useEffect, useState } from "react";
+import { memo, useCallback, useEffect, useState } from "react";
 import { DarkMode, Github, LightMode, Logo, Menu } from "@/src/assets/icons";
 import { cn } from "@/lib/utils";
 
@@ -37,10 +37,19 @@ const mobileNavigationItems: { name: string; items: NavigationItem[] }[] = [
   },
 ];
 
+const fetchGithubStars = async () => {
+  const response = await fetch(
+    "https://api.github.com/repos/pixelact-ui/pixelact-ui"
+  );
+  const data = await response.json();
+  return data.stargazers_count;
+};
+
 const iconsClassName = "hover:opacity-80 active:scale-90";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [githubStars, setGithubStars] = useState(0);
   const isMobile = useIsMobile();
   const [isDarkMode, setIsDarkMode] = useState(
     localStorage.getItem("theme") === "dark"
@@ -55,6 +64,15 @@ const Header = () => {
     }
   }, [theme]);
 
+  useEffect(() => {
+    const fetchData = async () => {
+      const stars = await fetchGithubStars();
+      setGithubStars(stars);
+    };
+
+    fetchData();
+  }, [setGithubStars]);
+
   const LightDarkModeIcon = useCallback(() => {
     return isDarkMode ? (
       <DarkMode
@@ -68,8 +86,7 @@ const Header = () => {
       />
     ) : (
       <LightMode
-        className={cn(iconsClassName)}
-        color="background"
+        className={cn(iconsClassName, "text-background")}
         onClick={() => {
           setIsDarkMode(true);
           document.documentElement.classList.remove("light");
@@ -160,15 +177,18 @@ const Header = () => {
         </div>
         {!isMobile && (
           <div className="flex items-center gap-4 cursor-pointer">
-            <Github
-              className={cn(iconsClassName, "fill-background")}
-              onClick={() =>
-                window.open(
-                  "https://github.com/pixelact-ui/pixelact-ui",
-                  "__blank"
-                )
-              }
-            />
+            <div className="flex items-center gap-2 text-xs text-background">
+              <Github
+                className={cn(iconsClassName, "fill-background")}
+                onClick={() =>
+                  window.open(
+                    "https://github.com/pixelact-ui/pixelact-ui",
+                    "__blank"
+                  )
+                }
+              />
+              <span>{githubStars}</span>
+            </div>
             <LightDarkModeIcon />
           </div>
         )}
@@ -177,4 +197,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default memo(Header);
