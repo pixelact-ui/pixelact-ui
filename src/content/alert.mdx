@@ -1,0 +1,88 @@
+import { Alert, AlertTitle, AlertDescription } from "@/components/ui/pixelact-ui/alert";
+
+## Alert
+
+A pixel art styled alert component built on top of shadcn/ui's Alert component. Features retro styling with multiple variants and full support for all underlying alert props.
+
+### Installation
+
+Add the Alert component to your project using the shadcn CLI:
+
+```bash
+npx shadcn@latest add https://pixelactui.com/r/pixelact-alert.json
+```
+
+This will automatically install the component and its dependencies to your project.
+
+### Basic Alert
+
+<CodePreview 
+  language="tsx"
+  code={`import { Alert, AlertTitle, AlertDescription } from "@/components/ui/pixelact-ui/alert";
+
+export function BasicAlert() {
+  return (
+    <Alert>
+      <AlertTitle>Information</AlertTitle>
+      <AlertDescription>
+        This is a basic alert message with pixel art styling.
+      </AlertDescription>
+    </Alert>
+  );
+}`}
+>
+  <Alert className="w-full">
+    <AlertTitle>Information</AlertTitle>
+    <AlertDescription>
+      This is a basic alert message with pixel art styling.
+    </AlertDescription>
+  </Alert>
+</CodePreview>
+
+### Destructive Alert
+
+<CodePreview 
+  language="tsx"
+  code={`import { Alert, AlertTitle, AlertDescription } from "@/components/ui/pixelact-ui/alert";
+
+export function DestructiveAlert() {
+  return (
+    <Alert variant="destructive">
+      <AlertTitle>Error</AlertTitle>
+      <AlertDescription>
+        Something went wrong! This is a destructive alert message.
+      </AlertDescription>
+    </Alert>
+  );
+}`}
+>
+  <Alert variant="destructive" className="w-full">
+    <AlertTitle>Error</AlertTitle>
+    <AlertDescription>Something went wrong! This is a destructive alert message.</AlertDescription>
+  </Alert>
+</CodePreview>
+
+### Pixel font
+
+<CodePreview
+    language="tsx"
+    code={`import { Alert, AlertTitle, AlertDescription } from "@/components/ui/pixelact-ui/alert";
+
+export function PixelFontAlert() {
+    return (
+        <Alert font="pixel">
+            <AlertTitle>Information</AlertTitle>
+            <AlertDescription>
+                This is a basic alert message with pixel art styling.
+            </AlertDescription>
+        </Alert>
+    );
+}`}
+>
+    <Alert font={"pixel"} className="w-full">
+        <AlertTitle>Information</AlertTitle>
+        <AlertDescription>
+            This is a basic alert message with pixel art styling.
+        </AlertDescription>
+    </Alert>
+</CodePreview>

@@ -5,6 +5,11 @@
   --pixel-box-shadow: calc(-1 * (var(--box-shadow-width))) 0 0 0 black,
     var(--box-shadow-width) 0 0 0 black, 0 var(--box-shadow-width) 0 0 black,
     0 calc(-1 * (var(--box-shadow-width))) 0 0 black;
+  --pixel-box-shadow-destructive: calc(-1 * (var(--box-shadow-width))) 0 0 0
+      var(--destructive),
+    var(--box-shadow-width) 0 0 0 var(--destructive),
+    0 var(--box-shadow-width) 0 0 var(--destructive),
+    0 calc(-1 * (var(--box-shadow-width))) 0 0 var(--destructive);
   --default-inner-border-color: rgb(200, 200, 200);
 }
 

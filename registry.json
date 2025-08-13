@@ -23,6 +23,25 @@
       ]
     },
     {
+      "name": "pixelact-alert",
+      "type": "registry:component",
+      "title": "Pixelact Alert",
+      "description": "A simple alert component.",
+      "registryDependencies": ["alert"],
+      "files": [
+        {
+          "path": "components/ui/pixelact-ui/alert/index.tsx",
+          "type": "registry:component",
+          "target": "components/ui/pixelact-ui/alert.tsx"
+        },
+        {
+          "path": "components/ui/pixelact-ui/styles/styles.css",
+          "type": "registry:style",
+          "target": "components/ui/pixelact-ui/styles/styles.css"
+        }
+      ]
+    },
+    {
       "name": "pixelact-button",
       "type": "registry:component",
       "title": "Pixelact Button",

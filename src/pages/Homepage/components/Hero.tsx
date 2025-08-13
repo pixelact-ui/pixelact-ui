@@ -26,7 +26,7 @@ const Hero = () => {
       <span className="text-foreground text-2xl md:text-3xl xl:text-5xl border-dashed border-b-4 pixel-font">
         Pixelact UI
       </span>
-      <p className="mt-4 max-w-2xl text-foreground md:text-center">
+      <p className="mt-4 max-w-2xl md:text-2xl text-foreground md:text-center">
         A pixel art flavored component library.
       </p>
       <div className="mt-6">
