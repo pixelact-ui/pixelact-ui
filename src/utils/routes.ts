@@ -12,6 +12,7 @@ interface Routes {
       label: string;
       accordion: string;
       alert: string;
+      alertDialog: string;
     };
   };
   showcase: string;
@@ -31,6 +32,7 @@ const routes: Routes = {
       label: "/docs/label",
       accordion: "/docs/accordion",
       alert: "/docs/alert",
+      alertDialog: "/docs/alert-dialog",
     }
   },
   showcase: "/showcase",

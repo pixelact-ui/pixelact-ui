@@ -21,6 +21,11 @@ const navItems: {
   Components: [
     { name: "Accordion", path: routes.docs.components.accordion, isNew: true },
     { name: "Alert", path: routes.docs.components.alert, isNew: true },
+    {
+      name: "Alert Dialog",
+      path: routes.docs.components.alertDialog,
+      isNew: true,
+    },
     { name: "Button", path: routes.docs.components.button },
     {
       name: "Dialog",

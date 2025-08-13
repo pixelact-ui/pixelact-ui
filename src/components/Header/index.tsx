@@ -35,6 +35,7 @@ const mobileNavigationItems: { name: string; items: NavigationItem[] }[] = [
     items: [
       { name: "Accordion", path: routes.docs.components.accordion },
       { name: "Alert", path: routes.docs.components.alert },
+      { name: "Alert Dialog", path: routes.docs.components.alertDialog },
       { name: "Button", path: routes.docs.components.button },
       { name: "Dialog", path: routes.docs.components.dialog },
       { name: "Input", path: routes.docs.components.input },
