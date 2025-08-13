@@ -34,6 +34,34 @@
   }
 }
 
+.pixel-secondary__button {
+  background-color: var(--color-secondary);
+  color: var(--color-secondary-foreground);
+
+  &::after {
+    border-right: 4px solid
+      color-mix(in hsl, var(--color-secondary) 70%, rgb(0, 0, 0));
+    border-bottom: 4px solid
+      color-mix(in hsl, var(--color-secondary) 70%, rgb(0, 0, 0));
+  }
+
+  &:hover {
+    background-color: color-mix(
+      in hsl,
+      var(--color-secondary) 90%,
+      rgb(0, 0, 0)
+    );
+  }
+
+  &:active {
+    background-color: color-mix(
+      in hsl,
+      var(--color-secondary) 70%,
+      rgb(0, 0, 0)
+    );
+  }
+}
+
 .pixel-success__button {
   background-color: var(--success);
   color: var(--success-foreground);

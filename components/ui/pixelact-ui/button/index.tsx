@@ -11,6 +11,7 @@ const pixelButtonVariants = cva(
     variants: {
       variant: {
         default: "pixel-default__button box-shadow-margin",
+        secondary: "pixel-secondary__button box-shadow-margin",
         warning: "pixel-warning__button box-shadow-margin",
         success: "pixel-success__button box-shadow-margin",
         destructive: "pixel-destructive__button box-shadow-margin",
