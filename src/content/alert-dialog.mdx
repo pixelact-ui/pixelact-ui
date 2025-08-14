@@ -1,0 +1,295 @@
+import {
+    AlertDialog,
+    AlertDialogTrigger,
+    AlertDialogContent,
+    AlertDialogHeader,
+    AlertDialogFooter,
+    AlertDialogTitle,
+    AlertDialogDescription,
+    AlertDialogAction,
+    AlertDialogCancel
+} from "@/components/ui/pixelact-ui/alert-dialog";
+import { Button } from "@/components/ui/pixelact-ui/button";
+import React from "react";
+
+## Alert Dialog
+
+A pixel art styled alert dialog component built on top of shadcn/ui's AlertDialog component. Features retro styling with multiple variants and full support for all underlying alert dialog props. Perfect for destructive actions, confirmations, and important user decisions.
+
+### Installation
+
+Add the Alert Dialog component to your project using the shadcn CLI:
+
+```bash
+npx shadcn@latest add https://pixelactui.com/r/pixelact-alert-dialog.json
+```
+
+This will automatically install the component and its dependencies to your project.
+
+### Basic Alert Dialog
+
+<CodePreview 
+  language="tsx"
+  code={`import { 
+  AlertDialog, 
+  AlertDialogTrigger, 
+  AlertDialogContent, 
+  AlertDialogHeader, 
+  AlertDialogFooter, 
+  AlertDialogTitle, 
+  AlertDialogDescription,
+  AlertDialogAction,
+  AlertDialogCancel
+} from "@/components/ui/pixelact-ui/alert-dialog";
+import { Button } from "@/components/ui/pixelact-ui/button";
+
+export function BasicAlertDialog() {
+  return (
+    <AlertDialog>
+      <AlertDialogTrigger asChild>
+        <Button variant="destructive">Delete Account</Button>
+      </AlertDialogTrigger>
+      <AlertDialogContent>
+        <AlertDialogHeader>
+          <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
+          <AlertDialogDescription>
+            This action cannot be undone. This will permanently delete your
+            account and remove your data from our servers.
+          </AlertDialogDescription>
+        </AlertDialogHeader>
+        <AlertDialogFooter>
+          <AlertDialogCancel asChild>
+            <Button variant="link">Cancel</Button>
+          </AlertDialogCancel>
+          <AlertDialogAction asChild>
+            <Button variant="destructive">Yes, delete account</Button>
+          </AlertDialogAction>
+        </AlertDialogFooter>
+      </AlertDialogContent>
+    </AlertDialog>
+  );
+}`}
+>
+  <AlertDialog>
+    <AlertDialogTrigger asChild>
+      <Button variant="destructive" className="w-fit">Delete Account</Button>
+    </AlertDialogTrigger>
+    <AlertDialogContent>
+      <AlertDialogHeader>
+        <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
+        <AlertDialogDescription>
+          This action cannot be undone. This will permanently delete your
+          account and remove your data from our servers.
+        </AlertDialogDescription>
+      </AlertDialogHeader>
+      <AlertDialogFooter>
+        <AlertDialogCancel asChild>
+          <Button variant="link">Cancel</Button>
+        </AlertDialogCancel>
+        <AlertDialogAction asChild>
+          <Button variant="destructive">Yes, delete account</Button>
+        </AlertDialogAction>
+      </AlertDialogFooter>
+    </AlertDialogContent>
+  </AlertDialog>
+</CodePreview>
+
+### Confirmation Dialog
+
+<CodePreview 
+  language="tsx"
+  code={`import { 
+  AlertDialog, 
+  AlertDialogTrigger, 
+  AlertDialogContent, 
+  AlertDialogHeader, 
+  AlertDialogFooter, 
+  AlertDialogTitle, 
+  AlertDialogDescription,
+  AlertDialogAction,
+  AlertDialogCancel
+} from "@/components/ui/pixelact-ui/alert-dialog";
+import { Button } from "@/components/ui/pixelact-ui/button";
+
+export function ConfirmationDialog() {
+  return (
+    <AlertDialog>
+      <AlertDialogTrigger asChild>
+        <Button>Save Changes</Button>
+      </AlertDialogTrigger>
+      <AlertDialogContent>
+        <AlertDialogHeader>
+          <AlertDialogTitle>Save your changes?</AlertDialogTitle>
+          <AlertDialogDescription>
+            You have unsaved changes. Would you like to save them before continuing?
+          </AlertDialogDescription>
+        </AlertDialogHeader>
+        <AlertDialogFooter>
+          <AlertDialogCancel asChild>
+            <Button variant="link">Don't Save</Button>
+          </AlertDialogCancel>
+          <AlertDialogAction asChild>
+            <Button variant="success">Save Changes</Button>
+          </AlertDialogAction>
+        </AlertDialogFooter>
+      </AlertDialogContent>
+    </AlertDialog>
+  );
+}`}
+>
+  <AlertDialog>
+    <AlertDialogTrigger asChild>
+      <Button className="w-fit">Save Changes</Button>
+    </AlertDialogTrigger>
+    <AlertDialogContent>
+      <AlertDialogHeader>
+        <AlertDialogTitle>Save your changes?</AlertDialogTitle>
+        <AlertDialogDescription>
+          You have unsaved changes. Would you like to save them before continuing?
+        </AlertDialogDescription>
+      </AlertDialogHeader>
+      <AlertDialogFooter>
+        <AlertDialogCancel asChild>
+          <Button variant="link">Don't Save</Button>
+        </AlertDialogCancel>
+        <AlertDialogAction asChild>
+          <Button variant="success">Save Changes</Button>
+        </AlertDialogAction>
+      </AlertDialogFooter>
+    </AlertDialogContent>
+  </AlertDialog>
+</CodePreview>
+
+### Warning Dialog
+
+<CodePreview 
+  language="tsx"
+  code={`import { 
+  AlertDialog, 
+  AlertDialogTrigger, 
+  AlertDialogContent, 
+  AlertDialogHeader, 
+  AlertDialogFooter, 
+  AlertDialogTitle, 
+  AlertDialogDescription,
+  AlertDialogAction,
+  AlertDialogCancel
+} from "@/components/ui/pixelact-ui/alert-dialog";
+import { Button } from "@/components/ui/pixelact-ui/button";
+
+export function WarningDialog() {
+  return (
+    <AlertDialog>
+      <AlertDialogTrigger asChild>
+        <Button variant="warning">Reset Settings</Button>
+      </AlertDialogTrigger>
+      <AlertDialogContent>
+        <AlertDialogHeader>
+          <AlertDialogTitle>Reset all settings?</AlertDialogTitle>
+          <AlertDialogDescription>
+            This will reset all your preferences to default values. 
+            This action cannot be undone.
+          </AlertDialogDescription>
+        </AlertDialogHeader>
+        <AlertDialogFooter>
+          <AlertDialogCancel asChild>
+            <Button variant="link">Keep Settings</Button>
+          </AlertDialogCancel>
+          <AlertDialogAction asChild>
+            <Button variant="warning">Reset to Default</Button>
+          </AlertDialogAction>
+        </AlertDialogFooter>
+      </AlertDialogContent>
+    </AlertDialog>
+  );
+}`}
+>
+  <AlertDialog>
+    <AlertDialogTrigger asChild>
+      <Button variant="warning" className="w-fit">Reset Settings</Button>
+    </AlertDialogTrigger>
+    <AlertDialogContent>
+      <AlertDialogHeader>
+        <AlertDialogTitle>Reset all settings?</AlertDialogTitle>
+        <AlertDialogDescription>
+          This will reset all your preferences to default values. 
+          This action cannot be undone.
+        </AlertDialogDescription>
+      </AlertDialogHeader>
+      <AlertDialogFooter>
+        <AlertDialogCancel asChild>
+          <Button variant="link">Keep Settings</Button>
+        </AlertDialogCancel>
+        <AlertDialogAction asChild>
+          <Button variant="warning">Reset to Default</Button>
+        </AlertDialogAction>
+      </AlertDialogFooter>
+    </AlertDialogContent>
+  </AlertDialog>
+</CodePreview>
+
+### Other Font
+
+<CodePreview 
+  language="tsx"
+  code={`import { 
+  AlertDialog, 
+  AlertDialogTrigger, 
+  AlertDialogContent, 
+  AlertDialogHeader, 
+  AlertDialogFooter, 
+  AlertDialogTitle, 
+  AlertDialogDescription,
+  AlertDialogAction,
+  AlertDialogCancel
+} from "@/components/ui/pixelact-ui/alert-dialog";
+import { Button } from "@/components/ui/pixelact-ui/button";
+
+export function OtherFontAlertDialog() {
+  return (
+    <AlertDialog>
+      <AlertDialogTrigger asChild>
+        <Button>Other Font Dialog</Button>
+      </AlertDialogTrigger>
+      <AlertDialogContent font="normal">
+        <AlertDialogHeader>
+          <AlertDialogTitle>Other Font Alert</AlertDialogTitle>
+          <AlertDialogDescription>
+            This alert dialog uses a different font styling.
+          </AlertDialogDescription>
+        </AlertDialogHeader>
+        <AlertDialogFooter>
+          <AlertDialogCancel asChild>
+            <Button variant="link">Cancel</Button>
+          </AlertDialogCancel>
+          <AlertDialogAction asChild>
+            <Button>Continue</Button>
+          </AlertDialogAction>
+        </AlertDialogFooter>
+      </AlertDialogContent>
+    </AlertDialog>
+  );
+}`}
+>
+  <AlertDialog>
+    <AlertDialogTrigger asChild>
+      <Button className="w-fit">Other Font Dialog</Button>
+    </AlertDialogTrigger>
+    <AlertDialogContent font="normal">
+      <AlertDialogHeader>
+        <AlertDialogTitle>Other Font Alert</AlertDialogTitle>
+        <AlertDialogDescription>
+          This alert dialog uses a different font styling.
+        </AlertDialogDescription>
+      </AlertDialogHeader>
+      <AlertDialogFooter>
+        <AlertDialogCancel asChild>
+          <Button variant="link">Cancel</Button>
+        </AlertDialogCancel>
+        <AlertDialogAction asChild>
+          <Button>Continue</Button>
+        </AlertDialogAction>
+      </AlertDialogFooter>
+    </AlertDialogContent>
+  </AlertDialog>
+</CodePreview>
