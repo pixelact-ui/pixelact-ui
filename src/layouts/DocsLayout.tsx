@@ -26,6 +26,11 @@ const navItems: {
       path: routes.docs.components.alertDialog,
       isNew: true,
     },
+    {
+      name: "Avatar",
+      path: routes.docs.components.avatar,
+      isNew: true,
+    },
     { name: "Button", path: routes.docs.components.button },
     {
       name: "Dialog",

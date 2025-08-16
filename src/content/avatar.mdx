@@ -1,0 +1,78 @@
+
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/pixelact-ui/avatar";
+
+## Avatar
+
+A pixel art styled avatar component built on top of shadcn/ui's Avatar component. Features retro styling, pixel font, and full support for all underlying avatar props. Useful for user profile images, team members, and more.
+
+### Installation
+
+Add the Avatar component to your project using the shadcn CLI:
+
+```bash
+npx shadcn@latest add https://pixelactui.com/r/pixelact-avatar.json
+```
+
+This will automatically install the component and its dependencies to your project.
+
+### Basic Avatar
+
+<CodePreview
+	language="tsx"
+	code={`import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/pixelact-ui/avatar";
+
+export function BasicAvatar() {
+	return (
+		<Avatar>
+			<AvatarImage src="/logo.svg" alt="User avatar" />
+			<AvatarFallback>AB</AvatarFallback>
+		</Avatar>
+	);
+}`}
+>
+	<Avatar>
+		<AvatarImage src="/logo.svg" alt="User avatar" />
+		<AvatarFallback>AB</AvatarFallback>
+	</Avatar>
+</CodePreview>
+
+### Avatar with border
+
+<CodePreview
+	language="tsx"
+	code={`import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/pixelact-ui/avatar";
+
+export function PixelAvatar() {
+	return (
+		<Avatar variant="pixel">
+			<AvatarImage src="/logo.svg" alt="Pixel avatar" />
+			<AvatarFallback>PX</AvatarFallback>
+		</Avatar>
+	);
+}`}
+>
+	<Avatar variant="pixel">
+		<AvatarImage src="/logo.svg" alt="Pixel avatar" />
+		<AvatarFallback>PX</AvatarFallback>
+	</Avatar>
+</CodePreview>
+
+### Avatar with font
+
+<CodePreview
+	language="tsx"
+	code={`import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/pixelact-ui/avatar";
+
+export function PixelFontAvatar() {
+	return (
+		<Avatar font="pixel">
+			<AvatarImage src="/logo.svg" alt="Pixel font avatar" />
+			<AvatarFallback>PF</AvatarFallback>
+		</Avatar>
+	);
+}`}
+>
+	<Avatar font="pixel">
+		<AvatarFallback>PF</AvatarFallback>
+	</Avatar>
+</CodePreview>
