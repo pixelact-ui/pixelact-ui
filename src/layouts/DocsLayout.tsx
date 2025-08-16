@@ -31,6 +31,11 @@ const navItems: {
       path: routes.docs.components.avatar,
       isNew: true,
     },
+    {
+      name: "Badge",
+      path: routes.docs.components.badge,
+      isNew: true,
+    },
     { name: "Button", path: routes.docs.components.button },
     {
       name: "Dialog",

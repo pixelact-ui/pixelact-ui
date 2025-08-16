@@ -1,18 +1,18 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-  "name": "pixelact-label",
+  "name": "pixelact-badge",
   "type": "registry:component",
-  "title": "Pixelact Label",
-  "description": "A simple label component.",
+  "title": "Pixelact Badge",
+  "description": "A simple badge component.",
   "registryDependencies": [
-    "label"
+    "badge"
   ],
   "files": [
     {
-      "path": "components/ui/pixelact-ui/label/index.tsx",
-      "content": "import * as React from \"react\";\r\nimport * as LabelPrimitive from \"@radix-ui/react-label\";\r\nimport { cn } from \"@/lib/utils\";\r\nimport { Label as ShadcnLabel } from \"@/components/ui/label\";\r\n\r\nimport \"@/components/ui/pixelact-ui/styles/styles.css\";\r\n\r\ninterface PixelLabelProps\r\n  extends React.ComponentProps<typeof LabelPrimitive.Root> {\r\n  asChild?: boolean;\r\n}\r\n\r\nfunction Label({ className, ...props }: PixelLabelProps) {\r\n  return <ShadcnLabel className={cn(\"pixel-font\", className)} {...props} />;\r\n}\r\n\r\nexport { Label };\r\n",
+      "path": "components/ui/pixelact-ui/badge/index.tsx",
+      "content": "import { type VariantProps, cva } from \"class-variance-authority\";\r\nimport { cn } from \"@/lib/utils\";\r\nimport { Badge as ShadcnBadge } from \"@/components/ui/badge\";\r\n\r\nconst badgeVariants = cva(\"\", {\r\n  variants: {\r\n    font: {\r\n      normal: \"\",\r\n      pixel: \"pixel-font\",\r\n    },\r\n    variant: {\r\n      default: \"bg-primary border-primary\",\r\n      destructive: \"bg-destructive border-destructive\",\r\n      outline: \"bg-background border-background\",\r\n      secondary: \"bg-secondary border-secondary\",\r\n    },\r\n  },\r\n  defaultVariants: {\r\n    font: \"pixel\",\r\n    variant: \"default\",\r\n  },\r\n});\r\n\r\nexport interface BadgeProps\r\n  extends React.ButtonHTMLAttributes<HTMLButtonElement>,\r\n    VariantProps<typeof badgeVariants> {\r\n  asChild?: boolean;\r\n}\r\n\r\nfunction Badge({ children, font, variant, ...props }: BadgeProps) {\r\n  return (\r\n    <div className={cn(\"relative inline-flex\")}>\r\n      <ShadcnBadge\r\n        {...props}\r\n        className={cn(\r\n          \"rounded-none shadow-(--pixel-box-shadow) box-shadow-margin\",\r\n          badgeVariants({ variant, font })\r\n        )}\r\n        variant={variant}\r\n      >\r\n        {children}\r\n      </ShadcnBadge>\r\n    </div>\r\n  );\r\n}\r\n\r\nexport { Badge };\r\n",
       "type": "registry:component",
-      "target": "components/ui/pixelact-ui/label.tsx"
+      "target": "components/ui/pixelact-ui/badge.tsx"
     },
     {
       "path": "components/ui/pixelact-ui/styles/styles.css",

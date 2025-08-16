@@ -37,6 +37,7 @@ const mobileNavigationItems: { name: string; items: NavigationItem[] }[] = [
       { name: "Alert", path: routes.docs.components.alert },
       { name: "Alert Dialog", path: routes.docs.components.alertDialog },
       { name: "Avatar", path: routes.docs.components.avatar },
+      { name: "Badge", path: routes.docs.components.badge },
       { name: "Button", path: routes.docs.components.button },
       { name: "Dialog", path: routes.docs.components.dialog },
       { name: "Input", path: routes.docs.components.input },

@@ -13,6 +13,13 @@
   --default-inner-border-color: rgb(200, 200, 200);
 }
 
+.dark {
+  --pixel-box-shadow: calc(-1 * (var(--box-shadow-width))) 0 0 0 var(--ring),
+    var(--box-shadow-width) 0 0 0 var(--ring),
+    0 var(--box-shadow-width) 0 0 var(--ring),
+    0 calc(-1 * (var(--box-shadow-width))) 0 0 var(--ring);
+}
+
 .pixel-font {
   font-family: "Press Start 2P", system-ui, -apple-system, sans-serif;
   line-height: 1.5;

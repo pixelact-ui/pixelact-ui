@@ -1,0 +1,67 @@
+
+import { Badge } from "@/components/ui/pixelact-ui/badge";
+
+## Badge
+
+A pixel art styled badge component built on top of shadcn/ui's Badge component. Features retro styling, pixel font, and multiple variants. Useful for status indicators, labels, and more.
+
+### Installation
+
+Add the Badge component to your project using the shadcn CLI:
+
+```bash
+npx shadcn@latest add https://pixelactui.com/r/pixelact-badge.json
+```
+
+This will automatically install the component and its dependencies to your project.
+
+### Basic Badge
+
+<CodePreview
+	language="tsx"
+	code={`import { Badge } from "@/components/ui/pixelact-ui/badge";
+
+export function BasicBadge() {
+	return <Badge>New</Badge>;
+}`}
+>
+	<Badge>New</Badge>
+</CodePreview>
+
+### Badge Variants
+
+<CodePreview
+	language="tsx"
+	code={`import { Badge } from "@/components/ui/pixelact-ui/badge";
+
+export function BadgeVariants() {
+	return (
+		<>
+			<Badge variant="default">Default</Badge>
+			<Badge variant="secondary">Secondary</Badge>
+			<Badge variant="destructive">Destructive</Badge>
+			<Badge variant="outline">Outline</Badge>
+		</>
+	);
+}`}
+>
+	<div style={{ display: "flex", gap: "8px", flexWrap: "wrap", alignItems: "center" }}>
+		<Badge variant="default">Default</Badge>
+		<Badge variant="secondary">Secondary</Badge>
+		<Badge variant="destructive">Destructive</Badge>
+		<Badge variant="outline">Outline</Badge>
+	</div>
+</CodePreview>
+
+### Without pixel font
+
+<CodePreview
+	language="tsx"
+	code={`import { Badge } from "@/components/ui/pixelact-ui/badge";
+
+export function PixelFontBadge() {
+	return <Badge font="pixel">PIXEL</Badge>;
+}`}
+>
+	<Badge font="normal">Pixel font</Badge>
+</CodePreview>

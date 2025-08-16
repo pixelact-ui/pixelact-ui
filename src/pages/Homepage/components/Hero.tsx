@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils";
 import { routes } from "@/src/utils";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/pixelact-ui/button";
+import { Badge } from "@/components/ui/pixelact-ui/badge";
 
 const Hero = () => {
   const navigate = useNavigate();
@@ -29,6 +30,7 @@ const Hero = () => {
       <p className="mt-4 max-w-2xl md:text-2xl text-foreground md:text-center">
         A pixel art flavored component library.
       </p>
+      <Badge font="pixel">Badge</Badge>
       <div className="mt-6">
         <Button
           className="w-full md:min-w-fit"
