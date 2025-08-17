@@ -142,6 +142,25 @@
       ]
     },
     {
+      "name": "pixelact-calendar",
+      "type": "registry:component",
+      "title": "Pixelact Calendar",
+      "description": "A simple calendar component.",
+      "registryDependencies": ["calendar"],
+      "files": [
+        {
+          "path": "components/ui/pixelact-ui/calendar/index.tsx",
+          "type": "registry:component",
+          "target": "components/ui/pixelact-ui/calendar.tsx"
+        },
+        {
+          "path": "components/ui/pixelact-ui/styles/styles.css",
+          "type": "registry:style",
+          "target": "components/ui/pixelact-ui/styles/styles.css"
+        }
+      ]
+    },
+    {
       "name": "pixelact-dialog",
       "type": "registry:component",
       "title": "Pixelact Dialog",
@@ -209,6 +228,25 @@
           "path": "components/ui/pixelact-ui/label/index.tsx",
           "type": "registry:component",
           "target": "components/ui/pixelact-ui/label.tsx"
+        },
+        {
+          "path": "components/ui/pixelact-ui/styles/styles.css",
+          "type": "registry:style",
+          "target": "components/ui/pixelact-ui/styles/styles.css"
+        }
+      ]
+    },
+    {
+      "name": "pixelact-select",
+      "type": "registry:component",
+      "title": "Pixelact Select",
+      "description": "A simple select component.",
+      "registryDependencies": ["select"],
+      "files": [
+        {
+          "path": "components/ui/pixelact-ui/select/index.tsx",
+          "type": "registry:component",
+          "target": "components/ui/pixelact-ui/select.tsx"
         },
         {
           "path": "components/ui/pixelact-ui/styles/styles.css",

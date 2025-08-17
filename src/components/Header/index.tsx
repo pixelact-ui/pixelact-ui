@@ -1,7 +1,12 @@
 import { useIsMobile } from "@/hooks/use-mobile";
 import { routes } from "@/src/utils";
 import { NavLink } from "react-router-dom";
-import { Drawer, DrawerContent, DrawerTrigger } from "@/components/ui/drawer";
+import {
+  Drawer,
+  DrawerContent,
+  DrawerHeader,
+  DrawerTrigger,
+} from "@/components/ui/drawer";
 import { memo, useCallback, useEffect, useState } from "react";
 import { DarkMode, Github, LightMode, Logo, Menu } from "@/src/assets/icons";
 import { cn } from "@/lib/utils";
@@ -38,11 +43,14 @@ const mobileNavigationItems: { name: string; items: NavigationItem[] }[] = [
       { name: "Alert Dialog", path: routes.docs.components.alertDialog },
       { name: "Avatar", path: routes.docs.components.avatar },
       { name: "Badge", path: routes.docs.components.badge },
+      { name: "Breadcrumb", path: routes.docs.components.breadcrumb },
       { name: "Button", path: routes.docs.components.button },
+      { name: "Calendar", path: routes.docs.components.calendar },
       { name: "Dialog", path: routes.docs.components.dialog },
       { name: "Input", path: routes.docs.components.input },
       { name: "Text Area", path: routes.docs.components.textarea },
       { name: "Label", path: routes.docs.components.label },
+      { name: "Select", path: routes.docs.components.select },
       { name: "More coming soon...", path: "/", disabled: true },
     ],
   },
@@ -135,35 +143,39 @@ const Header = () => {
                     style={{ color: "var(--background)" }}
                   />
                 </DrawerTrigger>
-                <DrawerContent className="p-4 gap-6">
-                  {mobileNavigationItems.map((section) => (
-                    <div key={section.name}>
-                      <div className="mb-2 text-lg text-foreground">
-                        {section.name}
+                <DrawerContent className="p-4">
+                  <DrawerHeader className="overflow-y-auto">
+                    {mobileNavigationItems.map((section) => (
+                      <div key={section.name}>
+                        <div className="mb-2 text-lg text-left text-foreground">
+                          {section.name}
+                        </div>
+                        <ul className="flex flex-col space-y-3 text-left">
+                          {section.items.map((subItem) => (
+                            <li
+                              key={subItem.path}
+                              onClick={() =>
+                                !subItem.disabled && setIsOpen(false)
+                              }
+                            >
+                              {subItem.disabled ? (
+                                <span className="opacity-40">
+                                  {subItem.name}
+                                </span>
+                              ) : (
+                                <a
+                                  href={subItem.path}
+                                  className="text-foreground/60"
+                                >
+                                  {subItem.name}
+                                </a>
+                              )}
+                            </li>
+                          ))}
+                        </ul>
                       </div>
-                      <ul className="flex flex-col space-y-3 ">
-                        {section.items.map((subItem) => (
-                          <li
-                            key={subItem.path}
-                            onClick={() =>
-                              !subItem.disabled && setIsOpen(false)
-                            }
-                          >
-                            {subItem.disabled ? (
-                              <span className="opacity-40">{subItem.name}</span>
-                            ) : (
-                              <a
-                                href={subItem.path}
-                                className="text-foreground/60"
-                              >
-                                {subItem.name}
-                              </a>
-                            )}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
+                    ))}
+                  </DrawerHeader>
                 </DrawerContent>
               </Drawer>
             </div>

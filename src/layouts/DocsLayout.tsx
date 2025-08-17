@@ -43,25 +43,31 @@ const navItems: {
     },
     { name: "Button", path: routes.docs.components.button },
     {
+      name: "Calendar",
+      path: routes.docs.components.calendar,
+      isNew: true,
+    },
+    {
       name: "Dialog",
       path: routes.docs.components.dialog,
-      workInProgress: false,
     },
     {
       name: "Input",
       path: routes.docs.components.input,
-      workInProgress: false,
     },
     { name: "Label", path: routes.docs.components.label },
     {
+      name: "Select",
+      path: routes.docs.components.select,
+      isNew: true,
+    },
+    {
       name: "Text Area",
       path: routes.docs.components.textarea,
-      workInProgress: false,
     },
     {
       name: "More coming soon",
       path: "/",
-      workInProgress: true,
     },
   ],
 };

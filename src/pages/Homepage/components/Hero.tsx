@@ -3,6 +3,13 @@ import { cn } from "@/lib/utils";
 import { routes } from "@/src/utils";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/pixelact-ui/button";
+import {
+  Select,
+  SelectContent,
+  SelectTrigger,
+  SelectValue,
+  SelectItem,
+} from "@/components/ui/pixelact-ui/select";
 
 const Hero = () => {
   const navigate = useNavigate();
@@ -26,7 +33,7 @@ const Hero = () => {
       <span className="text-foreground text-2xl md:text-3xl xl:text-5xl border-dashed border-b-4 pixel-font">
         Pixelact UI
       </span>
-      <p className="mt-4 max-w-2xl md:text-2xl text-foreground md:text-center">
+      <p className="mt-4 font-medium max-w-2xl md:text-2xl text-foreground md:text-center">
         A pixel art flavored component library.
       </p>
       <div className="mt-6">
@@ -37,6 +44,17 @@ const Hero = () => {
           Documentation
         </Button>
       </div>
+
+      <Select>
+        <SelectTrigger className="w-[180px]">
+          <SelectValue placeholder="Theme" />
+        </SelectTrigger>
+        <SelectContent>
+          <SelectItem value="light">Light</SelectItem>
+          <SelectItem value="dark">Dark</SelectItem>
+          <SelectItem value="system">System</SelectItem>
+        </SelectContent>
+      </Select>
     </section>
   );
 };

@@ -1,0 +1,46 @@
+
+import { Calendar } from "@/components/ui/pixelact-ui/calendar";
+
+## Calendar
+
+A pixel art styled calendar component built on top of shadcn/ui's Calendar. Features retro styling, pixel font, and full support for all underlying calendar props. Useful for date picking, scheduling, and more.
+
+### Installation
+
+Add the Calendar component to your project using the shadcn CLI:
+
+```bash
+npx shadcn@latest add https://pixelactui.com/r/pixelact-calendar.json
+```
+
+This will automatically install the component and its dependencies to your project.
+
+### Basic Calendar
+
+<CodePreview
+	language="tsx"
+	code={`import { Calendar } from "@/components/ui/pixelact-ui/calendar";
+
+export function BasicCalendar() {
+	return <Calendar mode="single" />;
+}`}
+>
+	<Calendar mode="single" />
+</CodePreview>
+
+### Calendar with dropdowns
+
+<CodePreview
+	language="tsx"
+	code={`import { Calendar } from "@/components/ui/pixelact-ui/calendar";
+
+export function PixelFontCalendar() {
+	return <Calendar mode="single" captionLayout="dropdown" />;
+}`}
+>
+	<Calendar
+      mode="single"
+      captionLayout="dropdown"
+    />
+</CodePreview>
+

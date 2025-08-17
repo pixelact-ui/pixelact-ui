@@ -138,14 +138,18 @@ function AlertDialogAction({
   className,
   ...props
 }: React.ComponentProps<typeof AlertDialogPrimitive.Action>) {
-  return <ShadcnAlertDialogTrigger className={cn(className)} {...props} />;
+  return (
+    <ShadcnAlertDialogTrigger className={cn("w-full", className)} {...props} />
+  );
 }
 
 function AlertDialogCancel({
   className,
   ...props
 }: React.ComponentProps<typeof AlertDialogPrimitive.Cancel>) {
-  return <ShadcnAlertDialogTrigger className={cn(className)} {...props} />;
+  return (
+    <ShadcnAlertDialogTrigger className={cn("w-full", className)} {...props} />
+  );
 }
 
 export {

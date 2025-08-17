@@ -16,6 +16,8 @@ interface Routes {
       avatar: string;
       badge: string;
       breadcrumb: string;
+      calendar: string;
+      select: string;
     };
   };
   showcase: string;
@@ -39,6 +41,8 @@ const routes: Routes = {
       avatar: "/docs/avatar",
       badge: "/docs/badge",
       breadcrumb: "/docs/breadcrumb",
+      calendar: "/docs/calendar",
+      select: "/docs/select",
     }
   },
   showcase: "/showcase",

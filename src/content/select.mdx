@@ -1,0 +1,82 @@
+
+import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/pixelact-ui/select";
+
+## Select
+
+A pixel art styled select component built on top of shadcn/ui's Select. Features retro styling, pixel font, and full support for all underlying select props. Useful for dropdowns, forms, and more.
+
+### Installation
+
+Add the Select component to your project using the shadcn CLI:
+
+```bash
+npx shadcn@latest add https://pixelactui.com/r/pixelact-select.json
+```
+
+This will automatically install the component and its dependencies to your project.
+
+### Basic Select
+
+<CodePreview
+	language="tsx"
+	code={`import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/pixelact-ui/select";
+
+export function BasicSelect() {
+	return (
+		<Select>
+			<SelectTrigger>
+				<SelectValue placeholder="Select a fruit" />
+			</SelectTrigger>
+			<SelectContent>
+				<SelectItem value="apple">Apple</SelectItem>
+				<SelectItem value="banana">Banana</SelectItem>
+				<SelectItem value="orange">Orange</SelectItem>
+			</SelectContent>
+		</Select>
+	);
+}`}
+>
+	<Select>
+		<SelectTrigger>
+			<SelectValue placeholder="Select a fruit" />
+		</SelectTrigger>
+		<SelectContent>
+			<SelectItem value="apple">Apple</SelectItem>
+			<SelectItem value="banana">Banana</SelectItem>
+			<SelectItem value="orange">Orange</SelectItem>
+		</SelectContent>
+	</Select>
+</CodePreview>
+
+### Other font
+
+<CodePreview
+	language="tsx"
+	code={`import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/pixelact-ui/select";
+
+export function PixelFontSelect() {
+	return (
+		<Select>
+			<SelectTrigger font="normal">
+				<SelectValue placeholder="Pixel font" font="pixel" />
+			</SelectTrigger>
+			<SelectContent font="pixel">
+				<SelectItem value="one">One</SelectItem>
+				<SelectItem value="two">Two</SelectItem>
+				<SelectItem value="three">Three</SelectItem>
+			</SelectContent>
+		</Select>
+	);
+}`}
+>
+	<Select>
+		<SelectTrigger font="normal">
+			<SelectValue placeholder="Other font"/>
+		</SelectTrigger>
+		<SelectContent font="normal">
+			<SelectItem value="one">One</SelectItem>
+			<SelectItem value="two">Two</SelectItem>
+			<SelectItem value="three">Three</SelectItem>
+		</SelectContent>
+	</Select>
+</CodePreview>
