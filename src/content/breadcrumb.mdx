@@ -1,0 +1,133 @@
+
+import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbPage, BreadcrumbSeparator, BreadcrumbEllipsis } from "@/components/ui/pixelact-ui/breadcrumb";
+
+## Breadcrumb
+
+A pixel art styled breadcrumb component built on top of shadcn/ui's Breadcrumb. Features retro styling, pixel font, and full support for all underlying breadcrumb props. Useful for navigation and showing the user's current location in the app.
+
+### Installation
+
+Add the Breadcrumb component to your project using the shadcn CLI:
+
+```bash
+npx shadcn@latest add https://pixelactui.com/r/pixelact-breadcrumb.json
+```
+
+This will automatically install the component and its dependencies to your project.
+
+### Basic Breadcrumb
+
+<CodePreview
+	language="tsx"
+	code={`import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/pixelact-ui/breadcrumb";
+
+export function BasicBreadcrumb() {
+	return (
+		<Breadcrumb font="pixel">
+			<BreadcrumbList>
+				<BreadcrumbItem>
+					<BreadcrumbLink href="/">Home</BreadcrumbLink>
+				</BreadcrumbItem>
+				<BreadcrumbSeparator />
+				<BreadcrumbItem>
+					<BreadcrumbLink href="/docs">Docs</BreadcrumbLink>
+				</BreadcrumbItem>
+				<BreadcrumbSeparator />
+				<BreadcrumbItem>
+					<BreadcrumbPage>Breadcrumb</BreadcrumbPage>
+				</BreadcrumbItem>
+			</BreadcrumbList>
+		</Breadcrumb>
+	);
+}`}
+>
+	<Breadcrumb font="pixel">
+		<BreadcrumbList>
+			<BreadcrumbItem>
+				<BreadcrumbLink href="/">Home</BreadcrumbLink>
+			</BreadcrumbItem>
+			<BreadcrumbSeparator />
+			<BreadcrumbItem>
+				<BreadcrumbLink href="/docs">Docs</BreadcrumbLink>
+			</BreadcrumbItem>
+			<BreadcrumbSeparator />
+			<BreadcrumbItem>
+				<BreadcrumbPage>Breadcrumb</BreadcrumbPage>
+			</BreadcrumbItem>
+		</BreadcrumbList>
+	</Breadcrumb>
+</CodePreview>
+
+### Breadcrumb with Ellipsis
+
+<CodePreview
+	language="tsx"
+	code={`import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbPage, BreadcrumbSeparator, BreadcrumbEllipsis } from "@/components/ui/pixelact-ui/breadcrumb";
+
+export function EllipsisBreadcrumb() {
+	return (
+		<Breadcrumb font="pixel">
+			<BreadcrumbList>
+				<BreadcrumbItem>
+					<BreadcrumbLink href="/">Home</BreadcrumbLink>
+				</BreadcrumbItem>
+				<BreadcrumbSeparator />
+				<BreadcrumbEllipsis />
+				<BreadcrumbSeparator />
+				<BreadcrumbItem>
+					<BreadcrumbPage>Current</BreadcrumbPage>
+				</BreadcrumbItem>
+			</BreadcrumbList>
+		</Breadcrumb>
+	);
+}`}
+>
+	<Breadcrumb font="pixel">
+		<BreadcrumbList>
+			<BreadcrumbItem>
+				<BreadcrumbLink href="/">Home</BreadcrumbLink>
+			</BreadcrumbItem>
+			<BreadcrumbSeparator />
+			<BreadcrumbEllipsis />
+			<BreadcrumbSeparator />
+			<BreadcrumbItem>
+				<BreadcrumbPage>Current</BreadcrumbPage>
+			</BreadcrumbItem>
+		</BreadcrumbList>
+	</Breadcrumb>
+</CodePreview>
+
+### Without pixel font
+
+<CodePreview
+	language="tsx"
+	code={`import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/pixelact-ui/breadcrumb";
+
+export function PixelFontBreadcrumb() {
+	return (
+		<Breadcrumb font="normal">
+			<BreadcrumbList>
+				<BreadcrumbItem>
+					<BreadcrumbLink href="/">Home</BreadcrumbLink>
+				</BreadcrumbItem>
+				<BreadcrumbSeparator />
+				<BreadcrumbItem>
+					<BreadcrumbPage>Pixel</BreadcrumbPage>
+				</BreadcrumbItem>
+			</BreadcrumbList>
+		</Breadcrumb>
+	);
+}`}
+>
+	<Breadcrumb font="normal">
+		<BreadcrumbList>
+			<BreadcrumbItem>
+				<BreadcrumbLink href="/">Home</BreadcrumbLink>
+			</BreadcrumbItem>
+			<BreadcrumbSeparator />
+			<BreadcrumbItem>
+				<BreadcrumbPage>Pixel</BreadcrumbPage>
+			</BreadcrumbItem>
+		</BreadcrumbList>
+	</Breadcrumb>
+</CodePreview>

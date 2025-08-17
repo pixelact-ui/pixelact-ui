@@ -36,6 +36,11 @@ const navItems: {
       path: routes.docs.components.badge,
       isNew: true,
     },
+    {
+      name: "Breadcrumb",
+      path: routes.docs.components.breadcrumb,
+      isNew: true,
+    },
     { name: "Button", path: routes.docs.components.button },
     {
       name: "Dialog",
