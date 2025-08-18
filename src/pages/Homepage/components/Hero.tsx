@@ -3,13 +3,6 @@ import { cn } from "@/lib/utils";
 import { routes } from "@/src/utils";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/pixelact-ui/button";
-import {
-  Select,
-  SelectContent,
-  SelectTrigger,
-  SelectValue,
-  SelectItem,
-} from "@/components/ui/pixelact-ui/select";
 
 const Hero = () => {
   const navigate = useNavigate();
