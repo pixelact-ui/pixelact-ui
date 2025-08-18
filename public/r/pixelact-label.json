@@ -10,7 +10,7 @@
   "files": [
     {
       "path": "components/ui/pixelact-ui/label/index.tsx",
-      "content": "import * as React from \"react\";\r\nimport * as LabelPrimitive from \"@radix-ui/react-label\";\r\nimport { cn } from \"@/lib/utils\";\r\nimport { Label as ShadcnLabel } from \"@/components/ui/label\";\r\n\r\nimport \"@/components/ui/pixelact-ui/styles/styles.css\";\r\n\r\ninterface PixelLabelProps\r\n  extends React.ComponentProps<typeof LabelPrimitive.Root> {\r\n  asChild?: boolean;\r\n}\r\n\r\nfunction Label({ className, ...props }: PixelLabelProps) {\r\n  return <ShadcnLabel className={cn(\"pixel-font\", className)} {...props} />;\r\n}\r\n\r\nexport { Label };\r\n",
+      "content": "import * as React from \"react\";\r\nimport * as LabelPrimitive from \"@radix-ui/react-label\";\r\nimport { cn } from \"@/lib/utils\";\r\nimport { Label as ShadcnLabel } from \"@/components/ui/label\";\r\n\r\nimport \"@/components/ui/pixelact-ui/styles/styles.css\";\r\n\r\ninterface PixelLabelProps\r\n  extends React.ComponentProps<typeof LabelPrimitive.Root> {\r\n  asChild?: boolean;\r\n}\r\n\r\nfunction Label({ className, ...props }: PixelLabelProps) {\r\n  return (\r\n    <ShadcnLabel\r\n      className={cn(\"pixel-font text-foreground\", className)}\r\n      {...props}\r\n    />\r\n  );\r\n}\r\n\r\nexport { Label };\r\n",
       "type": "registry:component",
       "target": "components/ui/pixelact-ui/label.tsx"
     },
