@@ -19,33 +19,28 @@ const navItems: {
     { name: "Contributing", path: routes.docs.contributing },
   ],
   Components: [
-    { name: "Accordion", path: routes.docs.components.accordion, isNew: true },
-    { name: "Alert", path: routes.docs.components.alert, isNew: true },
+    { name: "Accordion", path: routes.docs.components.accordion },
+    { name: "Alert", path: routes.docs.components.alert },
     {
       name: "Alert Dialog",
       path: routes.docs.components.alertDialog,
-      isNew: true,
     },
     {
       name: "Avatar",
       path: routes.docs.components.avatar,
-      isNew: true,
     },
     {
       name: "Badge",
       path: routes.docs.components.badge,
-      isNew: true,
     },
     {
       name: "Breadcrumb",
       path: routes.docs.components.breadcrumb,
-      isNew: true,
     },
     { name: "Button", path: routes.docs.components.button },
     {
       name: "Calendar",
       path: routes.docs.components.calendar,
-      isNew: true,
     },
     {
       name: "Dialog",
@@ -59,7 +54,6 @@ const navItems: {
     {
       name: "Select",
       path: routes.docs.components.select,
-      isNew: true,
     },
     {
       name: "Text Area",
@@ -68,6 +62,7 @@ const navItems: {
     {
       name: "More coming soon",
       path: "/",
+      workInProgress: true,
     },
   ],
 };
@@ -108,7 +103,7 @@ export function DocsLayout() {
                       {item.name}
                     </span>
                     {item.isNew && (
-                      <span className="flex gap-4 text-green-700 dark:text-green-500">
+                      <span className="flex gap-4 text-green-500 dark:text-green-300">
                         <Sparkles />
                       </span>
                     )}
