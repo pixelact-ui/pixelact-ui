@@ -18,7 +18,7 @@ import {
 
 import "@/components/ui/pixelact-ui/styles/styles.css";
 
-export const inputVariants = cva("", {
+export const inputVariants = cva("text-foreground", {
   variants: {
     font: {
       normal: "",

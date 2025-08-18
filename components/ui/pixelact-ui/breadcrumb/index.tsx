@@ -20,7 +20,7 @@ const breadcrumbVariants = cva("", {
       pixel: "pixel-font",
     },
     variant: {
-      default: "text-card-foreground",
+      default: "text-foreground",
       destructive:
         "text-destructive [&>svg]:text-current *:data-[slot=alert-description]:text-destructive/90",
     },

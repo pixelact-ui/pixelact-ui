@@ -62,15 +62,15 @@ export function DestructiveAlert() {
   </Alert>
 </CodePreview>
 
-### Pixel font
+### Other font
 
 <CodePreview
     language="tsx"
     code={`import { Alert, AlertTitle, AlertDescription } from "@/components/ui/pixelact-ui/alert";
 
-export function PixelFontAlert() {
+export function OtherFontAlert() {
     return (
-        <Alert font="pixel">
+        <Alert font="normal">
             <AlertTitle>Information</AlertTitle>
             <AlertDescription>
                 This is a basic alert message with pixel art styling.
@@ -79,7 +79,7 @@ export function PixelFontAlert() {
     );
 }`}
 >
-    <Alert font={"pixel"} className="w-full">
+    <Alert font={"normal"} className="w-full">
         <AlertTitle>Information</AlertTitle>
         <AlertDescription>
             This is a basic alert message with pixel art styling.

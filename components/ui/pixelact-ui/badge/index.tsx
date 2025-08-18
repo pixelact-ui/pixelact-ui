@@ -2,17 +2,17 @@ import { type VariantProps, cva } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 import { Badge as ShadcnBadge } from "@/components/ui/badge";
 
-const badgeVariants = cva("", {
+const badgeVariants = cva("border-none", {
   variants: {
     font: {
       normal: "",
       pixel: "pixel-font",
     },
     variant: {
-      default: "bg-primary border-primary",
-      destructive: "bg-destructive border-destructive",
-      outline: "bg-background border-background",
-      secondary: "bg-secondary border-secondary",
+      default: "bg-primary",
+      destructive: "bg-destructive",
+      outline: "bg-background",
+      secondary: "bg-secondary",
     },
   },
   defaultVariants: {

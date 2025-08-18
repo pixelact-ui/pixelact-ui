@@ -21,7 +21,7 @@ const alertVariants = cva("", {
   },
   defaultVariants: {
     variant: "default",
-    font: "normal",
+    font: "pixel",
   },
 });
 

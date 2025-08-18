@@ -62,7 +62,7 @@ function AlertDialogOverlay({
   return <ShadcnAlertDialogOverlay className={cn(className)} {...props} />;
 }
 
-interface BitAlertDialogContentProps
+interface AlertDialogContentProps
   extends React.ComponentProps<typeof AlertDialogPrimitive.Content>,
     VariantProps<typeof alertDialogVariants> {}
 
@@ -71,25 +71,20 @@ function AlertDialogContent({
   children,
   font,
   ...props
-}: BitAlertDialogContentProps) {
+}: AlertDialogContentProps) {
   return (
     <AlertDialogPortal>
       <AlertDialogOverlay />
       <>
         <ShadcnAlertDialogContent
           className={cn(
-            "rounded-none border-y-6 border-foreground dark:border-ring",
+            "rounded-none shadow-(--pixel-box-shadow)",
             alertDialogVariants({ font }),
             className
           )}
           {...props}
         >
           {children}
-
-          <div
-            className="absolute inset-0 border-x-6 -mx-1.5 border-foreground dark:border-ring pointer-events-none"
-            aria-hidden="true"
-          />
         </ShadcnAlertDialogContent>
       </>
     </AlertDialogPortal>
@@ -109,7 +104,10 @@ function AlertDialogFooter({
 }: React.ComponentProps<"div">) {
   return (
     <ShadcnAlertDialogFooter
-      className={cn("flex flex-col-reverse sm:flex-row gap-4", className)}
+      className={cn(
+        "flex flex-col-reverse sm:flex-row gap-4 sm:items-center sm:justify-end",
+        className
+      )}
       {...props}
     />
   );
@@ -121,7 +119,7 @@ function AlertDialogTitle({
 }: React.ComponentProps<typeof AlertDialogPrimitive.Title>) {
   return (
     <ShadcnAlertDialogTitle
-      className={cn("font-normal", className)}
+      className={cn("font-normal text-foreground", className)}
       {...props}
     />
   );
@@ -139,7 +137,10 @@ function AlertDialogAction({
   ...props
 }: React.ComponentProps<typeof AlertDialogPrimitive.Action>) {
   return (
-    <ShadcnAlertDialogTrigger className={cn("w-full", className)} {...props} />
+    <ShadcnAlertDialogTrigger
+      className={cn("w-full md:w-auto", className)}
+      {...props}
+    />
   );
 }
 
@@ -148,7 +149,10 @@ function AlertDialogCancel({
   ...props
 }: React.ComponentProps<typeof AlertDialogPrimitive.Cancel>) {
   return (
-    <ShadcnAlertDialogTrigger className={cn("w-full", className)} {...props} />
+    <ShadcnAlertDialogTrigger
+      className={cn("w-full md:w-auto", className)}
+      {...props}
+    />
   );
 }
 
