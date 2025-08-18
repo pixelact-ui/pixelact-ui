@@ -33,13 +33,13 @@ This will automatically install the components and their dependencies to your `c
 After installing components via the registry, use them like this:
 
 ```tsx
-import { Button } from "@/components/ui/pixelact-ui/button/button";
-import { Input } from "@/components/ui/pixelact-ui/input/input";
+import { Button } from "@/components/ui/pixelact-ui/button";
+import { Input } from "@/components/ui/pixelact-ui/input";
 import {
   Dialog,
   DialogContent,
   DialogTrigger,
-} from "@/components/ui/pixelact-ui/dialog/dialog";
+} from "@/components/ui/pixelact-ui/dialog";
 
 export default function App() {
   return (
@@ -61,20 +61,6 @@ export default function App() {
 }
 ```
 
----
-
-## 📚 Available Components
-
-| Component    | Registry URL                                      | Description                                |
-| ------------ | ------------------------------------------------- | ------------------------------------------ |
-| **Button**   | `https://pixelactui.com/r/pixelact-button.json`   | Pixel-styled button with multiple variants |
-| **Input**    | `https://pixelactui.com/r/pixelact-input.json`    | Retro input field with pixel styling       |
-| **Textarea** | `https://pixelactui.com/r/pixelact-textarea.json` | Pixel-themed textarea component            |
-| **Dialog**   | `https://pixelactui.com/r/pixelact-dialog.json`   | Modal dialog with pixel aesthetics         |
-| **Label**    | `https://pixelactui.com/r/pixelact-label.json`    | Form labels with pixel font styling        |
-
-> More components coming soon — contributions welcome!
-
 ## 🎨 Theming & Customization
 
 - **Registry-based**: Components are copied to your project, fully customizable
@@ -85,7 +71,7 @@ export default function App() {
 ### Customization Example
 
 ```tsx
-import { Button } from "@/components/ui/pixelact-ui/button/button";
+import { Button } from "@/components/ui/pixelact-ui/button";
 
 function CustomButton() {
   return (
@@ -105,12 +91,7 @@ function CustomButton() {
 
 Visit our documentation for detailed usage examples and API references:
 
-- [Installation Guide](https://pixelactui.com/docs/installation)
-- [Button Component](https://pixelactui.com/docs/button)
-- [Input Component](https://pixelactui.com/docs/input)
-- [Dialog Component](https://pixelactui.com/docs/dialog)
-- [Textarea Component](https://pixelactui.com/docs/textarea)
-- [Label Component](https://pixelactui.com/docs/label)
+[Documentation](https://pixelactui.com/docs/installation)
 
 ---
 
