@@ -13,7 +13,7 @@ interface PixelLabelProps
 function Label({ className, ...props }: PixelLabelProps) {
   return (
     <ShadcnLabel
-      className={cn("pixel-font text-foreground", className)}
+      className={cn("pixel-font text-foreground mb-2", className)}
       {...props}
     />
   );

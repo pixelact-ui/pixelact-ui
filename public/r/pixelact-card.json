@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "pixelact-card",
+  "type": "registry:component",
+  "title": "Pixelact Card",
+  "description": "A simple card component.",
+  "registryDependencies": [
+    "card"
+  ],
+  "files": [
+    {
+      "path": "components/ui/pixelact-ui/card/index.tsx",
+      "content": "import { type VariantProps, cva } from \"class-variance-authority\";\r\n\r\nimport { cn } from \"@/lib/utils\";\r\n\r\nimport {\r\n  Card as ShadcnCard,\r\n  CardAction as ShadcnCardAction,\r\n  CardContent as ShadcnCardContent,\r\n  CardDescription as ShadcnCardDescription,\r\n  CardFooter as ShadcnCardFooter,\r\n  CardHeader as ShadcnCardHeader,\r\n  CardTitle as ShadcnCardTitle,\r\n} from \"@/components/ui/card\";\r\n\r\nimport \"@/components/ui/pixelact-ui/styles/styles.css\";\r\n\r\nexport const cardVariants = cva(\"\", {\r\n  variants: {\r\n    font: {\r\n      normal: \"\",\r\n      pixel: \"pixel-font\",\r\n    },\r\n  },\r\n  defaultVariants: {\r\n    font: \"pixel\",\r\n  },\r\n});\r\n\r\nexport interface CardProps\r\n  extends React.ComponentProps<\"div\">,\r\n    VariantProps<typeof cardVariants> {\r\n  asChild?: boolean;\r\n}\r\n\r\nfunction Card({ ...props }: CardProps) {\r\n  const { className, font } = props;\r\n\r\n  return (\r\n    <ShadcnCard\r\n      {...props}\r\n      className={cn(\r\n        \"rounded-none border-0 bg-card shadow-(--pixel-box-shadow) box-shadow-margin\",\r\n        cardVariants({ font }),\r\n        className\r\n      )}\r\n    />\r\n  );\r\n}\r\n\r\nfunction CardHeader({ ...props }: CardProps) {\r\n  const { className } = props;\r\n\r\n  return <ShadcnCardHeader className={cn(\"\", className)} {...props} />;\r\n}\r\n\r\nfunction CardTitle({ ...props }: CardProps) {\r\n  const { className } = props;\r\n\r\n  return (\r\n    <ShadcnCardTitle\r\n      className={cn(\"font-normal text-lg\", className)}\r\n      {...props}\r\n    />\r\n  );\r\n}\r\n\r\nfunction CardDescription({ ...props }: CardProps) {\r\n  const { className } = props;\r\n\r\n  return <ShadcnCardDescription className={cn(className)} {...props} />;\r\n}\r\n\r\nfunction CardAction({ ...props }: CardProps) {\r\n  const { className } = props;\r\n\r\n  return <ShadcnCardAction className={cn(className)} {...props} />;\r\n}\r\n\r\nfunction CardContent({ ...props }: CardProps) {\r\n  const { className } = props;\r\n\r\n  return <ShadcnCardContent className={cn(className)} {...props} />;\r\n}\r\n\r\nfunction CardFooter({ ...props }: CardProps) {\r\n  const { className } = props;\r\n\r\n  return (\r\n    <ShadcnCardFooter\r\n      data-slot=\"card-footer\"\r\n      className={cn(className)}\r\n      {...props}\r\n    />\r\n  );\r\n}\r\n\r\nexport {\r\n  Card,\r\n  CardHeader,\r\n  CardFooter,\r\n  CardTitle,\r\n  CardAction,\r\n  CardDescription,\r\n  CardContent,\r\n};\r\n",
+      "type": "registry:component",
+      "target": "components/ui/pixelact-ui/card.tsx"
+    },
+    {
+      "path": "components/ui/pixelact-ui/styles/styles.css",
+      "content": "@import url(\"https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap\");\r\n\r\n:root {\r\n  --box-shadow-width: 4px;\r\n  --pixel-box-shadow: calc(-1 * (var(--box-shadow-width))) 0 0 0 black,\r\n    var(--box-shadow-width) 0 0 0 black, 0 var(--box-shadow-width) 0 0 black,\r\n    0 calc(-1 * (var(--box-shadow-width))) 0 0 black;\r\n  --pixel-box-shadow-destructive: calc(-1 * (var(--box-shadow-width))) 0 0 0\r\n      var(--destructive),\r\n    var(--box-shadow-width) 0 0 0 var(--destructive),\r\n    0 var(--box-shadow-width) 0 0 var(--destructive),\r\n    0 calc(-1 * (var(--box-shadow-width))) 0 0 var(--destructive);\r\n  --default-inner-border-color: rgb(200, 200, 200);\r\n}\r\n\r\n.dark {\r\n  --pixel-box-shadow: calc(-1 * (var(--box-shadow-width))) 0 0 0 var(--ring),\r\n    var(--box-shadow-width) 0 0 0 var(--ring),\r\n    0 var(--box-shadow-width) 0 0 var(--ring),\r\n    0 calc(-1 * (var(--box-shadow-width))) 0 0 var(--ring);\r\n}\r\n\r\n.pixel-font {\r\n  font-family: \"Press Start 2P\", system-ui, -apple-system, sans-serif;\r\n  line-height: 1.5;\r\n  letter-spacing: 0.5px;\r\n}\r\n\r\n.box-shadow-margin {\r\n  margin: var(--box-shadow-width);\r\n}\r\n",
+      "type": "registry:style",
+      "target": "components/ui/pixelact-ui/styles/styles.css"
+    }
+  ]
+}

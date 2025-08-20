@@ -21,49 +21,19 @@ const navItems: {
   Components: [
     { name: "Accordion", path: routes.docs.components.accordion },
     { name: "Alert", path: routes.docs.components.alert },
-    {
-      name: "Alert Dialog",
-      path: routes.docs.components.alertDialog,
-    },
-    {
-      name: "Avatar",
-      path: routes.docs.components.avatar,
-    },
-    {
-      name: "Badge",
-      path: routes.docs.components.badge,
-    },
-    {
-      name: "Breadcrumb",
-      path: routes.docs.components.breadcrumb,
-    },
+    { name: "Alert Dialog", path: routes.docs.components.alertDialog },
+    { name: "Avatar", path: routes.docs.components.avatar },
+    { name: "Badge", path: routes.docs.components.badge },
+    { name: "Breadcrumb", path: routes.docs.components.breadcrumb },
     { name: "Button", path: routes.docs.components.button },
-    {
-      name: "Calendar",
-      path: routes.docs.components.calendar,
-    },
-    {
-      name: "Dialog",
-      path: routes.docs.components.dialog,
-    },
-    {
-      name: "Input",
-      path: routes.docs.components.input,
-    },
+    { name: "Calendar", path: routes.docs.components.calendar },
+    { name: "Card", path: routes.docs.components.card },
+    { name: "Dialog", path: routes.docs.components.dialog },
+    { name: "Input", path: routes.docs.components.input },
     { name: "Label", path: routes.docs.components.label },
-    {
-      name: "Select",
-      path: routes.docs.components.select,
-    },
-    {
-      name: "Text Area",
-      path: routes.docs.components.textarea,
-    },
-    {
-      name: "More coming soon",
-      path: "/",
-      workInProgress: true,
-    },
+    { name: "Select", path: routes.docs.components.select },
+    { name: "Text Area", path: routes.docs.components.textarea },
+    { name: "More coming soon", path: "/", workInProgress: true },
   ],
 };
 

@@ -78,7 +78,7 @@ function AlertDialogContent({
       <>
         <ShadcnAlertDialogContent
           className={cn(
-            "rounded-none shadow-(--pixel-box-shadow)",
+            "rounded-none shadow-(--pixel-box-shadow) box-shadow-margin",
             alertDialogVariants({ font }),
             className
           )}

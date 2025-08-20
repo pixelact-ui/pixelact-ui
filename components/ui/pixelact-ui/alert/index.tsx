@@ -36,7 +36,7 @@ function Alert({ children, ...props }: AlertProps) {
     <ShadcnAlert
       {...props}
       className={cn(
-        "relative shadow-(--pixel-box-shadow) rounded-none border-none bg-background",
+        "relative shadow-(--pixel-box-shadow) box-shadow-margin rounded-none border-none bg-background",
         alertVariants({ variant, font }),
         className
       )}

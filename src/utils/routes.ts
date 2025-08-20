@@ -18,6 +18,7 @@ interface Routes {
       breadcrumb: string;
       calendar: string;
       select: string;
+      card: string;
     };
   };
   showcase: string;
@@ -43,6 +44,7 @@ const routes: Routes = {
       breadcrumb: "/docs/breadcrumb",
       calendar: "/docs/calendar",
       select: "/docs/select",
+      card: "/docs/card",
     }
   },
   showcase: "/showcase",

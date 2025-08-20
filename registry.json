@@ -161,6 +161,25 @@
       ]
     },
     {
+      "name": "pixelact-card",
+      "type": "registry:component",
+      "title": "Pixelact Card",
+      "description": "A simple card component.",
+      "registryDependencies": ["card"],
+      "files": [
+        {
+          "path": "components/ui/pixelact-ui/card/index.tsx",
+          "type": "registry:component",
+          "target": "components/ui/pixelact-ui/card.tsx"
+        },
+        {
+          "path": "components/ui/pixelact-ui/styles/styles.css",
+          "type": "registry:style",
+          "target": "components/ui/pixelact-ui/styles/styles.css"
+        }
+      ]
+    },
+    {
       "name": "pixelact-dialog",
       "type": "registry:component",
       "title": "Pixelact Dialog",

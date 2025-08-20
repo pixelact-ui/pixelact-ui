@@ -46,6 +46,7 @@ const mobileNavigationItems: { name: string; items: NavigationItem[] }[] = [
       { name: "Breadcrumb", path: routes.docs.components.breadcrumb },
       { name: "Button", path: routes.docs.components.button },
       { name: "Calendar", path: routes.docs.components.calendar },
+      { name: "Card", path: routes.docs.components.card },
       { name: "Dialog", path: routes.docs.components.dialog },
       { name: "Input", path: routes.docs.components.input },
       { name: "Text Area", path: routes.docs.components.textarea },

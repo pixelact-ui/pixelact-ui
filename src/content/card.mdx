@@ -1,0 +1,125 @@
+
+import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, CardAction } from "@/components/ui/pixelact-ui/card";
+import { Button } from "@/components/ui/pixelact-ui/button";
+import { Button as ShadcnButton } from "@/components/ui/button";
+
+## Card
+
+A pixel art styled card component built on top of shadcn/ui's Card. Features retro styling, pixel font, and full support for all underlying card props. Useful for grouping content, displaying information, and more.
+
+### Installation
+
+Add the Card component to your project using the shadcn CLI:
+
+```bash
+npx shadcn@latest add https://pixelactui.com/r/pixelact-card.json
+```
+
+This will automatically install the component and its dependencies to your project.
+
+### Basic Card
+
+<CodePreview
+	language="tsx"
+	code={`import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/pixelact-ui/card";
+
+export function BasicCard() {
+	return (
+		<Card>
+			<CardHeader>
+				<CardTitle>Card Title</CardTitle>
+				<CardDescription>This is a pixelact card component.</CardDescription>
+			</CardHeader>
+			<CardContent>
+				Here is some content inside the card.
+			</CardContent>
+			<CardFooter>
+				<Button>Action</Button>
+			</CardFooter>
+		</Card>
+	);
+}`}
+>
+	<Card className="max-w-xs">
+		<CardHeader>
+			<CardTitle>Card Title</CardTitle>
+			<CardDescription>This is a pixelact card component.</CardDescription>
+		</CardHeader>
+		<CardContent>
+			Here is some content inside the card.
+		</CardContent>
+		<CardFooter>
+			<Button className="w-full">Action</Button>
+		</CardFooter>
+	</Card>
+</CodePreview>
+
+### Card with Actions
+
+<CodePreview
+	language="tsx"
+	code={`import { Card, CardHeader, CardTitle, CardContent, CardFooter } from "@/components/ui/pixelact-ui/card";
+import { Button } from "@/components/ui/pixelact-ui/button";
+
+export function CardWithActions() {
+	return (
+		<Card>
+			<CardHeader>
+				<CardTitle>Card with Actions</CardTitle>
+			</CardHeader>
+			<CardContent>
+				This card has action buttons below.
+			</CardContent>
+			<CardFooter>
+				<Button variant="success">Accept</Button>
+				<Button variant="destructive">Decline</Button>
+			</CardFooter>
+		</Card>
+	);
+}`}
+>
+	<Card className="max-w-xs">
+		<CardHeader>
+			<CardTitle>Card with Actions</CardTitle>
+		</CardHeader>
+		<CardContent>
+			This card has action.
+		</CardContent>
+		<CardFooter className="gap-2 flex flex-col md:flex-row">
+			<Button className="w-full md:flex-1" variant="success">Accept</Button>
+			<Button className="w-full md:flex-1" variant="destructive">Decline</Button>
+		</CardFooter>
+	</Card>
+</CodePreview>
+
+### Other font
+
+<CodePreview
+	language="tsx"
+	code={`import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/pixelact-ui/card";
+
+export function PixelFontCard() {
+	return (
+		<Card font="normal">
+			<CardHeader>
+				<CardTitle>Other Font Card</CardTitle>
+			</CardHeader>
+			<CardContent>
+				This card can use any font.
+			</CardContent>
+		</Card>
+	);
+}`}
+>
+	<Card font="normal" className="max-w-xs">
+		<CardHeader>
+			<CardTitle>Card with any font</CardTitle>
+		</CardHeader>
+		<CardContent>
+			This card can use any font.
+		</CardContent>
+		<CardFooter>
+			<ShadcnButton className="w-full" variant="outline">Close</ShadcnButton>
+		</CardFooter>
+	</Card>
+</CodePreview>
