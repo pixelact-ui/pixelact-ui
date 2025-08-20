@@ -15,28 +15,7 @@ npx shadcn@latest add https://pixelactui.com/r/pixelact-avatar.json
 
 This will automatically install the component and its dependencies to your project.
 
-### Basic Avatar
-
-<CodePreview
-	language="tsx"
-	code={`import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/pixelact-ui/avatar";
-
-export function BasicAvatar() {
-	return (
-		<Avatar>
-			<AvatarImage src="/logo.svg" alt="User avatar" />
-			<AvatarFallback>AB</AvatarFallback>
-		</Avatar>
-	);
-}`}
->
-	<Avatar>
-		<AvatarImage src="/logo.svg" alt="User avatar" />
-		<AvatarFallback>AB</AvatarFallback>
-	</Avatar>
-</CodePreview>
-
-### Avatar with border
+### Square avatar
 
 <CodePreview
 	language="tsx"
@@ -44,17 +23,59 @@ export function BasicAvatar() {
 
 export function PixelAvatar() {
 	return (
-		<Avatar variant="pixel">
-			<AvatarImage src="/logo.svg" alt="Pixel avatar" />
+		<Avatar variant="square" size="small/medium/large">
+			<AvatarImage src="/avatar.png" alt="Pixel avatar" />
 			<AvatarFallback>PX</AvatarFallback>
 		</Avatar>
 	);
 }`}
 >
-	<Avatar variant="pixel">
-		<AvatarImage src="/logo.svg" alt="Pixel avatar" />
-		<AvatarFallback>PX</AvatarFallback>
-	</Avatar>
+
+	<div className="flex gap-4 items-center">
+		<Avatar variant="square" size="small">
+			<AvatarImage src="https://github.com/shadcn.png" alt="Pixel avatar" />
+			<AvatarFallback>PX</AvatarFallback>
+		</Avatar>
+		<Avatar variant="square">
+			<AvatarImage src="https://github.com/shadcn.png" alt="Pixel avatar" />
+			<AvatarFallback>PX</AvatarFallback>
+		</Avatar>
+		<Avatar variant="square" size="large">
+			<AvatarImage src="https://github.com/shadcn.png" alt="Pixel avatar" />
+			<AvatarFallback>PX</AvatarFallback>
+		</Avatar>
+	</div>
+</CodePreview>
+
+### Round avatar
+
+<CodePreview
+	language="tsx"
+	code={`import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/pixelact-ui/avatar";
+
+export function RoundAvatar() {
+	return (
+		<Avatar variant="round" size="small/medium/large">
+			<AvatarImage src="/avatar.png" alt="Round avatar" />
+			<AvatarFallback>RA</AvatarFallback>
+		</Avatar>
+	);
+}`}
+>
+	<div className="flex gap-4 items-center">
+		<Avatar variant="round" size="small">
+			<AvatarImage src="https://github.com/shadcn.png" alt="Pixel avatar" />
+			<AvatarFallback>PX</AvatarFallback>
+		</Avatar>
+		<Avatar variant="round">
+			<AvatarImage src="https://github.com/shadcn.png" alt="Pixel avatar" />
+			<AvatarFallback>PX</AvatarFallback>
+		</Avatar>
+		<Avatar variant="round" size="large">
+			<AvatarImage src="https://github.com/shadcn.png" alt="Pixel avatar" />
+			<AvatarFallback>PX</AvatarFallback>
+		</Avatar>
+	</div>
 </CodePreview>
 
 ### Avatar with font
@@ -72,7 +93,7 @@ export function PixelFontAvatar() {
 	);
 }`}
 >
-	<Avatar font="pixel">
+	<Avatar font="pixel" variant="round" size="large">
 		<AvatarFallback>PF</AvatarFallback>
 	</Avatar>
 </CodePreview>
