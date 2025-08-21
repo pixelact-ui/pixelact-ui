@@ -49,6 +49,7 @@ function Calendar({ className, classNames, font, ...props }: CalendarProps) {
         caption_label: `flex gap-2 p-1  ${
           hasDropdowns ? "shadow-(--pixel-box-shadow) box-shadow-margin" : ""
         }`,
+        dropdown_root: cn("relative"),
         months_dropdown: cn("text-black p-2"),
         years_dropdown: cn("text-black p-2"),
         ...classNames,

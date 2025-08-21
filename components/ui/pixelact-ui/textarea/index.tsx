@@ -9,7 +9,7 @@ const pixelTextAreaVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-white text-black ",
+        default: "bg-background text-foreground",
       },
       size: {
         default: "min-h-16 px-3 py-2 text-sm",
