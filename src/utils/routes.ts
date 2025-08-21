@@ -19,6 +19,7 @@ interface Routes {
       calendar: string;
       select: string;
       card: string;
+      carousel: string;
     };
   };
   showcase: string;
@@ -45,6 +46,7 @@ const routes: Routes = {
       calendar: "/docs/calendar",
       select: "/docs/select",
       card: "/docs/card",
+      carousel: "/docs/carousel",
     }
   },
   showcase: "/showcase",

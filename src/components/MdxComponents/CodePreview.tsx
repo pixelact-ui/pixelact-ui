@@ -9,6 +9,7 @@ interface CodePreviewProps {
   code: string;
   language?: string;
   className?: string;
+  contentClassName?: string;
 }
 
 export function CodePreview({
@@ -16,6 +17,7 @@ export function CodePreview({
   code,
   language = "tsx",
   className,
+  contentClassName,
 }: CodePreviewProps) {
   const [activeTab, setActiveTab] = useState<"preview" | "code">("preview");
   const codeRef = useRef<HTMLElement>(null);
@@ -57,9 +59,14 @@ export function CodePreview({
       </div>
 
       {/* Tab Content */}
-      <div className="min-h-[200px]">
+      <div className={cn("min-h-[200px]")}>
         {activeTab === "preview" ? (
-          <div className="p-6 bg-background border border-foreground">
+          <div
+            className={cn(
+              "p-6 bg-background border border-foreground",
+              contentClassName
+            )}
+          >
             <div className="flex items-center justify-center min-h-[150px]">
               {children}
             </div>

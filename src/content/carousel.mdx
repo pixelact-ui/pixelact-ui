@@ -1,0 +1,95 @@
+
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/pixelact-ui/carousel";
+
+## Carousel
+
+A pixel art styled carousel component built on top of embla-carousel and shadcn/ui's Carousel. Features retro styling, pixel font, and full support for all underlying carousel props. Useful for image sliders, product showcases, and more.
+
+### Installation
+
+Add the Carousel component to your project using the shadcn CLI:
+
+```bash
+npx shadcn@latest add https://pixelactui.com/r/pixelact-carousel.json
+```
+
+This will automatically install the component and its dependencies to your project.
+
+### Basic Carousel
+
+<CodePreview
+	language="tsx"
+	code={`import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/pixelact-ui/carousel";
+
+export function BasicCarousel() {
+	return (
+		<Carousel className="max-w-md">
+            <CarouselContent className="gap-4">
+                {Array.from({ length: 5 }).map((_, index) => (
+                <CarouselItem key={index}>
+                    <div className="p-1 h-[200px] flex items-center justify-center">
+                    <span>{index + 1}</span>
+                    </div>
+                </CarouselItem>
+                ))}
+            </CarouselContent>
+		<CarouselPrevious />
+		<CarouselNext />
+	</Carousel>
+	);
+}`}
+>
+	<Carousel className="w-full max-w-xs">
+		<CarouselContent className="gap-4">
+        {Array.from({ length: 5 }).map((_, index) => (
+          <CarouselItem key={index}>
+            <div className="p-1 h-[200px] flex items-center justify-center">
+              <span>{index + 1}</span>
+            </div>
+          </CarouselItem>
+        ))}
+      </CarouselContent>
+		<CarouselPrevious />
+		<CarouselNext />
+	</Carousel>
+</CodePreview>
+
+### Vertical Carousel
+
+<CodePreview
+    contentClassName="p-16"
+    language="tsx"
+    code={`import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/pixelact-ui/carousel";
+
+export function VerticalCarousel() {
+	return (
+		<Carousel className="max-w-md" orientation="vertical">
+			<CarouselContent className="gap-4 max-h-[250px]">
+				{Array.from({ length: 5 }).map((_, index) => (
+					<CarouselItem key={index}>
+						<div className="p-1 h-[200px] flex items-center justify-center">
+							<span>{index + 1}</span>
+						</div>
+					</CarouselItem>
+				))}
+			</CarouselContent>
+			<CarouselPrevious />
+			<CarouselNext />
+		</Carousel>
+	);
+}`}
+>
+	<Carousel className="w-full max-w-xs" orientation="vertical">
+		<CarouselContent className="gap-4 max-h-[250px]">
+			{Array.from({ length: 5 }).map((_, index) => (
+				<CarouselItem key={index}>
+					<div className="p-1 h-[200px] flex items-center justify-center">
+						<span>{index + 1}</span>
+					</div>
+				</CarouselItem>
+			))}
+		</CarouselContent>
+		<CarouselPrevious />
+		<CarouselNext />
+	</Carousel>
+</CodePreview>

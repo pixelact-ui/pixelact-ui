@@ -34,6 +34,7 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "date-fns": "^4.1.0",
+    "embla-carousel-react": "^8.6.0",
     "highlight.js": "^11.11.1",
     "lucide-react": "^0.507.0",
     "motion": "^12.10.5",

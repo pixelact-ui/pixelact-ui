@@ -180,6 +180,25 @@
       ]
     },
     {
+      "name": "pixelact-carousel",
+      "type": "registry:component",
+      "title": "Pixelact Carousel",
+      "description": "A simple carousel component.",
+      "registryDependencies": ["carousel"],
+      "files": [
+        {
+          "path": "components/ui/pixelact-ui/carousel/index.tsx",
+          "type": "registry:component",
+          "target": "components/ui/pixelact-ui/carousel.tsx"
+        },
+        {
+          "path": "components/ui/pixelact-ui/styles/styles.css",
+          "type": "registry:style",
+          "target": "components/ui/pixelact-ui/styles/styles.css"
+        }
+      ]
+    },
+    {
       "name": "pixelact-dialog",
       "type": "registry:component",
       "title": "Pixelact Dialog",
