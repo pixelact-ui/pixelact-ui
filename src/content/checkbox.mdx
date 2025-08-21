@@ -1,0 +1,59 @@
+
+import React from "react";
+import { Checkbox } from "@/components/ui/pixelact-ui/checkbox";
+
+## Checkbox
+
+A pixel art styled checkbox component built on top of shadcn/ui's Checkbox. Features retro styling, pixel font, and full support for all underlying checkbox props. Useful for forms, settings, and toggles.
+
+### Installation
+
+Add the Checkbox component to your project using the shadcn CLI:
+
+```bash
+npx shadcn@latest add https://pixelactui.com/r/pixelact-checkbox.json
+```
+
+This will automatically install the component and its dependencies to your project.
+
+### Basic Checkbox
+
+<CodePreview
+	language="tsx"
+	code={`import { Checkbox } from "@/components/ui/pixelact-ui/checkbox";
+
+export function BasicCheckbox() {
+	return (
+		<div>
+            <Checkbox id="checkbox" />
+            <label htmlFor="checkbox">Accept terms</label>
+		</div>
+	);
+}`}
+>
+	<div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+		<Checkbox id="checkbox" />
+		<label htmlFor="checkbox" className="text-foreground">Accept terms</label>
+	</div>
+</CodePreview>
+
+### Disabled Checkbox
+
+<CodePreview
+	language="tsx"
+	code={`import { Checkbox } from "@/components/ui/pixelact-ui/checkbox";
+
+export function DisabledCheckbox() {
+	return (
+		<div>
+			<Checkbox id="disabled-checkbox" disabled />
+			<label htmlFor="disabled-checkbox" style={{ color: '#888' }}>Disabled</label>
+		</div>
+	);
+}`}
+>
+	<div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+		<Checkbox id="disabled-checkbox" disabled />
+		<label htmlFor="disabled-checkbox" style={{ color: '#888' }}>Disabled</label>
+	</div>
+</CodePreview>

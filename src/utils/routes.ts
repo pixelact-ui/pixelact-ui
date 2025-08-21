@@ -20,6 +20,7 @@ interface Routes {
       select: string;
       card: string;
       carousel: string;
+      checkbox: string;
     };
   };
   showcase: string;
@@ -47,6 +48,7 @@ const routes: Routes = {
       select: "/docs/select",
       card: "/docs/card",
       carousel: "/docs/carousel",
+      checkbox: "/docs/checkbox",
     }
   },
   showcase: "/showcase",

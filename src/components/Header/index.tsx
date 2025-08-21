@@ -48,6 +48,7 @@ const mobileNavigationItems: { name: string; items: NavigationItem[] }[] = [
       { name: "Calendar", path: routes.docs.components.calendar },
       { name: "Card", path: routes.docs.components.card },
       { name: "Carousel", path: routes.docs.components.carousel },
+      { name: "Checkbox", path: routes.docs.components.checkbox },
       { name: "Dialog", path: routes.docs.components.dialog },
       { name: "Input", path: routes.docs.components.input },
       { name: "Text Area", path: routes.docs.components.textarea },
@@ -208,16 +209,16 @@ const Header = () => {
         </div>
         {!isMobile && (
           <div className="flex items-center gap-4 cursor-pointer">
-            <div className="flex items-center gap-2 text-xs text-background">
-              <Github
-                className={cn(iconsClassName, "fill-background")}
-                onClick={() =>
-                  window.open(
-                    "https://github.com/pixelact-ui/pixelact-ui",
-                    "__blank"
-                  )
-                }
-              />
+            <div
+              className="flex items-center gap-2 text-xs text-background"
+              onClick={() =>
+                window.open(
+                  "https://github.com/pixelact-ui/pixelact-ui",
+                  "__blank"
+                )
+              }
+            >
+              <Github className={cn(iconsClassName, "fill-background")} />
               <span>{githubStars}</span>
             </div>
             <LightDarkModeIcon />

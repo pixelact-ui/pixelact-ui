@@ -199,6 +199,25 @@
       ]
     },
     {
+      "name": "pixelact-checkbox",
+      "type": "registry:component",
+      "title": "Pixelact Checkbox",
+      "description": "A simple checkbox component.",
+      "registryDependencies": ["checkbox"],
+      "files": [
+        {
+          "path": "components/ui/pixelact-ui/checkbox/index.tsx",
+          "type": "registry:component",
+          "target": "components/ui/pixelact-ui/checkbox.tsx"
+        },
+        {
+          "path": "components/ui/pixelact-ui/styles/styles.css",
+          "type": "registry:style",
+          "target": "components/ui/pixelact-ui/styles/styles.css"
+        }
+      ]
+    },
+    {
       "name": "pixelact-dialog",
       "type": "registry:component",
       "title": "Pixelact Dialog",
