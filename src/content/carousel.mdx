@@ -24,18 +24,19 @@ This will automatically install the component and its dependencies to your proje
 export function BasicCarousel() {
 	return (
 		<Carousel className="max-w-md">
-            <CarouselContent className="gap-4">
-                {Array.from({ length: 5 }).map((_, index) => (
-                <CarouselItem key={index}>
-                    <div className="p-1 h-[200px] flex items-center justify-center">
-                    <span>{index + 1}</span>
-                    </div>
-                </CarouselItem>
-                ))}
-            </CarouselContent>
-		<CarouselPrevious />
-		<CarouselNext />
-	</Carousel>
+			<CarouselContent className="gap-4">
+				{Array.from({ length: 5 }).map((_, index) => (
+					<CarouselItem key={index}>
+						<div className="p-1 h-[200px] flex items-center justify-center">
+							<span>{index + 1}</span>
+						</div>
+					</CarouselItem>
+				))}
+			</CarouselContent>
+			<CarouselPrevious />
+			<CarouselNext />
+		</Carousel>
+	)
 	);
 }`}
 >
