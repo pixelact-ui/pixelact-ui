@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { cn } from "@/lib/utils";
 import { Pre } from "./Pre";
 import hljs from "highlight.js";
-import "highlight.js/styles/base16/edge-dark.css";
+import "highlight.js/styles/hybrid.css";
 
 interface CodePreviewProps {
   children: React.ReactNode;
