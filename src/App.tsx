@@ -1,4 +1,4 @@
-import React, { Suspense, useState } from "react";
+import React, { Suspense, useState, useEffect } from "react";
 import "highlight.js/styles/github-dark.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { routes } from "@/src/utils";
@@ -83,10 +83,47 @@ const RoutesComponent = () => (
   </BrowserRouter>
 );
 
+// List of EU country codes (ISO 3166-1 alpha-2)
+const EU_COUNTRIES = [
+  "AT",
+  "BE",
+  "BG",
+  "HR",
+  "CY",
+  "CZ",
+  "DK",
+  "EE",
+  "FI",
+  "FR",
+  "DE",
+  "GR",
+  "HU",
+  "IE",
+  "IT",
+  "LV",
+  "LT",
+  "LU",
+  "MT",
+  "NL",
+  "PL",
+  "PT",
+  "RO",
+  "SK",
+  "SI",
+  "ES",
+  "SE",
+  "IS",
+  "LI",
+  "NO",
+  "CH",
+];
+
 function App() {
   const [posthogClient, setPosthogClient] = useState<typeof posthog | null>(
     null
   );
+  const [showBanner, setShowBanner] = useState(false);
+  const [geoChecked, setGeoChecked] = useState(false);
 
   const initPostHog = () => {
     posthog.init(import.meta.env.VITE_PUBLIC_POSTHOG_KEY, {
@@ -98,6 +135,31 @@ function App() {
     setPosthogClient(posthog);
   };
 
+  useEffect(() => {
+    // Only run geolocation check once
+    if (geoChecked) return;
+    fetch("https://ipapi.co/json/")
+      .then((res) => res.json())
+      .then((data) => {
+        if (EU_COUNTRIES.includes(data.country_code)) {
+          // In EU: show banner if not declined
+          if (localStorage.getItem("posthog_opt_in") !== "false") {
+            setShowBanner(true);
+          }
+        } else {
+          // Not in EU: always init PostHog
+          initPostHog();
+        }
+      })
+      .catch(() => {
+        // On error, default to showing banner (privacy by default)
+        if (localStorage.getItem("posthog_opt_in") !== "false") {
+          setShowBanner(true);
+        }
+      })
+      .finally(() => setGeoChecked(true));
+  }, [geoChecked]);
+
   return (
     <>
       {posthogClient ? (
@@ -107,15 +169,18 @@ function App() {
       ) : (
         <RoutesComponent />
       )}
-      {!posthog.__loaded &&
-        localStorage.getItem("posthog_opt_in") !== "false" && (
-          <CookiesBanner
-            onAccept={() => initPostHog()}
-            onDecline={() => {
-              localStorage.setItem("posthog_opt_in", "false");
-            }}
-          />
-        )}
+      {showBanner && !posthog.__loaded && (
+        <CookiesBanner
+          onAccept={() => {
+            initPostHog();
+            setShowBanner(false);
+          }}
+          onDecline={() => {
+            localStorage.setItem("posthog_opt_in", "false");
+            setShowBanner(false);
+          }}
+        />
+      )}
     </>
   );
 }
