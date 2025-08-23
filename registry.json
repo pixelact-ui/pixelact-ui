@@ -218,6 +218,25 @@
       ]
     },
     {
+      "name": "pixelact-collapsible",
+      "type": "registry:component",
+      "title": "Pixelact Collapsible",
+      "description": "A simple collapsible component.",
+      "registryDependencies": ["collapsible"],
+      "files": [
+        {
+          "path": "components/ui/pixelact-ui/collapsible/index.tsx",
+          "type": "registry:component",
+          "target": "components/ui/pixelact-ui/collapsible.tsx"
+        },
+        {
+          "path": "components/ui/pixelact-ui/styles/styles.css",
+          "type": "registry:style",
+          "target": "components/ui/pixelact-ui/styles/styles.css"
+        }
+      ]
+    },
+    {
       "name": "pixelact-dialog",
       "type": "registry:component",
       "title": "Pixelact Dialog",

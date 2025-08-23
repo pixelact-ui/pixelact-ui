@@ -21,6 +21,7 @@ interface Routes {
       card: string;
       carousel: string;
       checkbox: string;
+      collapsible: string;
     };
   };
   showcase: string;
@@ -49,6 +50,7 @@ const routes: Routes = {
       card: "/docs/card",
       carousel: "/docs/carousel",
       checkbox: "/docs/checkbox",
+      collapsible: "/docs/collapsible",
     }
   },
   showcase: "/showcase",
