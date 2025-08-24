@@ -36,7 +36,7 @@ export function CodePreview({
           onClick={() => setActiveTab("preview")}
           className={cn(
             "px-4 py-2 text-sm pixel-font transition-colors cursor-pointer",
-            "hover:bg-foreground/10",
+            "hover:bg-foreground/10 hover:text-foreground",
             activeTab === "preview"
               ? "bg-foreground text-background"
               : "bg-background text-foreground"

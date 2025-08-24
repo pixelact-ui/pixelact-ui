@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "pixelact-popover",
+  "type": "registry:component",
+  "title": "Pixelact Popover",
+  "description": "A simple popover component.",
+  "registryDependencies": [
+    "popover"
+  ],
+  "files": [
+    {
+      "path": "components/ui/pixelact-ui/popover/index.tsx",
+      "content": "import * as PopoverPrimitive from \"@radix-ui/react-popover\";\r\nimport { type VariantProps, cva } from \"class-variance-authority\";\r\n\r\nimport { cn } from \"@/lib/utils\";\r\n\r\nimport {\r\n  Popover as ShadcnPopover,\r\n  PopoverAnchor as ShadcnPopoverAnchor,\r\n  PopoverContent as ShadcnPopoverContent,\r\n  PopoverTrigger as ShadcnPopoverTrigger,\r\n} from \"@/components/ui/popover\";\r\n\r\nimport \"@/components/ui/pixelact-ui/styles/styles.css\";\r\n\r\nconst Popover = ShadcnPopover;\r\n\r\nconst PopoverTrigger = ShadcnPopoverTrigger;\r\n\r\nconst PopoverAnchor = ShadcnPopoverAnchor;\r\n\r\nexport const popOverVariants = cva(\"\", {\r\n  variants: {\r\n    font: {\r\n      normal: \"\",\r\n      pixel: \"pixel-font\",\r\n    },\r\n  },\r\n  defaultVariants: {\r\n    font: \"pixel\",\r\n  },\r\n});\r\n\r\nexport interface PopoverProps\r\n  extends React.ComponentProps<typeof PopoverPrimitive.Content>,\r\n    VariantProps<typeof popOverVariants> {}\r\n\r\nfunction PopoverContent({ children, font, className, ...props }: PopoverProps) {\r\n  return (\r\n    <ShadcnPopoverContent\r\n      className={cn(\r\n        \"relative bg-card text-foreground border-none rounded-none mt-1 shadow-(--pixel-box-shadow)\",\r\n        popOverVariants({ font }),\r\n        className\r\n      )}\r\n      {...props}\r\n    >\r\n      {children}\r\n    </ShadcnPopoverContent>\r\n  );\r\n}\r\n\r\nexport { Popover, PopoverTrigger, PopoverContent, PopoverAnchor };\r\n",
+      "type": "registry:component",
+      "target": "components/ui/pixelact-ui/popover.tsx"
+    },
+    {
+      "path": "components/ui/pixelact-ui/styles/styles.css",
+      "content": "@import url(\"https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap\");\r\n\r\n:root {\r\n  --box-shadow-width: 4px;\r\n  --pixel-box-shadow: calc(-1 * (var(--box-shadow-width))) 0 0 0 black,\r\n    var(--box-shadow-width) 0 0 0 black, 0 var(--box-shadow-width) 0 0 black,\r\n    0 calc(-1 * (var(--box-shadow-width))) 0 0 black;\r\n  --pixel-box-shadow-destructive: calc(-1 * (var(--box-shadow-width))) 0 0 0\r\n      var(--destructive),\r\n    var(--box-shadow-width) 0 0 0 var(--destructive),\r\n    0 var(--box-shadow-width) 0 0 var(--destructive),\r\n    0 calc(-1 * (var(--box-shadow-width))) 0 0 var(--destructive);\r\n  --default-inner-border-color: rgb(200, 200, 200);\r\n}\r\n\r\n.dark {\r\n  --pixel-box-shadow: calc(-1 * (var(--box-shadow-width))) 0 0 0 var(--ring),\r\n    var(--box-shadow-width) 0 0 0 var(--ring),\r\n    0 var(--box-shadow-width) 0 0 var(--ring),\r\n    0 calc(-1 * (var(--box-shadow-width))) 0 0 var(--ring);\r\n}\r\n\r\n.pixel-font {\r\n  font-family: \"Press Start 2P\", system-ui, -apple-system, sans-serif;\r\n  line-height: 1.5;\r\n  letter-spacing: 0.5px;\r\n}\r\n\r\n.box-shadow-margin {\r\n  margin: var(--box-shadow-width);\r\n}\r\n",
+      "type": "registry:style",
+      "target": "components/ui/pixelact-ui/styles/styles.css"
+    }
+  ]
+}

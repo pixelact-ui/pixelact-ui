@@ -1,0 +1,47 @@
+
+import { Popover, PopoverTrigger, PopoverContent } from "@/components/ui/pixelact-ui/popover";
+import { Button } from "@/components/ui/pixelact-ui/button";
+
+## Popover
+
+A pixel art styled popover component built on top of shadcn/ui's Popover. Features retro styling, pixel font, and full support for all underlying popover props. Useful for tooltips, menus, and more.
+
+### Installation
+
+Add the Popover component to your project using the shadcn CLI:
+
+```bash
+npx shadcn@latest add https://pixelactui.com/r/pixelact-popover.json
+```
+
+This will automatically install the component and its dependencies to your project.
+
+### Basic Popover
+
+<CodePreview
+	language="tsx"
+	code={`import { Popover, PopoverTrigger, PopoverContent } from "@/components/ui/pixelact-ui/popover";
+import { Button } from "@/components/ui/pixelact-ui/button";
+
+export function BasicPopover() {
+	return (
+		<Popover>
+			<PopoverTrigger>
+				<Button>Open Popover</Button>
+			</PopoverTrigger>
+			<PopoverContent>
+				<div style={{ padding: 8 }}>This is a popover!</div>
+			</PopoverContent>
+		</Popover>
+	);
+}`}
+>
+	<Popover>
+		<PopoverTrigger>
+			<Button>Open Popover</Button>
+		</PopoverTrigger>
+		<PopoverContent>
+			<div style={{ padding: 8 }}>This is a popover!</div>
+		</PopoverContent>
+	</Popover>
+</CodePreview>

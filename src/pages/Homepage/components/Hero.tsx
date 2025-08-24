@@ -9,7 +9,7 @@ const Hero = () => {
 
   return (
     <section
-      className={`relative flex flex-col  justify-center md:items-center p-4 md:p-12 xl:px-24 xl:py-36`}
+      className={`relative flex flex-col justify-center md:items-center p-4 md:p-12 xl:px-24 xl:py-36`}
     >
       <AnimatedGridPattern
         numSquares={30}

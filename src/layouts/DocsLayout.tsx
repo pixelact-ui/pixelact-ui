@@ -35,6 +35,7 @@ const navItems: {
     { name: "Dialog", path: routes.docs.components.dialog },
     { name: "Input", path: routes.docs.components.input },
     { name: "Label", path: routes.docs.components.label },
+    { name: "Popover", path: routes.docs.components.popover },
     { name: "Select", path: routes.docs.components.select },
     { name: "Text Area", path: routes.docs.components.textarea },
     { name: "More coming soon", path: "/", workInProgress: true },

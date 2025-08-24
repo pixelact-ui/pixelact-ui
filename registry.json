@@ -313,6 +313,25 @@
       ]
     },
     {
+      "name": "pixelact-popover",
+      "type": "registry:component",
+      "title": "Pixelact Popover",
+      "description": "A simple popover component.",
+      "registryDependencies": ["popover"],
+      "files": [
+        {
+          "path": "components/ui/pixelact-ui/popover/index.tsx",
+          "type": "registry:component",
+          "target": "components/ui/pixelact-ui/popover.tsx"
+        },
+        {
+          "path": "components/ui/pixelact-ui/styles/styles.css",
+          "type": "registry:style",
+          "target": "components/ui/pixelact-ui/styles/styles.css"
+        }
+      ]
+    },
+    {
       "name": "pixelact-select",
       "type": "registry:component",
       "title": "Pixelact Select",
