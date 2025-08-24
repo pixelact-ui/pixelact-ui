@@ -10,6 +10,7 @@ import {
 import { memo, useCallback, useEffect, useState } from "react";
 import { DarkMode, Github, LightMode, Logo, Menu } from "@/src/assets/icons";
 import { cn } from "@/lib/utils";
+import { usePostHog } from "posthog-js/react";
 
 interface NavigationItem {
   name: string;
@@ -78,6 +79,7 @@ const Header = () => {
     localStorage.getItem("theme") === "dark"
   );
   const theme = localStorage.getItem("theme");
+  const posthog = usePostHog();
 
   useEffect(() => {
     if (theme === "dark") {
@@ -158,9 +160,12 @@ const Header = () => {
                           {section.items.map((subItem) => (
                             <li
                               key={subItem.path}
-                              onClick={() =>
-                                !subItem.disabled && setIsOpen(false)
-                              }
+                              onClick={() => {
+                                posthog?.capture("Clicked Documentation Link", {
+                                  path: subItem.path,
+                                });
+                                if (!subItem.disabled) setIsOpen(false);
+                              }}
                             >
                               {subItem.disabled ? (
                                 <span className="opacity-40">

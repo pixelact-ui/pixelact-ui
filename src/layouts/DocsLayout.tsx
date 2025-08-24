@@ -2,6 +2,7 @@ import { useIsMobile } from "@/hooks/use-mobile";
 import { cn } from "@/lib/utils";
 import { routes } from "@/src/utils";
 import { ConstructionIcon, Sparkles } from "lucide-react";
+import { usePostHog } from "posthog-js/react";
 import { useState } from "react";
 import { NavLink, Outlet } from "react-router-dom";
 
@@ -43,6 +44,7 @@ const navItems: {
 export function DocsLayout() {
   const [currentLink, setCurrentLink] = useState(window.location.pathname);
   const isMobile = useIsMobile();
+  const posthog = usePostHog();
 
   return (
     <div className="flex flex-1 max-w-full bg-background">
@@ -62,6 +64,9 @@ export function DocsLayout() {
                       if (item.workInProgress) {
                         return e.preventDefault();
                       }
+                      posthog?.capture("Clicked Documentation Link", {
+                        path: item.path,
+                      });
                       setCurrentLink(item.path);
                     }}
                     className={cn(
