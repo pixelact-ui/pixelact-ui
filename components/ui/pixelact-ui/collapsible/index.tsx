@@ -23,7 +23,7 @@ function Collapsible({ children, ...props }: CollapsibleProps) {
     <div className={cn("relative", className)}>
       <ShadcnCollapsible
         {...props}
-        className={cn("pixel-font font-normal", className)}
+        className={cn("pixel-font font-normal text-foreground", className)}
       >
         {children}
       </ShadcnCollapsible>
