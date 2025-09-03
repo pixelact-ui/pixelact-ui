@@ -1,10 +1,7 @@
-"use client";
-
 import { Command as CommandPrimitive } from "cmdk";
 
 import { cn } from "@/lib/utils";
 
-import { Separator } from "@/components/ui/pixelact-ui/separator";
 import {
   Command as ShadcnCommand,
   CommandDialog as ShadcnCommandDialog,
