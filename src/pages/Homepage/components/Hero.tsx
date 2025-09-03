@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils";
 import { routes } from "@/src/utils";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/pixelact-ui/button";
+import { CommandExample } from "@/src/components/CommandTest";
 
 const Hero = () => {
   const navigate = useNavigate();
@@ -37,6 +38,7 @@ const Hero = () => {
           Documentation
         </Button>
       </div>
+      <CommandExample />
     </section>
   );
 };

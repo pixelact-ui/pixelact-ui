@@ -23,11 +23,13 @@ interface Routes {
       checkbox: string;
       collapsible: string;
       popover: string;
+      command: string;
     };
   };
   showcase: string;
   notFound: string;
 }
+
 const routes: Routes = {
   root: "/",
   docs: {
@@ -53,6 +55,7 @@ const routes: Routes = {
       checkbox: "/docs/checkbox",
       collapsible: "/docs/collapsible",
       popover: "/docs/popover",
+      command: "/docs/command",
     }
   },
   showcase: "/showcase",

@@ -32,6 +32,7 @@ const navItems: {
     { name: "Carousel", path: routes.docs.components.carousel },
     { name: "Checkbox", path: routes.docs.components.checkbox },
     { name: "Collapsible", path: routes.docs.components.collapsible },
+    { name: "Command", path: routes.docs.components.command },
     { name: "Dialog", path: routes.docs.components.dialog },
     { name: "Input", path: routes.docs.components.input },
     { name: "Label", path: routes.docs.components.label },
