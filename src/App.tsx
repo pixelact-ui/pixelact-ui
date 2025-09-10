@@ -149,6 +149,8 @@ function App() {
         } else {
           // Not in EU: always init PostHog
           initPostHog();
+          localStorage.setItem("posthog_opt_in", "true");
+          setShowBanner(false);
         }
       })
       .catch(() => {
@@ -173,6 +175,7 @@ function App() {
         <CookiesBanner
           onAccept={() => {
             initPostHog();
+            localStorage.setItem("posthog_opt_in", "true");
             setShowBanner(false);
           }}
           onDecline={() => {
