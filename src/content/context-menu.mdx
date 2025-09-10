@@ -1,0 +1,202 @@
+import React from "react";
+import {
+    ContextMenu,
+    ContextMenuTrigger,
+    ContextMenuContent,
+    ContextMenuItem,
+    ContextMenuCheckboxItem,
+    ContextMenuRadioItem,
+    ContextMenuLabel,
+    ContextMenuSeparator,
+    ContextMenuShortcut,
+    ContextMenuGroup,
+    ContextMenuSub,
+    ContextMenuSubContent,
+    ContextMenuSubTrigger,
+    ContextMenuRadioGroup,
+} from "@/components/ui/pixelact-ui/context-menu";
+import { Button } from "@/components/ui/pixelact-ui/button";
+
+## Context Menu
+
+A pixel art styled context menu component built on top of shadcn/ui's ContextMenu. Features retro styling, pixel font, and full support for all underlying context menu props. Useful for right-click menus, actions, and more.
+
+### Installation
+
+Add the ContextMenu component to your project using the shadcn CLI:
+
+```bash
+npx shadcn@latest add https://pixelactui.com/r/pixelact-context-menu.json
+```
+
+This will automatically install the component and its dependencies to your project.
+
+### Basic Context Menu
+
+<CodePreview
+	language="tsx"
+	code={`import {
+	ContextMenu,
+	ContextMenuTrigger,
+	ContextMenuContent,
+	ContextMenuItem,
+	ContextMenuSeparator,
+	ContextMenuShortcut,
+} from "@/components/ui/pixelact-ui/context-menu";
+import { Button } from "@/components/ui/pixelact-ui/button";
+
+export function BasicContextMenu() {
+	return (
+		<ContextMenu>
+			<ContextMenuTrigger asChild>
+				<Button>Right click me</Button>
+			</ContextMenuTrigger>
+			<ContextMenuContent>
+				<ContextMenuItem>Profile</ContextMenuItem>
+				<ContextMenuItem>Settings</ContextMenuItem>
+				<ContextMenuSeparator />
+				<ContextMenuItem>
+					Logout
+					<ContextMenuShortcut>⌘L</ContextMenuShortcut>
+				</ContextMenuItem>
+			</ContextMenuContent>
+		</ContextMenu>
+	);
+}`}
+>
+	<ContextMenu>
+		<ContextMenuTrigger asChild>
+			<Button>Right click me</Button>
+		</ContextMenuTrigger>
+		<ContextMenuContent>
+			<ContextMenuItem>Profile</ContextMenuItem>
+			<ContextMenuItem>Settings</ContextMenuItem>
+			<ContextMenuSeparator />
+			<ContextMenuItem>
+				Logout
+				<ContextMenuShortcut>⌘L</ContextMenuShortcut>
+			</ContextMenuItem>
+		</ContextMenuContent>
+	</ContextMenu>
+</CodePreview>
+
+### Context Menu with Checkbox and Radio Items
+
+<CodePreview
+	language="tsx"
+	code={`import * as React from "react";
+import {
+	ContextMenu,
+	ContextMenuTrigger,
+	ContextMenuContent,
+	ContextMenuItem,
+	ContextMenuCheckboxItem,
+	ContextMenuRadioItem,
+	ContextMenuRadioGroup,
+	ContextMenuSeparator,
+} from "@/components/ui/pixelact-ui/context-menu";
+import { Button } from "@/components/ui/pixelact-ui/button";
+
+export function CheckboxRadioContextMenu() {
+	const [checked, setChecked] = React.useState(true);
+	const [color, setColor] = React.useState("blue");
+	return (
+		<ContextMenu>
+			<ContextMenuTrigger asChild>
+				<Button>Right click for options</Button>
+			</ContextMenuTrigger>
+			<ContextMenuContent>
+				<ContextMenuCheckboxItem checked={checked} onCheckedChange={setChecked}>
+					Show Grid
+				</ContextMenuCheckboxItem>
+				<ContextMenuSeparator />
+				<ContextMenuRadioGroup value={color} onValueChange={setColor}>
+					<ContextMenuRadioItem value="blue">Blue</ContextMenuRadioItem>
+					<ContextMenuRadioItem value="red">Red</ContextMenuRadioItem>
+					<ContextMenuRadioItem value="green">Green</ContextMenuRadioItem>
+				</ContextMenuRadioGroup>
+			</ContextMenuContent>
+		</ContextMenu>
+	);
+}`}
+>
+	{(() => {
+		const [checked, setChecked] = React.useState(true);
+		const [color, setColor] = React.useState("blue");
+		return (
+			<ContextMenu>
+				<ContextMenuTrigger asChild>
+					<Button>Right click for options</Button>
+				</ContextMenuTrigger>
+				<ContextMenuContent>
+					<ContextMenuCheckboxItem checked={checked} onCheckedChange={setChecked}>
+						Show Grid
+					</ContextMenuCheckboxItem>
+					<ContextMenuSeparator />
+					<ContextMenuRadioGroup value={color} onValueChange={setColor}>
+						<ContextMenuRadioItem value="blue">Blue</ContextMenuRadioItem>
+						<ContextMenuRadioItem value="red">Red</ContextMenuRadioItem>
+						<ContextMenuRadioItem value="green">Green</ContextMenuRadioItem>
+					</ContextMenuRadioGroup>
+				</ContextMenuContent>
+			</ContextMenu>
+		);
+	})()}
+</CodePreview>
+
+### Context Menu with Submenu
+
+<CodePreview
+	language="tsx"
+	code={`import {
+	ContextMenu,
+	ContextMenuTrigger,
+	ContextMenuContent,
+	ContextMenuItem,
+	ContextMenuSub,
+	ContextMenuSubTrigger,
+	ContextMenuSubContent,
+	ContextMenuSeparator,
+} from "@/components/ui/pixelact-ui/context-menu";
+import { Button } from "@/components/ui/pixelact-ui/button";
+
+export function SubmenuContextMenu() {
+	return (
+		<ContextMenu>
+			<ContextMenuTrigger asChild>
+				<Button>Right click for submenu</Button>
+			</ContextMenuTrigger>
+			<ContextMenuContent>
+				<ContextMenuItem>Open</ContextMenuItem>
+				<ContextMenuSub>
+					<ContextMenuSubTrigger>More Options</ContextMenuSubTrigger>
+					<ContextMenuSubContent>
+						<ContextMenuItem>Duplicate</ContextMenuItem>
+						<ContextMenuItem>Rename</ContextMenuItem>
+					</ContextMenuSubContent>
+				</ContextMenuSub>
+				<ContextMenuSeparator />
+				<ContextMenuItem>Delete</ContextMenuItem>
+			</ContextMenuContent>
+		</ContextMenu>
+	);
+}`}
+>
+	<ContextMenu>
+		<ContextMenuTrigger asChild>
+			<Button>Right click for submenu</Button>
+		</ContextMenuTrigger>
+		<ContextMenuContent>
+			<ContextMenuItem>Open</ContextMenuItem>
+			<ContextMenuSub>
+				<ContextMenuSubTrigger>More Options</ContextMenuSubTrigger>
+				<ContextMenuSubContent>
+					<ContextMenuItem>Duplicate</ContextMenuItem>
+					<ContextMenuItem>Rename</ContextMenuItem>
+				</ContextMenuSubContent>
+			</ContextMenuSub>
+			<ContextMenuSeparator />
+			<ContextMenuItem>Delete</ContextMenuItem>
+		</ContextMenuContent>
+	</ContextMenu>
+</CodePreview>

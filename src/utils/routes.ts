@@ -24,6 +24,7 @@ interface Routes {
       collapsible: string;
       popover: string;
       command: string;
+      contextMenu: string;
     };
   };
   showcase: string;
@@ -56,6 +57,7 @@ const routes: Routes = {
       collapsible: "/docs/collapsible",
       popover: "/docs/popover",
       command: "/docs/command",
+      contextMenu: "/docs/context-menu",
     }
   },
   showcase: "/showcase",

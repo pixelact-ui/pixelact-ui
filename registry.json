@@ -368,6 +368,25 @@
           "target": "components/ui/pixelact-ui/styles/styles.css"
         }
       ]
+    },
+    {
+      "name": "pixelact-context-menu",
+      "type": "registry:component",
+      "title": "Pixelact Context Menu",
+      "description": "A simple context menu component.",
+      "registryDependencies": ["context-menu"],
+      "files": [
+        {
+          "path": "components/ui/pixelact-ui/context-menu/index.tsx",
+          "type": "registry:component",
+          "target": "components/ui/pixelact-ui/context-menu.tsx"
+        },
+        {
+          "path": "components/ui/pixelact-ui/styles/styles.css",
+          "type": "registry:style",
+          "target": "components/ui/pixelact-ui/styles/styles.css"
+        }
+      ]
     }
   ]
 }

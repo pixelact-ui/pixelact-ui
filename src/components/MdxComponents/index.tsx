@@ -40,7 +40,7 @@ const mdxComponents = {
     />
   ),
   p: (props: ComponentProps<"p">) => (
-    <p {...props} className="text-foreground mb-4 leading-relaxed" />
+    <p {...props} className="text-foreground leading-relaxed" />
   ),
   pre: (props: ComponentProps<typeof Pre>) => <Pre {...props} />,
   blockquote: (props: ComponentProps<"blockquote">) => (
