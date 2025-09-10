@@ -9,7 +9,7 @@ const Hero = () => {
 
   return (
     <section
-      className={`relative flex flex-col justify-center md:items-center p-4 md:p-12 xl:px-24 xl:py-36`}
+      className={`relative pixel-font flex flex-col justify-center p-4 md:p-12 xl:px-24 xl:py-24`}
     >
       <AnimatedGridPattern
         numSquares={30}
@@ -23,17 +23,15 @@ const Hero = () => {
           "md:[mask-image:radial-gradient(800px_circle_at_center,white,transparent)]"
         )}
       />
-      <span className="text-foreground text-2xl md:text-3xl xl:text-5xl border-dashed border-b-4 pixel-font">
+      <span className="text-foreground w-fit text-2xl md:text-3xl xl:text-5xl border-dashed border-b-4 pixel-font">
         Pixelact UI
       </span>
-      <p className="mt-4 font-medium max-w-2xl md:text-2xl text-foreground md:text-center">
-        A pixel art flavored component library.
+      <p className="mt-4 max-w-2xl text-normal md:text-md text-foreground ">
+        A pixel art flavored component library. Works with your favorite
+        framework. Built on top of shadcn/ui. Open source.
       </p>
       <div className="mt-6">
-        <Button
-          className="w-full md:min-w-fit"
-          onClick={() => navigate(routes.docs.installation)}
-        >
+        <Button className="" onClick={() => navigate(routes.docs.installation)}>
           Documentation
         </Button>
       </div>

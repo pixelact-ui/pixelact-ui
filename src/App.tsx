@@ -2,13 +2,13 @@ import React, { Suspense, useState, useEffect } from "react";
 import "highlight.js/styles/github-dark.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { routes } from "@/src/utils";
-import { DocsLayout } from "./layouts/DocsLayout";
 import Layout from "./layouts/Layout";
 import Spinner from "./components/Spinner";
 import mdxComponents from "./components/MdxComponents";
 import { PostHogProvider } from "posthog-js/react";
 import posthog from "posthog-js";
 import CookiesBanner from "./components/CookiesBanner";
+import DocsLayout from "./layouts/DocsLayout";
 
 const LazyHomepage = React.lazy(() => import("./pages/Homepage"));
 const LazyNotFound = React.lazy(() => import("./pages/NotFound"));

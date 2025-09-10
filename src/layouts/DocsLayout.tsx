@@ -44,69 +44,73 @@ const navItems: {
   ],
 };
 
-export function DocsLayout() {
+const DocsLayout = () => {
   const [currentLink, setCurrentLink] = useState(window.location.pathname);
   const isMobile = useIsMobile();
   const posthog = usePostHog();
 
   return (
-    <div className="flex flex-1 max-w-full bg-background">
-      {!isMobile && (
-        <aside className="min-w-72 border-r-4 border-dashed border-foreground mx-12 px-12 py-12 xl:mx-12">
-          <nav className="flex flex-col gap-4 pixel-font">
-            {Object.entries(navItems).map(([section, items]) => (
-              <div key={section} className="flex flex-col gap-2">
-                <h3 className="w-fit text-lg text-foreground border-b-2">
-                  {section}
-                </h3>
-                {items.map((item) => (
-                  <NavLink
-                    key={item.path}
-                    to={item.path}
-                    onClick={(e) => {
-                      if (item.workInProgress) {
-                        return e.preventDefault();
-                      }
-                      posthog?.capture("Clicked Documentation Link", {
-                        path: item.path,
-                      });
-                      setCurrentLink(item.path);
-                    }}
-                    className={cn(
-                      "flex items-center gap-4",
-                      item.workInProgress && "cursor-default",
-                      currentLink === item.path
-                        ? "ml-4 w-fit text-link"
-                        : "ml-4 w-fit text-foreground"
-                    )}
-                  >
-                    <span className={cn(item.workInProgress && "opacity-50")}>
-                      {item.name}
-                    </span>
-                    {item.isNew && (
-                      <span className="flex gap-4 text-green-500 dark:text-green-300">
-                        <Sparkles />
+    <div className="flex flex-1  bg-background">
+      <div className="max-w-[1400px] mx-auto flex">
+        {!isMobile && (
+          <aside className="border-x-2 border-dashed border-foreground/20 p-12">
+            <nav className="flex flex-col gap-4 pixel-font">
+              {Object.entries(navItems).map(([section, items]) => (
+                <div key={section} className="flex flex-col gap-2">
+                  <h3 className="w-fit text-lg text-foreground border-b-2">
+                    {section}
+                  </h3>
+                  {items.map((item) => (
+                    <NavLink
+                      key={item.path}
+                      to={item.path}
+                      onClick={(e) => {
+                        if (item.workInProgress) {
+                          return e.preventDefault();
+                        }
+                        posthog?.capture("Clicked Documentation Link", {
+                          path: item.path,
+                        });
+                        setCurrentLink(item.path);
+                      }}
+                      className={cn(
+                        "flex items-center gap-4",
+                        item.workInProgress && "cursor-default",
+                        currentLink === item.path
+                          ? "ml-4 w-fit text-link"
+                          : "ml-4 w-fit text-foreground"
+                      )}
+                    >
+                      <span className={cn(item.workInProgress && "opacity-50")}>
+                        {item.name}
                       </span>
-                    )}
-                    {item.workInProgress && (
-                      <ConstructionIcon className="text-yellow-500 dark:text-yellow-300" />
-                    )}
-                  </NavLink>
-                ))}
-              </div>
-            ))}
-          </nav>
-        </aside>
-      )}
-
-      <main
-        className={cn(
-          "p-4 md:px-12 md:py-12 w-full xl:max-w-4xl",
-          isMobile && "mt-16"
+                      {item.isNew && (
+                        <span className="flex gap-4 text-green-500 dark:text-green-300">
+                          <Sparkles />
+                        </span>
+                      )}
+                      {item.workInProgress && (
+                        <ConstructionIcon className="text-yellow-500 dark:text-yellow-300" />
+                      )}
+                    </NavLink>
+                  ))}
+                </div>
+              ))}
+            </nav>
+          </aside>
         )}
-      >
-        <Outlet />
-      </main>
+
+        <main
+          className={cn(
+            "p-4 md:px-12 md:py-12 w-full xl:min-w-[1000px] border-r-2 border-dashed border-foreground/20",
+            isMobile && "mt-16"
+          )}
+        >
+          <Outlet />
+        </main>
+      </div>
     </div>
   );
-}
+};
+
+export default DocsLayout;

@@ -104,7 +104,7 @@ const Header = () => {
   const LightDarkModeIcon = useCallback(() => {
     return isDarkMode ? (
       <DarkMode
-        className={cn(iconsClassName, "fill-background")}
+        className={cn(iconsClassName, "text-foreground")}
         onClick={() => {
           setIsDarkMode(false);
           document.documentElement.classList.remove("dark");
@@ -114,7 +114,7 @@ const Header = () => {
       />
     ) : (
       <LightMode
-        className={cn(iconsClassName, "text-background")}
+        className={cn(iconsClassName, "text-foreground")}
         onClick={() => {
           setIsDarkMode(true);
           document.documentElement.classList.remove("light");
@@ -126,9 +126,14 @@ const Header = () => {
   }, [isDarkMode]);
 
   return (
-    <header className={cn("w-full z-50", isMobile && "fixed")}>
-      <nav className="flex gap-12 justify-between items-center h-16 bg-foreground px-4 md:px-12 pixel-font xl:px-24">
-        <div className="flex items-center justify-between md:justify-normal w-full gap-12">
+    <header
+      className={cn(
+        "w-full z-50 bg-background border-b-2 border-dashed border-foreground/20",
+        isMobile && "fixed"
+      )}
+    >
+      <nav className="flex gap-12 justify-between items-center h-16 max-w-[1400px] border-x-2 border-dashed border-foreground/20 mx-auto bg-background px-4 pixel-font">
+        <div className="flex items-center justify-between  md:justify-normal w-full gap-12">
           <NavLink to={routes.root} className=" text-xs text-background">
             <Logo width={30} height={30} />
           </NavLink>
@@ -137,7 +142,7 @@ const Header = () => {
             <div className="flex gap-4">
               <LightDarkModeIcon />
               <Github
-                className={cn(iconsClassName, "fill-background")}
+                className={cn(iconsClassName, "fill-foreground")}
                 onClick={() =>
                   window.open(
                     "https://github.com/pixelact-ui/pixelact-ui",
@@ -149,7 +154,7 @@ const Header = () => {
                 <DrawerTrigger>
                   <Menu
                     className={cn(iconsClassName)}
-                    style={{ color: "var(--background)" }}
+                    style={{ color: "var(--foreground)" }}
                   />
                 </DrawerTrigger>
                 <DrawerContent className="p-4">
@@ -227,8 +232,8 @@ const Header = () => {
                 )
               }
             >
-              <Github className={cn(iconsClassName, "fill-background")} />
-              <span>{githubStars}</span>
+              <Github className={cn(iconsClassName, "fill-foreground")} />
+              <span className="text-foreground">{githubStars}</span>
             </div>
             <LightDarkModeIcon />
           </div>
