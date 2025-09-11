@@ -137,14 +137,20 @@ function App() {
 
   useEffect(() => {
     // Only run geolocation check once
-    if (geoChecked) return;
+    if (geoChecked) {
+      initPostHog();
+      return;
+    }
     fetch("https://ipapi.co/json/")
       .then((res) => res.json())
       .then((data) => {
         if (EU_COUNTRIES.includes(data.country_code)) {
           // In EU: show banner if not declined
-          if (localStorage.getItem("posthog_opt_in") !== "false") {
+          if (localStorage.getItem("posthog_opt_in") === "false") {
             setShowBanner(true);
+          } else if (localStorage.getItem("posthog_opt_in") === "true") {
+            initPostHog();
+            setShowBanner(false);
           }
         } else {
           // Not in EU: always init PostHog
