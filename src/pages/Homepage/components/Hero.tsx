@@ -31,7 +31,10 @@ const Hero = () => {
         framework. Built on top of shadcn/ui. Open source.
       </p>
       <div className="mt-6">
-        <Button className="" onClick={() => navigate(routes.docs.installation)}>
+        <Button
+          className="w-full md:w-fit"
+          onClick={() => navigate(routes.docs.installation)}
+        >
           Documentation
         </Button>
       </div>

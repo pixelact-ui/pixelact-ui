@@ -97,7 +97,7 @@ import {
 import { Textarea } from "@/components/ui/pixelact-ui/textarea";
 import React from "react";
 import { DialogClose } from "@/components/ui/dialog";
-import { useIsMobile } from "@/hooks/use-mobile";
+import { useMediaquery } from "@/hooks/use-mediaquery";
 
 const ComponentsShowcase = () => {
   const [calendarDate, setCalendarDate] = React.useState<Date | undefined>(
@@ -105,7 +105,7 @@ const ComponentsShowcase = () => {
   );
   const [emailNotifications, setEmailNotifications] = React.useState(true);
   const [selectedPlan, setSelectedPlan] = React.useState("pro");
-  const isMobile = useIsMobile();
+  const isMobile = useMediaquery();
 
   return (
     <div className="border-t-2 border-dashed border-foreground/20 text-foreground pixel-font p-4 md:p-12 xl:p-24">

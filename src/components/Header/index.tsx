@@ -1,4 +1,4 @@
-import { useIsMobile } from "@/hooks/use-mobile";
+import { DESKTOP_BREAKPOINT, useMediaquery } from "@/hooks/use-mediaquery";
 import { routes } from "@/src/utils";
 import { NavLink } from "react-router-dom";
 import {
@@ -77,7 +77,7 @@ const iconsClassName = "hover:opacity-80 active:scale-90";
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [githubStars, setGithubStars] = useState(0);
-  const isMobile = useIsMobile();
+  const isSmallDevice = useMediaquery({ breakpoint: DESKTOP_BREAKPOINT });
   const [isDarkMode, setIsDarkMode] = useState(
     localStorage.getItem("theme") === "dark"
   );
@@ -129,16 +129,16 @@ const Header = () => {
     <header
       className={cn(
         "w-full z-50 bg-background border-b-2 border-dashed border-foreground/20",
-        isMobile && "fixed"
+        isSmallDevice && "fixed"
       )}
     >
       <nav className="flex gap-12 justify-between items-center h-16 max-w-[1400px] border-x-2 border-dashed border-foreground/20 mx-auto bg-background px-4 pixel-font">
-        <div className="flex items-center justify-between  md:justify-normal w-full gap-12">
+        <div className="flex items-center justify-between xl:justify-normal w-full gap-12">
           <NavLink to={routes.root} className=" text-xs text-background">
             <Logo width={30} height={30} />
           </NavLink>
 
-          {isMobile ? (
+          {isSmallDevice ? (
             <div className="flex gap-4">
               <LightDarkModeIcon />
               <Github
@@ -203,13 +203,13 @@ const Header = () => {
                   return (
                     <div key={item.path} className="relative">
                       {item.disabled ? (
-                        <span className="text-background opacity-50 cursor-default">
+                        <span className="text-foreground opacity-50 cursor-default">
                           {item.name}
                         </span>
                       ) : (
                         <NavLink
                           to={item.path}
-                          className={cn("text-background")}
+                          className={cn("text-foreground")}
                         >
                           {item.name}
                         </NavLink>
@@ -221,7 +221,7 @@ const Header = () => {
             </ul>
           )}
         </div>
-        {!isMobile && (
+        {!isSmallDevice && (
           <div className="flex items-center gap-4 cursor-pointer">
             <div
               className="flex items-center gap-2 text-xs text-background"
