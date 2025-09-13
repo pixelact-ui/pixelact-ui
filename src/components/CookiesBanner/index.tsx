@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/pixelact-ui/button";
-import { useIsMobile } from "@/hooks/use-mobile";
+import { useMediaquery } from "@/hooks/use-mediaquery";
 import { useState } from "react";
 
 interface CookiesBannerProps {
@@ -9,7 +9,7 @@ interface CookiesBannerProps {
 
 const CookiesBanner = ({ onAccept, onDecline }: CookiesBannerProps) => {
   const [isVisible, setIsVisible] = useState(true);
-  const isMobile = useIsMobile();
+  const isMobile = useMediaquery();
   if (!isVisible) return null;
   return (
     <div className="fixed bottom-0 left-0 right-0 bg-foreground text-foreground border-t-2 p-4 flex flex-col md:flex-row md:items-center md:justify-between gap-4 z-50">

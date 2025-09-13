@@ -1,16 +1,16 @@
 import { cn } from "@/lib/utils";
 import ComponentsShowcase from "./components/ComponentsShowcase";
 import Hero from "./components/Hero";
-import { useIsMobile } from "@/hooks/use-mobile";
+import { DESKTOP_BREAKPOINT, useMediaquery } from "@/hooks/use-mediaquery";
 
 const Homepage: React.FC = () => {
-  const isMobile = useIsMobile();
+  const isSmallDevice = useMediaquery({ breakpoint: DESKTOP_BREAKPOINT });
 
   return (
     <div
       className={cn(
         "flex flex-col bg-background text-foreground",
-        isMobile && "mt-16"
+        isSmallDevice && "mt-16"
       )}
     >
       <div className="max-w-[1400px] mx-auto border-x-2 border-dashed border-foreground/20">
