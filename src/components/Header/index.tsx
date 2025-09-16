@@ -54,6 +54,7 @@ const mobileNavigationItems: { name: string; items: NavigationItem[] }[] = [
       { name: "Command", path: routes.docs.components.command },
       { name: "Context Menu", path: routes.docs.components.contextMenu },
       { name: "Dialog", path: routes.docs.components.dialog },
+      { name: "Hover Card", path: routes.docs.components.hoverCard },
       { name: "Input", path: routes.docs.components.input },
       { name: "Text Area", path: routes.docs.components.textarea },
       { name: "Label", path: routes.docs.components.label },

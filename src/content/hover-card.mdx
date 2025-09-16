@@ -1,0 +1,47 @@
+
+import { HoverCard, HoverCardTrigger, HoverCardContent } from "@/components/ui/pixelact-ui/hover-card";
+import { Button } from "@/components/ui/pixelact-ui/button";
+
+## Hover Card
+
+A pixel art styled hover card component built on top of Radix UI's HoverCard. Features retro styling, pixel font, and full support for all underlying hover card props. Useful for showing additional information on hover, user previews, and more.
+
+### Installation
+
+Add the HoverCard component to your project using the shadcn CLI:
+
+```bash
+npx shadcn@latest add https://pixelactui.com/r/pixelact-hover-card.json
+```
+
+This will automatically install the component and its dependencies to your project.
+
+### Basic Hover Card
+
+<CodePreview
+	language="tsx"
+	code={`import { HoverCard, HoverCardTrigger, HoverCardContent } from "@/components/ui/pixelact-ui/hover-card";
+import { Button } from "@/components/ui/pixelact-ui/button";
+
+export function BasicHoverCard() {
+	return (
+		<HoverCard>
+			<HoverCardTrigger>
+				<Button>Hover me</Button>
+			</HoverCardTrigger>
+			<HoverCardContent className="text-center">
+                Pixelact Hover Card
+			</HoverCardContent>
+		</HoverCard>
+	);
+}`}
+>
+	<HoverCard>
+		<HoverCardTrigger>
+			<span className="pixel-font text-foreground cursor-default hover:underline">Hover me</span>
+		</HoverCardTrigger>
+		<HoverCardContent className="text-center">
+            Pixelact Hover Card
+		</HoverCardContent>
+	</HoverCard>
+</CodePreview>

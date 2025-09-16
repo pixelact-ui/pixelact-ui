@@ -35,6 +35,7 @@ const navItems: {
     { name: "Command", path: routes.docs.components.command },
     { name: "Context Menu", path: routes.docs.components.contextMenu },
     { name: "Dialog", path: routes.docs.components.dialog },
+    { name: "Hover Card", path: routes.docs.components.hoverCard },
     { name: "Input", path: routes.docs.components.input },
     { name: "Label", path: routes.docs.components.label },
     { name: "Popover", path: routes.docs.components.popover },

@@ -25,6 +25,7 @@ interface Routes {
       popover: string;
       command: string;
       contextMenu: string;
+      hoverCard: string;
     };
   };
   showcase: string;
@@ -58,6 +59,7 @@ const routes: Routes = {
       popover: "/docs/popover",
       command: "/docs/command",
       contextMenu: "/docs/context-menu",
+      hoverCard: "/docs/hover-card",
     }
   },
   showcase: "/showcase",
