@@ -3,6 +3,12 @@ import { cn } from "@/lib/utils";
 import { routes } from "@/src/utils";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/pixelact-ui/button";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/pixelact-ui/tooltip";
 
 const Hero = () => {
   const navigate = useNavigate();

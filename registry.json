@@ -406,6 +406,25 @@
           "target": "components/ui/pixelact-ui/styles/styles.css"
         }
       ]
+    },
+    {
+      "name": "pixelact-tooltip",
+      "type": "registry:component",
+      "title": "Pixelact Tooltip",
+      "description": "A simple tooltip component.",
+      "registryDependencies": ["tooltip"],
+      "files": [
+        {
+          "path": "components/ui/pixelact-ui/tooltip/index.tsx",
+          "type": "registry:component",
+          "target": "components/ui/pixelact-ui/tooltip.tsx"
+        },
+        {
+          "path": "components/ui/pixelact-ui/styles/styles.css",
+          "type": "registry:style",
+          "target": "components/ui/pixelact-ui/styles/styles.css"
+        }
+      ]
     }
   ]
 }

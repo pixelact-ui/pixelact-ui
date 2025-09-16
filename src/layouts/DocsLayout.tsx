@@ -41,6 +41,7 @@ const navItems: {
     { name: "Popover", path: routes.docs.components.popover },
     { name: "Select", path: routes.docs.components.select },
     { name: "Text Area", path: routes.docs.components.textarea },
+    { name: "Tooltip", path: routes.docs.components.tooltip },
     { name: "More coming soon", path: "/", workInProgress: true },
   ],
 };

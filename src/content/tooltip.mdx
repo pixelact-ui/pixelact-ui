@@ -1,0 +1,51 @@
+
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/pixelact-ui/tooltip";
+import { Button } from "@/components/ui/pixelact-ui/button";
+
+## Tooltip
+
+A pixel art styled tooltip component built on top of shadcn/ui's Tooltip. Features retro styling, pixel font, and full support for all underlying tooltip props. Useful for hints, labels, and additional info on hover or focus.
+
+### Installation
+
+Add the Tooltip component to your project using the shadcn CLI:
+
+```bash
+npx shadcn@latest add https://pixelactui.com/r/pixelact-tooltip.json
+```
+
+This will automatically install the component and its dependencies to your project.
+
+### Basic Tooltip
+
+<CodePreview
+	language="tsx"
+	code={`import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/pixelact-ui/tooltip";
+import { Button } from "@/components/ui/pixelact-ui/button";
+
+export function BasicTooltip() {
+	return (
+		<TooltipProvider>
+			<Tooltip>
+				<TooltipTrigger>
+					<Button>Hover me</Button>
+				</TooltipTrigger>
+				<TooltipContent>
+					Pixelact Tooltip!
+				</TooltipContent>
+			</Tooltip>
+		</TooltipProvider>
+	);
+}`}
+>
+	<TooltipProvider>
+		<Tooltip>
+			<TooltipTrigger>
+				<Button>Hover me</Button>
+			</TooltipTrigger>
+			<TooltipContent>
+				Pixelact Tooltip!
+			</TooltipContent>
+		</Tooltip>
+	</TooltipProvider>
+</CodePreview>
