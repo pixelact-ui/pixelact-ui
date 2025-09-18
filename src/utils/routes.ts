@@ -27,6 +27,7 @@ interface Routes {
       contextMenu: string;
       hoverCard: string;
       tooltip: string;
+      menubar: string;
     };
   };
   showcase: string;
@@ -62,6 +63,7 @@ const routes: Routes = {
       contextMenu: "/docs/context-menu",
       hoverCard: "/docs/hover-card",
       tooltip: "/docs/tooltip",
+      menubar: "/docs/menubar",
     }
   },
   showcase: "/showcase",

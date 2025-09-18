@@ -425,6 +425,25 @@
           "target": "components/ui/pixelact-ui/styles/styles.css"
         }
       ]
+    },
+    {
+      "name": "pixelact-menubar",
+      "type": "registry:component",
+      "title": "Pixelact Menubar",
+      "description": "A simple menubar component.",
+      "registryDependencies": ["menubar"],
+      "files": [
+        {
+          "path": "components/ui/pixelact-ui/menubar/index.tsx",
+          "type": "registry:component",
+          "target": "components/ui/pixelact-ui/menubar.tsx"
+        },
+        {
+          "path": "components/ui/pixelact-ui/styles/styles.css",
+          "type": "registry:style",
+          "target": "components/ui/pixelact-ui/styles/styles.css"
+        }
+      ]
     }
   ]
 }
