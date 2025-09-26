@@ -4,7 +4,7 @@
   "homepage": "https://pixelactui.com",
   "items": [
     {
-      "name": "pixelact-accordion",
+      "name": "accordion",
       "type": "registry:component",
       "title": "Pixelact Accordion",
       "description": "A simple accordion component.",
@@ -23,7 +23,7 @@
       ]
     },
     {
-      "name": "pixelact-alert",
+      "name": "alert",
       "type": "registry:component",
       "title": "Pixelact Alert",
       "description": "A simple alert component.",
@@ -42,7 +42,7 @@
       ]
     },
     {
-      "name": "pixelact-alert-dialog",
+      "name": "alert-dialog",
       "type": "registry:component",
       "title": "Pixelact Alert Dialog",
       "description": "A simple alert dialog component.",
@@ -61,7 +61,7 @@
       ]
     },
     {
-      "name": "pixelact-avatar",
+      "name": "avatar",
       "type": "registry:component",
       "title": "Pixelact Avatar",
       "description": "A simple avatar component.",
@@ -80,7 +80,7 @@
       ]
     },
     {
-      "name": "pixelact-badge",
+      "name": "badge",
       "type": "registry:component",
       "title": "Pixelact Badge",
       "description": "A simple badge component.",
@@ -99,7 +99,7 @@
       ]
     },
     {
-      "name": "pixelact-breadcrumb",
+      "name": "breadcrumb",
       "type": "registry:component",
       "title": "Pixelact Breadcrumb",
       "description": "A simple breadcrumb component.",
@@ -118,7 +118,7 @@
       ]
     },
     {
-      "name": "pixelact-button",
+      "name": "button",
       "type": "registry:component",
       "title": "Pixelact Button",
       "description": "A simple button component.",
@@ -142,7 +142,7 @@
       ]
     },
     {
-      "name": "pixelact-calendar",
+      "name": "calendar",
       "type": "registry:component",
       "title": "Pixelact Calendar",
       "description": "A simple calendar component.",
@@ -161,7 +161,7 @@
       ]
     },
     {
-      "name": "pixelact-card",
+      "name": "card",
       "type": "registry:component",
       "title": "Pixelact Card",
       "description": "A simple card component.",
@@ -180,7 +180,7 @@
       ]
     },
     {
-      "name": "pixelact-carousel",
+      "name": "carousel",
       "type": "registry:component",
       "title": "Pixelact Carousel",
       "description": "A simple carousel component.",
@@ -199,7 +199,7 @@
       ]
     },
     {
-      "name": "pixelact-checkbox",
+      "name": "checkbox",
       "type": "registry:component",
       "title": "Pixelact Checkbox",
       "description": "A simple checkbox component.",
@@ -218,7 +218,7 @@
       ]
     },
     {
-      "name": "pixelact-collapsible",
+      "name": "collapsible",
       "type": "registry:component",
       "title": "Pixelact Collapsible",
       "description": "A simple collapsible component.",
@@ -237,7 +237,7 @@
       ]
     },
     {
-      "name": "pixelact-dialog",
+      "name": "dialog",
       "type": "registry:component",
       "title": "Pixelact Dialog",
       "description": "A simple dialog component.",
@@ -256,7 +256,7 @@
       ]
     },
     {
-      "name": "pixelact-input",
+      "name": "input",
       "type": "registry:component",
       "title": "Pixelact Input",
       "description": "A simple input component.",
@@ -275,7 +275,7 @@
       ]
     },
     {
-      "name": "pixelact-textarea",
+      "name": "textarea",
       "type": "registry:component",
       "title": "Pixelact Textarea",
       "description": "A simple textarea component.",
@@ -294,7 +294,7 @@
       ]
     },
     {
-      "name": "pixelact-label",
+      "name": "label",
       "type": "registry:component",
       "title": "Pixelact Label",
       "description": "A simple label component.",
@@ -313,7 +313,7 @@
       ]
     },
     {
-      "name": "pixelact-popover",
+      "name": "popover",
       "type": "registry:component",
       "title": "Pixelact Popover",
       "description": "A simple popover component.",
@@ -332,7 +332,7 @@
       ]
     },
     {
-      "name": "pixelact-select",
+      "name": "select",
       "type": "registry:component",
       "title": "Pixelact Select",
       "description": "A simple select component.",
@@ -351,7 +351,7 @@
       ]
     },
     {
-      "name": "pixelact-command",
+      "name": "command",
       "type": "registry:component",
       "title": "Pixelact Command",
       "description": "A simple command component.",
@@ -370,7 +370,7 @@
       ]
     },
     {
-      "name": "pixelact-context-menu",
+      "name": "context-menu",
       "type": "registry:component",
       "title": "Pixelact Context Menu",
       "description": "A simple context menu component.",
@@ -389,7 +389,7 @@
       ]
     },
     {
-      "name": "pixelact-hover-card",
+      "name": "hover-card",
       "type": "registry:component",
       "title": "Pixelact Hover Card",
       "description": "A simple hover card component.",
@@ -408,7 +408,7 @@
       ]
     },
     {
-      "name": "pixelact-tooltip",
+      "name": "tooltip",
       "type": "registry:component",
       "title": "Pixelact Tooltip",
       "description": "A simple tooltip component.",
@@ -427,7 +427,7 @@
       ]
     },
     {
-      "name": "pixelact-menubar",
+      "name": "menubar",
       "type": "registry:component",
       "title": "Pixelact Menubar",
       "description": "A simple menubar component.",

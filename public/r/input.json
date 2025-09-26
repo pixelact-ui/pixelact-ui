@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input",
+  "type": "registry:component",
+  "title": "Pixelact Input",
+  "description": "A simple input component.",
+  "registryDependencies": [
+    "input"
+  ],
+  "files": [
+    {
+      "path": "components/ui/pixelact-ui/input/index.tsx",
+      "content": "import * as React from \"react\";\r\nimport { cn } from \"@/lib/utils\";\r\nimport \"@/components/ui/pixelact-ui/styles/styles.css\";\r\n\r\nexport interface PixelInputProps\r\n  extends React.InputHTMLAttributes<HTMLInputElement> {\r\n  disabled?: boolean;\r\n  className?: string;\r\n}\r\n\r\nconst Input = React.forwardRef<HTMLInputElement, PixelInputProps>(\r\n  ({ className, disabled, ...props }, ref) => {\r\n    return (\r\n      <input\r\n        className={cn(\r\n          \"pixel__input pixel-font max-w-full outline-none p-2 bg-background text-foreground shadow-(--pixel-box-shadow) placeholder:text-sm md:placeholder:text-base box-shadow-margin disabled:opacity-40\",\r\n          disabled && \"disabled:opacity-40 disabled:cursor-not-allowed\",\r\n          className\r\n        )}\r\n        disabled={disabled}\r\n        ref={ref}\r\n        {...props}\r\n      />\r\n    );\r\n  }\r\n);\r\nInput.displayName = \"PixelInput\";\r\n\r\nexport { Input };\r\n",
+      "type": "registry:component",
+      "target": "components/ui/pixelact-ui/input.tsx"
+    },
+    {
+      "path": "components/ui/pixelact-ui/styles/styles.css",
+      "content": "@import url(\"https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap\");\r\n\r\n:root {\r\n  --box-shadow-width: 4px;\r\n  --pixel-box-shadow: calc(-1 * (var(--box-shadow-width))) 0 0 0 black,\r\n    var(--box-shadow-width) 0 0 0 black, 0 var(--box-shadow-width) 0 0 black,\r\n    0 calc(-1 * (var(--box-shadow-width))) 0 0 black;\r\n  --pixel-box-shadow-destructive: calc(-1 * (var(--box-shadow-width))) 0 0 0\r\n      var(--destructive),\r\n    var(--box-shadow-width) 0 0 0 var(--destructive),\r\n    0 var(--box-shadow-width) 0 0 var(--destructive),\r\n    0 calc(-1 * (var(--box-shadow-width))) 0 0 var(--destructive);\r\n  --default-inner-border-color: rgb(200, 200, 200);\r\n}\r\n\r\n.dark {\r\n  --pixel-box-shadow: calc(-1 * (var(--box-shadow-width))) 0 0 0 var(--ring),\r\n    var(--box-shadow-width) 0 0 0 var(--ring),\r\n    0 var(--box-shadow-width) 0 0 var(--ring),\r\n    0 calc(-1 * (var(--box-shadow-width))) 0 0 var(--ring);\r\n}\r\n\r\n.pixel-font {\r\n  font-family: \"Press Start 2P\", system-ui, -apple-system, sans-serif;\r\n  line-height: 1.5;\r\n  letter-spacing: 0.5px;\r\n}\r\n\r\n.box-shadow-margin {\r\n  margin: var(--box-shadow-width);\r\n}\r\n",
+      "type": "registry:style",
+      "target": "components/ui/pixelact-ui/styles/styles.css"
+    }
+  ]
+}

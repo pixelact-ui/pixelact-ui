@@ -21,7 +21,7 @@ npx shadcn@latest init
 Install individual components using the shadcn CLI:
 
 ```bash
-npx shadcn@latest add https://pixelactui.com/r/'pixact-component'.json
+npx shadcn@latest add https://pixelactui.com/r/{name}.json
 ```
 
 This will automatically install the components and their dependencies to your `components/ui/pixelact-ui/` directory.

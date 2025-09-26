@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badge",
+  "type": "registry:component",
+  "title": "Pixelact Badge",
+  "description": "A simple badge component.",
+  "registryDependencies": [
+    "badge"
+  ],
+  "files": [
+    {
+      "path": "components/ui/pixelact-ui/badge/index.tsx",
+      "content": "import { type VariantProps, cva } from \"class-variance-authority\";\r\nimport { cn } from \"@/lib/utils\";\r\nimport { Badge as ShadcnBadge } from \"@/components/ui/badge\";\r\n\r\nconst badgeVariants = cva(\"border-none\", {\r\n  variants: {\r\n    font: {\r\n      normal: \"\",\r\n      pixel: \"pixel-font\",\r\n    },\r\n    variant: {\r\n      default: \"bg-primary\",\r\n      destructive: \"bg-destructive\",\r\n      outline: \"bg-background\",\r\n      secondary: \"bg-secondary\",\r\n    },\r\n  },\r\n  defaultVariants: {\r\n    font: \"pixel\",\r\n    variant: \"default\",\r\n  },\r\n});\r\n\r\nexport interface BadgeProps\r\n  extends React.ButtonHTMLAttributes<HTMLButtonElement>,\r\n    VariantProps<typeof badgeVariants> {\r\n  asChild?: boolean;\r\n}\r\n\r\nfunction Badge({ children, font, variant, ...props }: BadgeProps) {\r\n  return (\r\n    <div className={cn(\"relative inline-flex\")}>\r\n      <ShadcnBadge\r\n        {...props}\r\n        className={cn(\r\n          \"rounded-none shadow-(--pixel-box-shadow) box-shadow-margin\",\r\n          badgeVariants({ variant, font })\r\n        )}\r\n        variant={variant}\r\n      >\r\n        {children}\r\n      </ShadcnBadge>\r\n    </div>\r\n  );\r\n}\r\n\r\nexport { Badge };\r\n",
+      "type": "registry:component",
+      "target": "components/ui/pixelact-ui/badge.tsx"
+    },
+    {
+      "path": "components/ui/pixelact-ui/styles/styles.css",
+      "content": "@import url(\"https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap\");\r\n\r\n:root {\r\n  --box-shadow-width: 4px;\r\n  --pixel-box-shadow: calc(-1 * (var(--box-shadow-width))) 0 0 0 black,\r\n    var(--box-shadow-width) 0 0 0 black, 0 var(--box-shadow-width) 0 0 black,\r\n    0 calc(-1 * (var(--box-shadow-width))) 0 0 black;\r\n  --pixel-box-shadow-destructive: calc(-1 * (var(--box-shadow-width))) 0 0 0\r\n      var(--destructive),\r\n    var(--box-shadow-width) 0 0 0 var(--destructive),\r\n    0 var(--box-shadow-width) 0 0 var(--destructive),\r\n    0 calc(-1 * (var(--box-shadow-width))) 0 0 var(--destructive);\r\n  --default-inner-border-color: rgb(200, 200, 200);\r\n}\r\n\r\n.dark {\r\n  --pixel-box-shadow: calc(-1 * (var(--box-shadow-width))) 0 0 0 var(--ring),\r\n    var(--box-shadow-width) 0 0 0 var(--ring),\r\n    0 var(--box-shadow-width) 0 0 var(--ring),\r\n    0 calc(-1 * (var(--box-shadow-width))) 0 0 var(--ring);\r\n}\r\n\r\n.pixel-font {\r\n  font-family: \"Press Start 2P\", system-ui, -apple-system, sans-serif;\r\n  line-height: 1.5;\r\n  letter-spacing: 0.5px;\r\n}\r\n\r\n.box-shadow-margin {\r\n  margin: var(--box-shadow-width);\r\n}\r\n",
+      "type": "registry:style",
+      "target": "components/ui/pixelact-ui/styles/styles.css"
+    }
+  ]
+}
