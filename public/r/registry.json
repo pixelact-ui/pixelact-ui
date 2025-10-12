@@ -1,0 +1,449 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "Pixelact UI",
+  "homepage": "https://pixelactui.com",
+  "items": [
+    {
+      "name": "accordion",
+      "type": "registry:component",
+      "title": "Pixelact Accordion",
+      "description": "A simple accordion component.",
+      "registryDependencies": ["accordion"],
+      "files": [
+        {
+          "path": "components/ui/pixelact-ui/accordion/index.tsx",
+          "type": "registry:component",
+          "target": "components/ui/pixelact-ui/accordion.tsx"
+        },
+        {
+          "path": "components/ui/pixelact-ui/styles/styles.css",
+          "type": "registry:style",
+          "target": "components/ui/pixelact-ui/styles/styles.css"
+        }
+      ]
+    },
+    {
+      "name": "alert",
+      "type": "registry:component",
+      "title": "Pixelact Alert",
+      "description": "A simple alert component.",
+      "registryDependencies": ["alert"],
+      "files": [
+        {
+          "path": "components/ui/pixelact-ui/alert/index.tsx",
+          "type": "registry:component",
+          "target": "components/ui/pixelact-ui/alert.tsx"
+        },
+        {
+          "path": "components/ui/pixelact-ui/styles/styles.css",
+          "type": "registry:style",
+          "target": "components/ui/pixelact-ui/styles/styles.css"
+        }
+      ]
+    },
+    {
+      "name": "alert-dialog",
+      "type": "registry:component",
+      "title": "Pixelact Alert Dialog",
+      "description": "A simple alert dialog component.",
+      "registryDependencies": ["alert-dialog"],
+      "files": [
+        {
+          "path": "components/ui/pixelact-ui/alert-dialog/index.tsx",
+          "type": "registry:component",
+          "target": "components/ui/pixelact-ui/alert-dialog.tsx"
+        },
+        {
+          "path": "components/ui/pixelact-ui/styles/styles.css",
+          "type": "registry:style",
+          "target": "components/ui/pixelact-ui/styles/styles.css"
+        }
+      ]
+    },
+    {
+      "name": "avatar",
+      "type": "registry:component",
+      "title": "Pixelact Avatar",
+      "description": "A simple avatar component.",
+      "registryDependencies": ["avatar"],
+      "files": [
+        {
+          "path": "components/ui/pixelact-ui/avatar/index.tsx",
+          "type": "registry:component",
+          "target": "components/ui/pixelact-ui/avatar.tsx"
+        },
+        {
+          "path": "components/ui/pixelact-ui/styles/styles.css",
+          "type": "registry:style",
+          "target": "components/ui/pixelact-ui/styles/styles.css"
+        }
+      ]
+    },
+    {
+      "name": "badge",
+      "type": "registry:component",
+      "title": "Pixelact Badge",
+      "description": "A simple badge component.",
+      "registryDependencies": ["badge"],
+      "files": [
+        {
+          "path": "components/ui/pixelact-ui/badge/index.tsx",
+          "type": "registry:component",
+          "target": "components/ui/pixelact-ui/badge.tsx"
+        },
+        {
+          "path": "components/ui/pixelact-ui/styles/styles.css",
+          "type": "registry:style",
+          "target": "components/ui/pixelact-ui/styles/styles.css"
+        }
+      ]
+    },
+    {
+      "name": "breadcrumb",
+      "type": "registry:component",
+      "title": "Pixelact Breadcrumb",
+      "description": "A simple breadcrumb component.",
+      "registryDependencies": ["breadcrumb"],
+      "files": [
+        {
+          "path": "components/ui/pixelact-ui/breadcrumb/index.tsx",
+          "type": "registry:component",
+          "target": "components/ui/pixelact-ui/breadcrumb.tsx"
+        },
+        {
+          "path": "components/ui/pixelact-ui/styles/styles.css",
+          "type": "registry:style",
+          "target": "components/ui/pixelact-ui/styles/styles.css"
+        }
+      ]
+    },
+    {
+      "name": "button",
+      "type": "registry:component",
+      "title": "Pixelact Button",
+      "description": "A simple button component.",
+      "registryDependencies": ["button"],
+      "files": [
+        {
+          "path": "components/ui/pixelact-ui/button/index.tsx",
+          "type": "registry:component",
+          "target": "components/ui/pixelact-ui/button.tsx"
+        },
+        {
+          "path": "components/ui/pixelact-ui/button/button.css",
+          "type": "registry:style",
+          "target": "components/ui/pixelact-ui/button.css"
+        },
+        {
+          "path": "components/ui/pixelact-ui/styles/styles.css",
+          "type": "registry:style",
+          "target": "components/ui/pixelact-ui/styles/styles.css"
+        }
+      ]
+    },
+    {
+      "name": "calendar",
+      "type": "registry:component",
+      "title": "Pixelact Calendar",
+      "description": "A simple calendar component.",
+      "registryDependencies": ["calendar"],
+      "files": [
+        {
+          "path": "components/ui/pixelact-ui/calendar/index.tsx",
+          "type": "registry:component",
+          "target": "components/ui/pixelact-ui/calendar.tsx"
+        },
+        {
+          "path": "components/ui/pixelact-ui/styles/styles.css",
+          "type": "registry:style",
+          "target": "components/ui/pixelact-ui/styles/styles.css"
+        }
+      ]
+    },
+    {
+      "name": "card",
+      "type": "registry:component",
+      "title": "Pixelact Card",
+      "description": "A simple card component.",
+      "registryDependencies": ["card"],
+      "files": [
+        {
+          "path": "components/ui/pixelact-ui/card/index.tsx",
+          "type": "registry:component",
+          "target": "components/ui/pixelact-ui/card.tsx"
+        },
+        {
+          "path": "components/ui/pixelact-ui/styles/styles.css",
+          "type": "registry:style",
+          "target": "components/ui/pixelact-ui/styles/styles.css"
+        }
+      ]
+    },
+    {
+      "name": "carousel",
+      "type": "registry:component",
+      "title": "Pixelact Carousel",
+      "description": "A simple carousel component.",
+      "registryDependencies": ["carousel"],
+      "files": [
+        {
+          "path": "components/ui/pixelact-ui/carousel/index.tsx",
+          "type": "registry:component",
+          "target": "components/ui/pixelact-ui/carousel.tsx"
+        },
+        {
+          "path": "components/ui/pixelact-ui/styles/styles.css",
+          "type": "registry:style",
+          "target": "components/ui/pixelact-ui/styles/styles.css"
+        }
+      ]
+    },
+    {
+      "name": "checkbox",
+      "type": "registry:component",
+      "title": "Pixelact Checkbox",
+      "description": "A simple checkbox component.",
+      "registryDependencies": ["checkbox"],
+      "files": [
+        {
+          "path": "components/ui/pixelact-ui/checkbox/index.tsx",
+          "type": "registry:component",
+          "target": "components/ui/pixelact-ui/checkbox.tsx"
+        },
+        {
+          "path": "components/ui/pixelact-ui/styles/styles.css",
+          "type": "registry:style",
+          "target": "components/ui/pixelact-ui/styles/styles.css"
+        }
+      ]
+    },
+    {
+      "name": "collapsible",
+      "type": "registry:component",
+      "title": "Pixelact Collapsible",
+      "description": "A simple collapsible component.",
+      "registryDependencies": ["collapsible"],
+      "files": [
+        {
+          "path": "components/ui/pixelact-ui/collapsible/index.tsx",
+          "type": "registry:component",
+          "target": "components/ui/pixelact-ui/collapsible.tsx"
+        },
+        {
+          "path": "components/ui/pixelact-ui/styles/styles.css",
+          "type": "registry:style",
+          "target": "components/ui/pixelact-ui/styles/styles.css"
+        }
+      ]
+    },
+    {
+      "name": "dialog",
+      "type": "registry:component",
+      "title": "Pixelact Dialog",
+      "description": "A simple dialog component.",
+      "registryDependencies": ["dialog"],
+      "files": [
+        {
+          "path": "components/ui/pixelact-ui/dialog/index.tsx",
+          "type": "registry:component",
+          "target": "components/ui/pixelact-ui/dialog.tsx"
+        },
+        {
+          "path": "components/ui/pixelact-ui/styles/styles.css",
+          "type": "registry:style",
+          "target": "components/ui/pixelact-ui/styles/styles.css"
+        }
+      ]
+    },
+    {
+      "name": "input",
+      "type": "registry:component",
+      "title": "Pixelact Input",
+      "description": "A simple input component.",
+      "registryDependencies": ["input"],
+      "files": [
+        {
+          "path": "components/ui/pixelact-ui/input/index.tsx",
+          "type": "registry:component",
+          "target": "components/ui/pixelact-ui/input.tsx"
+        },
+        {
+          "path": "components/ui/pixelact-ui/styles/styles.css",
+          "type": "registry:style",
+          "target": "components/ui/pixelact-ui/styles/styles.css"
+        }
+      ]
+    },
+    {
+      "name": "textarea",
+      "type": "registry:component",
+      "title": "Pixelact Textarea",
+      "description": "A simple textarea component.",
+      "registryDependencies": ["textarea"],
+      "files": [
+        {
+          "path": "components/ui/pixelact-ui/textarea/index.tsx",
+          "type": "registry:component",
+          "target": "components/ui/pixelact-ui/textarea.tsx"
+        },
+        {
+          "path": "components/ui/pixelact-ui/styles/styles.css",
+          "type": "registry:style",
+          "target": "components/ui/pixelact-ui/styles/styles.css"
+        }
+      ]
+    },
+    {
+      "name": "label",
+      "type": "registry:component",
+      "title": "Pixelact Label",
+      "description": "A simple label component.",
+      "registryDependencies": ["label"],
+      "files": [
+        {
+          "path": "components/ui/pixelact-ui/label/index.tsx",
+          "type": "registry:component",
+          "target": "components/ui/pixelact-ui/label.tsx"
+        },
+        {
+          "path": "components/ui/pixelact-ui/styles/styles.css",
+          "type": "registry:style",
+          "target": "components/ui/pixelact-ui/styles/styles.css"
+        }
+      ]
+    },
+    {
+      "name": "popover",
+      "type": "registry:component",
+      "title": "Pixelact Popover",
+      "description": "A simple popover component.",
+      "registryDependencies": ["popover"],
+      "files": [
+        {
+          "path": "components/ui/pixelact-ui/popover/index.tsx",
+          "type": "registry:component",
+          "target": "components/ui/pixelact-ui/popover.tsx"
+        },
+        {
+          "path": "components/ui/pixelact-ui/styles/styles.css",
+          "type": "registry:style",
+          "target": "components/ui/pixelact-ui/styles/styles.css"
+        }
+      ]
+    },
+    {
+      "name": "select",
+      "type": "registry:component",
+      "title": "Pixelact Select",
+      "description": "A simple select component.",
+      "registryDependencies": ["select"],
+      "files": [
+        {
+          "path": "components/ui/pixelact-ui/select/index.tsx",
+          "type": "registry:component",
+          "target": "components/ui/pixelact-ui/select.tsx"
+        },
+        {
+          "path": "components/ui/pixelact-ui/styles/styles.css",
+          "type": "registry:style",
+          "target": "components/ui/pixelact-ui/styles/styles.css"
+        }
+      ]
+    },
+    {
+      "name": "command",
+      "type": "registry:component",
+      "title": "Pixelact Command",
+      "description": "A simple command component.",
+      "registryDependencies": ["command"],
+      "files": [
+        {
+          "path": "components/ui/pixelact-ui/command/index.tsx",
+          "type": "registry:component",
+          "target": "components/ui/pixelact-ui/command.tsx"
+        },
+        {
+          "path": "components/ui/pixelact-ui/styles/styles.css",
+          "type": "registry:style",
+          "target": "components/ui/pixelact-ui/styles/styles.css"
+        }
+      ]
+    },
+    {
+      "name": "context-menu",
+      "type": "registry:component",
+      "title": "Pixelact Context Menu",
+      "description": "A simple context menu component.",
+      "registryDependencies": ["context-menu"],
+      "files": [
+        {
+          "path": "components/ui/pixelact-ui/context-menu/index.tsx",
+          "type": "registry:component",
+          "target": "components/ui/pixelact-ui/context-menu.tsx"
+        },
+        {
+          "path": "components/ui/pixelact-ui/styles/styles.css",
+          "type": "registry:style",
+          "target": "components/ui/pixelact-ui/styles/styles.css"
+        }
+      ]
+    },
+    {
+      "name": "hover-card",
+      "type": "registry:component",
+      "title": "Pixelact Hover Card",
+      "description": "A simple hover card component.",
+      "registryDependencies": ["hover-card"],
+      "files": [
+        {
+          "path": "components/ui/pixelact-ui/hover-card/index.tsx",
+          "type": "registry:component",
+          "target": "components/ui/pixelact-ui/hover-card.tsx"
+        },
+        {
+          "path": "components/ui/pixelact-ui/styles/styles.css",
+          "type": "registry:style",
+          "target": "components/ui/pixelact-ui/styles/styles.css"
+        }
+      ]
+    },
+    {
+      "name": "tooltip",
+      "type": "registry:component",
+      "title": "Pixelact Tooltip",
+      "description": "A simple tooltip component.",
+      "registryDependencies": ["tooltip"],
+      "files": [
+        {
+          "path": "components/ui/pixelact-ui/tooltip/index.tsx",
+          "type": "registry:component",
+          "target": "components/ui/pixelact-ui/tooltip.tsx"
+        },
+        {
+          "path": "components/ui/pixelact-ui/styles/styles.css",
+          "type": "registry:style",
+          "target": "components/ui/pixelact-ui/styles/styles.css"
+        }
+      ]
+    },
+    {
+      "name": "menubar",
+      "type": "registry:component",
+      "title": "Pixelact Menubar",
+      "description": "A simple menubar component.",
+      "registryDependencies": ["menubar"],
+      "files": [
+        {
+          "path": "components/ui/pixelact-ui/menubar/index.tsx",
+          "type": "registry:component",
+          "target": "components/ui/pixelact-ui/menubar.tsx"
+        },
+        {
+          "path": "components/ui/pixelact-ui/styles/styles.css",
+          "type": "registry:style",
+          "target": "components/ui/pixelact-ui/styles/styles.css"
+        }
+      ]
+    }
+  ]
+}
