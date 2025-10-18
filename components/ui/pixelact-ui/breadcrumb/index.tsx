@@ -135,7 +135,19 @@ function BreadcrumbSeparator({
     <ShadcnBreadcrumbSeparator
       className={cn(breadcrumbVariants({ variant }), className)}
       {...props}
-    />
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        viewBox="0 0 24 24"
+      >
+        <path
+          className="fill-foreground"
+          d="M8 5v2h2V5zm4 4V7h-2v2zm2 2V9h-2v2zm0 2h2v-2h-2zm-2 2v-2h2v2zm0 0h-2v2h2zm-4 4v-2h2v2z"
+        />
+      </svg>
+    </ShadcnBreadcrumbSeparator>
   );
 }
 

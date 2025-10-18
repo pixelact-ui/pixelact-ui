@@ -108,7 +108,7 @@ const MenubarSubTrigger = React.forwardRef<
       stroke="currentColor"
       strokeWidth="0.25"
       aria-label="chevron-right"
-      className="size-7 ml-auto"
+      className="size-8 ml-auto"
     >
       <rect x="128" y="136" width="14" height="14" rx="1"></rect>
       <rect x="112" y="152" width="14" height="14" rx="1"></rect>
