@@ -5,7 +5,6 @@ import {
   Accordion,
   AccordionContent as ShadcnAccordionContent,
   AccordionItem as ShadcnAccordionItem,
-  AccordionTrigger as ShadcnAccordionTrigger,
 } from "@/components/ui/accordion";
 
 import "@/components/ui/pixelact-ui/styles/styles.css";
