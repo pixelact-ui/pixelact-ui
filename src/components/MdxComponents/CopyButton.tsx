@@ -1,6 +1,5 @@
 import { useState } from "react";
 import clsx from "clsx";
-import { Check, Clipboard } from "lucide-react";
 
 const buttonClasses =
   "flex items-center text-xs font-medium text-white rounded cursor-pointer p-2 bg-zinc-900 hover:bg-zinc-800 disabled:bg-zinc-700 transition-colors duration-200";
