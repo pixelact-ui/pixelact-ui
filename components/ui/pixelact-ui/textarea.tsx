@@ -1,7 +1,6 @@
 import * as React from "react";
-import { cva, type VariantProps } from "class-variance-authority";
+import { cva } from "class-variance-authority";
 import { cn } from "@/lib/utils";
-import { Textarea as ShadcnTextarea } from "@/components/ui/textarea";
 import "@/components/ui/pixelact-ui/styles/styles.css";
 
 const pixelTextAreaVariants = cva(
@@ -24,23 +23,18 @@ const pixelTextAreaVariants = cva(
   }
 );
 
-export interface PixelTextAreaProps
-  extends React.ComponentProps<typeof ShadcnTextarea>,
-    VariantProps<typeof pixelTextAreaVariants> {}
-
-const Textarea = React.forwardRef<
-  React.ComponentRef<typeof ShadcnTextarea>,
-  PixelTextAreaProps
->(({ className, variant, size, ...props }, ref) => {
+function Textarea({ className, ...props }: React.ComponentProps<"textarea">) {
   return (
-    <ShadcnTextarea
+    <textarea
       data-slot="textarea"
-      className={cn(pixelTextAreaVariants({ variant, size }), className)}
-      ref={ref}
+      className={cn(
+        "border-input placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive dark:bg-input/30 flex field-sizing-content min-h-16 w-full rounded-md border bg-transparent px-3 py-2 text-base shadow-xs transition-[color,box-shadow] outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",
+        pixelTextAreaVariants(),
+        className
+      )}
       {...props}
     />
   );
-});
-Textarea.displayName = "PixelTextarea";
+}
 
 export { Textarea };
