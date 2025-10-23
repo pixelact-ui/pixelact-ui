@@ -9,7 +9,7 @@
   ],
   "files": [
     {
-      "path": "components/ui/pixelact-ui/popover/index.tsx",
+      "path": "components/ui/pixelact-ui/popover.tsx",
       "content": "import * as PopoverPrimitive from \"@radix-ui/react-popover\";\r\nimport { type VariantProps, cva } from \"class-variance-authority\";\r\n\r\nimport { cn } from \"@/lib/utils\";\r\n\r\nimport {\r\n  Popover as ShadcnPopover,\r\n  PopoverAnchor as ShadcnPopoverAnchor,\r\n  PopoverContent as ShadcnPopoverContent,\r\n  PopoverTrigger as ShadcnPopoverTrigger,\r\n} from \"@/components/ui/popover\";\r\n\r\nimport \"@/components/ui/pixelact-ui/styles/styles.css\";\r\n\r\nconst Popover = ShadcnPopover;\r\n\r\nconst PopoverTrigger = ShadcnPopoverTrigger;\r\n\r\nconst PopoverAnchor = ShadcnPopoverAnchor;\r\n\r\nexport const popOverVariants = cva(\"\", {\r\n  variants: {\r\n    font: {\r\n      normal: \"\",\r\n      pixel: \"pixel-font\",\r\n    },\r\n  },\r\n  defaultVariants: {\r\n    font: \"pixel\",\r\n  },\r\n});\r\n\r\nexport interface PopoverProps\r\n  extends React.ComponentProps<typeof PopoverPrimitive.Content>,\r\n    VariantProps<typeof popOverVariants> {}\r\n\r\nfunction PopoverContent({ children, font, className, ...props }: PopoverProps) {\r\n  return (\r\n    <ShadcnPopoverContent\r\n      className={cn(\r\n        \"relative bg-card text-foreground border-none rounded-none mt-1 shadow-(--pixel-box-shadow)\",\r\n        popOverVariants({ font }),\r\n        className\r\n      )}\r\n      {...props}\r\n    >\r\n      {children}\r\n    </ShadcnPopoverContent>\r\n  );\r\n}\r\n\r\nexport { Popover, PopoverTrigger, PopoverContent, PopoverAnchor };\r\n",
       "type": "registry:component",
       "target": "components/ui/pixelact-ui/popover.tsx"

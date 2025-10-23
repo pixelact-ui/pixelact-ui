@@ -11,7 +11,7 @@
       "registryDependencies": ["accordion"],
       "files": [
         {
-          "path": "components/ui/pixelact-ui/accordion/index.tsx",
+          "path": "components/ui/pixelact-ui/accordion.tsx",
           "type": "registry:component",
           "target": "components/ui/pixelact-ui/accordion.tsx"
         },
@@ -30,7 +30,7 @@
       "registryDependencies": ["alert"],
       "files": [
         {
-          "path": "components/ui/pixelact-ui/alert/index.tsx",
+          "path": "components/ui/pixelact-ui/alert.tsx",
           "type": "registry:component",
           "target": "components/ui/pixelact-ui/alert.tsx"
         },
@@ -49,7 +49,7 @@
       "registryDependencies": ["alert-dialog"],
       "files": [
         {
-          "path": "components/ui/pixelact-ui/alert-dialog/index.tsx",
+          "path": "components/ui/pixelact-ui/alert-dialog.tsx",
           "type": "registry:component",
           "target": "components/ui/pixelact-ui/alert-dialog.tsx"
         },
@@ -68,7 +68,7 @@
       "registryDependencies": ["avatar"],
       "files": [
         {
-          "path": "components/ui/pixelact-ui/avatar/index.tsx",
+          "path": "components/ui/pixelact-ui/avatar.tsx",
           "type": "registry:component",
           "target": "components/ui/pixelact-ui/avatar.tsx"
         },
@@ -87,7 +87,7 @@
       "registryDependencies": ["badge"],
       "files": [
         {
-          "path": "components/ui/pixelact-ui/badge/index.tsx",
+          "path": "components/ui/pixelact-ui/badge.tsx",
           "type": "registry:component",
           "target": "components/ui/pixelact-ui/badge.tsx"
         },
@@ -106,7 +106,7 @@
       "registryDependencies": ["breadcrumb"],
       "files": [
         {
-          "path": "components/ui/pixelact-ui/breadcrumb/index.tsx",
+          "path": "components/ui/pixelact-ui/breadcrumb.tsx",
           "type": "registry:component",
           "target": "components/ui/pixelact-ui/breadcrumb.tsx"
         },
@@ -149,7 +149,7 @@
       "registryDependencies": ["calendar"],
       "files": [
         {
-          "path": "components/ui/pixelact-ui/calendar/index.tsx",
+          "path": "components/ui/pixelact-ui/calendar.tsx",
           "type": "registry:component",
           "target": "components/ui/pixelact-ui/calendar.tsx"
         },
@@ -168,7 +168,7 @@
       "registryDependencies": ["card"],
       "files": [
         {
-          "path": "components/ui/pixelact-ui/card/index.tsx",
+          "path": "components/ui/pixelact-ui/card.tsx",
           "type": "registry:component",
           "target": "components/ui/pixelact-ui/card.tsx"
         },
@@ -187,7 +187,7 @@
       "registryDependencies": ["carousel"],
       "files": [
         {
-          "path": "components/ui/pixelact-ui/carousel/index.tsx",
+          "path": "components/ui/pixelact-ui/carousel.tsx",
           "type": "registry:component",
           "target": "components/ui/pixelact-ui/carousel.tsx"
         },
@@ -206,7 +206,7 @@
       "registryDependencies": ["checkbox"],
       "files": [
         {
-          "path": "components/ui/pixelact-ui/checkbox/index.tsx",
+          "path": "components/ui/pixelact-ui/checkbox.tsx",
           "type": "registry:component",
           "target": "components/ui/pixelact-ui/checkbox.tsx"
         },
@@ -225,7 +225,7 @@
       "registryDependencies": ["collapsible"],
       "files": [
         {
-          "path": "components/ui/pixelact-ui/collapsible/index.tsx",
+          "path": "components/ui/pixelact-ui/collapsible.tsx",
           "type": "registry:component",
           "target": "components/ui/pixelact-ui/collapsible.tsx"
         },
@@ -244,7 +244,7 @@
       "registryDependencies": ["dialog"],
       "files": [
         {
-          "path": "components/ui/pixelact-ui/dialog/index.tsx",
+          "path": "components/ui/pixelact-ui/dialog.tsx",
           "type": "registry:component",
           "target": "components/ui/pixelact-ui/dialog.tsx"
         },
@@ -263,7 +263,7 @@
       "registryDependencies": ["input"],
       "files": [
         {
-          "path": "components/ui/pixelact-ui/input/index.tsx",
+          "path": "components/ui/pixelact-ui/input.tsx",
           "type": "registry:component",
           "target": "components/ui/pixelact-ui/input.tsx"
         },
@@ -282,7 +282,7 @@
       "registryDependencies": ["textarea"],
       "files": [
         {
-          "path": "components/ui/pixelact-ui/textarea/index.tsx",
+          "path": "components/ui/pixelact-ui/textarea.tsx",
           "type": "registry:component",
           "target": "components/ui/pixelact-ui/textarea.tsx"
         },
@@ -301,7 +301,7 @@
       "registryDependencies": ["label"],
       "files": [
         {
-          "path": "components/ui/pixelact-ui/label/index.tsx",
+          "path": "components/ui/pixelact-ui/label.tsx",
           "type": "registry:component",
           "target": "components/ui/pixelact-ui/label.tsx"
         },
@@ -320,7 +320,7 @@
       "registryDependencies": ["popover"],
       "files": [
         {
-          "path": "components/ui/pixelact-ui/popover/index.tsx",
+          "path": "components/ui/pixelact-ui/popover.tsx",
           "type": "registry:component",
           "target": "components/ui/pixelact-ui/popover.tsx"
         },
@@ -339,7 +339,7 @@
       "registryDependencies": ["select"],
       "files": [
         {
-          "path": "components/ui/pixelact-ui/select/index.tsx",
+          "path": "components/ui/pixelact-ui/select.tsx",
           "type": "registry:component",
           "target": "components/ui/pixelact-ui/select.tsx"
         },
@@ -358,7 +358,7 @@
       "registryDependencies": ["command"],
       "files": [
         {
-          "path": "components/ui/pixelact-ui/command/index.tsx",
+          "path": "components/ui/pixelact-ui/command.tsx",
           "type": "registry:component",
           "target": "components/ui/pixelact-ui/command.tsx"
         },
@@ -377,7 +377,7 @@
       "registryDependencies": ["context-menu"],
       "files": [
         {
-          "path": "components/ui/pixelact-ui/context-menu/index.tsx",
+          "path": "components/ui/pixelact-ui/context-menu.tsx",
           "type": "registry:component",
           "target": "components/ui/pixelact-ui/context-menu.tsx"
         },
@@ -396,7 +396,7 @@
       "registryDependencies": ["hover-card"],
       "files": [
         {
-          "path": "components/ui/pixelact-ui/hover-card/index.tsx",
+          "path": "components/ui/pixelact-ui/hover-card.tsx",
           "type": "registry:component",
           "target": "components/ui/pixelact-ui/hover-card.tsx"
         },
@@ -415,7 +415,7 @@
       "registryDependencies": ["tooltip"],
       "files": [
         {
-          "path": "components/ui/pixelact-ui/tooltip/index.tsx",
+          "path": "components/ui/pixelact-ui/tooltip.tsx",
           "type": "registry:component",
           "target": "components/ui/pixelact-ui/tooltip.tsx"
         },
@@ -434,7 +434,7 @@
       "registryDependencies": ["menubar"],
       "files": [
         {
-          "path": "components/ui/pixelact-ui/menubar/index.tsx",
+          "path": "components/ui/pixelact-ui/menubar.tsx",
           "type": "registry:component",
           "target": "components/ui/pixelact-ui/menubar.tsx"
         },

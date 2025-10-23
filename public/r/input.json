@@ -9,7 +9,7 @@
   ],
   "files": [
     {
-      "path": "components/ui/pixelact-ui/input/index.tsx",
+      "path": "components/ui/pixelact-ui/input.tsx",
       "content": "import * as React from \"react\";\r\nimport { cn } from \"@/lib/utils\";\r\nimport \"@/components/ui/pixelact-ui/styles/styles.css\";\r\n\r\nexport interface PixelInputProps\r\n  extends React.InputHTMLAttributes<HTMLInputElement> {\r\n  disabled?: boolean;\r\n  className?: string;\r\n}\r\n\r\nconst Input = React.forwardRef<HTMLInputElement, PixelInputProps>(\r\n  ({ className, disabled, ...props }, ref) => {\r\n    return (\r\n      <input\r\n        className={cn(\r\n          \"pixel__input pixel-font max-w-full outline-none p-2 bg-background text-foreground shadow-(--pixel-box-shadow) placeholder:text-sm md:placeholder:text-base box-shadow-margin disabled:opacity-40\",\r\n          disabled && \"disabled:opacity-40 disabled:cursor-not-allowed\",\r\n          className\r\n        )}\r\n        disabled={disabled}\r\n        ref={ref}\r\n        {...props}\r\n      />\r\n    );\r\n  }\r\n);\r\nInput.displayName = \"PixelInput\";\r\n\r\nexport { Input };\r\n",
       "type": "registry:component",
       "target": "components/ui/pixelact-ui/input.tsx"

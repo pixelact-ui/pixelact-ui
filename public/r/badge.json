@@ -9,7 +9,7 @@
   ],
   "files": [
     {
-      "path": "components/ui/pixelact-ui/badge/index.tsx",
+      "path": "components/ui/pixelact-ui/badge.tsx",
       "content": "import { type VariantProps, cva } from \"class-variance-authority\";\r\nimport { cn } from \"@/lib/utils\";\r\nimport { Badge as ShadcnBadge } from \"@/components/ui/badge\";\r\n\r\nconst badgeVariants = cva(\"border-none\", {\r\n  variants: {\r\n    font: {\r\n      normal: \"\",\r\n      pixel: \"pixel-font\",\r\n    },\r\n    variant: {\r\n      default: \"bg-primary\",\r\n      destructive: \"bg-destructive\",\r\n      outline: \"bg-background\",\r\n      secondary: \"bg-secondary\",\r\n    },\r\n  },\r\n  defaultVariants: {\r\n    font: \"pixel\",\r\n    variant: \"default\",\r\n  },\r\n});\r\n\r\nexport interface BadgeProps\r\n  extends React.ButtonHTMLAttributes<HTMLButtonElement>,\r\n    VariantProps<typeof badgeVariants> {\r\n  asChild?: boolean;\r\n}\r\n\r\nfunction Badge({ children, font, variant, ...props }: BadgeProps) {\r\n  return (\r\n    <div className={cn(\"relative inline-flex\")}>\r\n      <ShadcnBadge\r\n        {...props}\r\n        className={cn(\r\n          \"rounded-none shadow-(--pixel-box-shadow) box-shadow-margin\",\r\n          badgeVariants({ variant, font })\r\n        )}\r\n        variant={variant}\r\n      >\r\n        {children}\r\n      </ShadcnBadge>\r\n    </div>\r\n  );\r\n}\r\n\r\nexport { Badge };\r\n",
       "type": "registry:component",
       "target": "components/ui/pixelact-ui/badge.tsx"
