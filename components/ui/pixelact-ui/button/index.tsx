@@ -1,7 +1,7 @@
 import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
-import { Button as ShadcnButton, buttonVariants } from "@/components/ui/button";
+import { Button as ShadcnButton } from "@/components/ui/button";
 import "@/components/ui/pixelact-ui/styles/styles.css";
 import "./button.css";
 
@@ -10,7 +10,7 @@ const pixelButtonVariants = cva(
   {
     variants: {
       variant: {
-        default: "pixel-default__button box-shadow-margin",
+        default: "pixel-default__button box-shadow-margin bg-white text-black",
         secondary: "pixel-secondary__button box-shadow-margin",
         warning: "pixel-warning__button box-shadow-margin",
         success: "pixel-success__button box-shadow-margin",
@@ -39,16 +39,12 @@ export interface PixelButtonProps
 const Button = React.forwardRef<
   React.ComponentRef<typeof ShadcnButton>,
   PixelButtonProps
->(({ className, variant, ...props }, ref) => {
+>(({ className, variant, size, ...props }, ref) => {
   return (
     <ShadcnButton
-      className={cn(
-        buttonVariants({ variant }),
-        pixelButtonVariants({ variant }),
-        className
-      )}
-      ref={ref}
       {...props}
+      className={cn(pixelButtonVariants({ variant, size }), className)}
+      ref={ref}
     />
   );
 });

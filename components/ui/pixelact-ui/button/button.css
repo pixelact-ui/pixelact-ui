@@ -17,8 +17,6 @@
 }
 
 .pixel-default__button {
-  background-color: white;
-  color: black;
   &::after {
     border-right: 4px solid
       color-mix(in hsl, var(--default-inner-border-color) 70%, rgba(0, 0, 0));
