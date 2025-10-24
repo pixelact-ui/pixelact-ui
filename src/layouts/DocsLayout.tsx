@@ -14,7 +14,7 @@ const navItems: {
     isNew?: boolean;
   }[];
 } = {
-  "Getting started": [
+  "Get started": [
     { name: "Installation", path: routes.docs.installation },
     { name: "Fonts", path: routes.docs.fonts },
     { name: "Contributing", path: routes.docs.contributing },
@@ -59,7 +59,7 @@ const DocsLayout = () => {
           <nav className="flex flex-col gap-4 pixel-font">
             {Object.entries(navItems).map(([section, items]) => (
               <div key={section} className="flex flex-col gap-2">
-                <h3 className="w-fit text-lg text-foreground border-b-2">
+                <h3 className="w-fit text-foreground/50 border-b-2 mb-2">
                   {section}
                 </h3>
                 {items.map((item) => (
@@ -79,8 +79,8 @@ const DocsLayout = () => {
                       "flex items-center gap-4",
                       item.workInProgress && "cursor-default",
                       currentLink === item.path
-                        ? "ml-4 w-fit text-link"
-                        : "ml-4 w-fit text-foreground"
+                        ? "w-fit text-link"
+                        : "w-fit text-foreground"
                     )}
                   >
                     <span className={cn(item.workInProgress && "opacity-50")}>
