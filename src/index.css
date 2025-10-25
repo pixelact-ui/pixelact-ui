@@ -169,3 +169,9 @@ body * {
     --sidebar-ring: oklch(0.8 0.2 120);
   }
 }
+
+code {
+  background-color: var(--muted);
+  padding: 4px 6px;
+  border-radius: 4px;
+}

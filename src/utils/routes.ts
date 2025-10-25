@@ -4,6 +4,7 @@ interface Routes {
     installation: string;
     fonts: string;
     contributing: string;
+    mcpServer: string;
     components: {
       button: string;
       textarea: string;
@@ -40,6 +41,7 @@ const routes: Routes = {
     installation: "/docs/installation",
     fonts: "/docs/fonts",
     contributing: "/docs/contributing",
+    mcpServer: "/docs/mcp-server",
     components: {
       button: "/docs/button",
       textarea: "/docs/text-area",

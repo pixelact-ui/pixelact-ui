@@ -34,6 +34,7 @@ const mobileNavigationItems: { name: string; items: NavigationItem[] }[] = [
       { name: "Installation", path: routes.docs.installation },
       { name: "Fonts", path: routes.docs.fonts },
       { name: "Contributing", path: routes.docs.contributing },
+      { name: "MCP Server", path: routes.docs.mcpServer },
     ],
   },
   {
