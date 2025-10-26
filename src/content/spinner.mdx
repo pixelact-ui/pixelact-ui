@@ -1,0 +1,123 @@
+import { Spinner } from "@/components/ui/pixelact-ui/spinner";
+import { Button } from "@/components/ui/pixelact-ui/button";
+import React from "react";
+
+## Spinner
+
+A pixel art styled loading spinner component. Features retro styling and smooth animation, perfect for indicating loading states in pixel art themed applications.
+
+### Installation
+
+The Spinner component is already included in the pixelact-ui package:
+
+```bash
+npx shadcn@latest add @pixelact-ui/spinner
+```
+
+### Basic Spinner
+
+<CodePreview
+  language="tsx"
+  code={`import { Spinner } from "@/components/Spinner";
+
+export function BasicSpinner() {
+  return (
+      <Spinner/>
+  );
+}`}
+>
+    <Spinner className="text-foreground" />
+</CodePreview>
+
+### Button and Spinner
+
+<CodePreview
+  language="tsx"
+  code={`import { Spinner } from "@/components/Spinner";
+import { Button } from "@/components/ui/pixelact-ui/button";
+import React from "react";
+
+export function LoadingButtonWithText() {
+  const [isUploading, setIsUploading] = React.useState(false);
+
+  const handleUpload = async () => {
+    setIsUploading(true);
+    await new Promise(resolve => setTimeout(resolve, 3000));
+    setIsUploading(false);
+  };
+
+  return (
+    <Button onClick={handleUpload} disabled={isUploading} className="flex items-center gap-2">
+      {isUploading && (
+        <div style={{ height: 16, width: 16 }}>
+          <Spinner />
+        </div>
+      )}
+      {isUploading ? "Uploading..." : "Upload File"}
+    </Button>
+  );
+}`}
+>
+  {(() => {
+    const [isUploading, setIsUploading] = React.useState(false);
+
+    const handleUpload = async () => {
+      setIsUploading(true);
+      await new Promise(resolve => setTimeout(resolve, 3000));
+      setIsUploading(false);
+    };
+
+    return (
+      <Button onClick={handleUpload} disabled={isUploading} className="flex items-center gap-2">
+        {isUploading && (
+          <div style={{ height: 16, width: 16 }}>
+            <Spinner />
+          </div>
+        )}
+        {isUploading ? "Uploading..." : "Upload File"}
+      </Button>
+    );
+  })()}
+</CodePreview>
+
+### Colors
+
+<CodePreview
+  language="tsx"
+  code={`import { Spinner } from "@/components/Spinner";
+
+export function ColoredSpinners() {
+  return (
+    <Spinner className="text-red-500" />
+    <Spinner className="text-green-500" />
+    <Spinner className="text-blue-500" />
+  );
+}`}
+>
+  <div className="flex gap-4">
+    <Spinner className="text-red-500" />
+    <Spinner className="text-green-500" />
+    <Spinner className="text-blue-500" />
+  </div>
+</CodePreview>
+
+### Sizes
+
+<CodePreview
+  language="tsx"
+  code={`import { Spinner } from "@/components/Spinner";
+
+export function SizedSpinners() {
+  return (
+    <Spinner className="h-4 w-4" />
+    <Spinner className="h-8 w-8" />
+    <Spinner className="h-12 w-12" />
+  );
+}`}
+>
+  <div className="flex items-center gap-4">
+    <Spinner className="text-foreground h-4 w-4" />
+    <Spinner className="text-foreground h-8 w-8" />
+    <Spinner className="text-foreground h-12 w-12" />
+  </div>
+</CodePreview>

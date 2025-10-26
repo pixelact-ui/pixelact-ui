@@ -444,6 +444,20 @@
           "target": "components/ui/pixelact-ui/styles/styles.css"
         }
       ]
+    },
+    {
+      "name": "spinner",
+      "type": "registry:component",
+      "title": "Pixelact Spinner",
+      "description": "A simple spinner component.",
+      "registryDependencies": ["spinner"],
+      "files": [
+        {
+          "path": "components/ui/pixelact-ui/spinner/index.tsx",
+          "type": "registry:component",
+          "target": "components/ui/pixelact-ui/spinner.tsx"
+        }
+      ]
     }
   ]
 }

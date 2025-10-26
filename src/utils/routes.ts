@@ -29,6 +29,7 @@ interface Routes {
       hoverCard: string;
       tooltip: string;
       menubar: string;
+      spinner: string;
     };
   };
   showcase: string;
@@ -66,6 +67,7 @@ const routes: Routes = {
       hoverCard: "/docs/hover-card",
       tooltip: "/docs/tooltip",
       menubar: "/docs/menubar",
+      spinner: "/docs/spinner",
     }
   },
   showcase: "/showcase",

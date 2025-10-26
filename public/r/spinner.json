@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "spinner",
+  "type": "registry:component",
+  "title": "Pixelact Spinner",
+  "description": "A simple spinner component.",
+  "registryDependencies": [
+    "spinner"
+  ],
+  "files": [
+    {
+      "path": "components/ui/pixelact-ui/spinner.tsx",
+      "content": "import { cn } from \"@/lib/utils\";\r\n\r\nfunction Spinner({ className, ...props }: React.ComponentProps<\"svg\">) {\r\n  return (\r\n    <svg\r\n      xmlns=\"http://www.w3.org/2000/svg\"\r\n      width=\"32\"\r\n      height=\"32\"\r\n      viewBox=\"0 0 24 24\"\r\n      className={cn(\r\n        \"animate-[hourglassFlip_3s_ease-in-out_infinite]\",\r\n        className\r\n      )}\r\n      {...props}\r\n    >\r\n      <defs>\r\n        <style>{`\r\n          @keyframes hourglassFlip {\r\n            0% { transform: rotate(0deg); }\r\n            20% { transform: rotate(180deg); }\r\n            50% { transform: rotate(180deg); }\r\n            70% { transform: rotate(360deg); }\r\n            100% { transform: rotate(360deg); }\r\n          }\r\n        `}</style>\r\n      </defs>\r\n      <path\r\n        fill=\"currentColor\"\r\n        d=\"M18 2H6v6h2v2h2v4H8v2H6v6h12v-6h-2v-2h-2v-4h2V8h2zm-2 6h-2v2h-4V8H8V4h8zm-2 6v2h2v4H8v-4h2v-2z\"\r\n      />\r\n    </svg>\r\n  );\r\n}\r\n\r\nexport { Spinner };\r\n",
+      "type": "registry:component",
+      "target": "components/ui/pixelact-ui/spinner.tsx"
+    }
+  ]
+}
