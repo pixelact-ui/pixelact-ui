@@ -17,8 +17,8 @@ const navItems: {
   "Get started": [
     { name: "Installation", path: routes.docs.installation },
     { name: "Fonts", path: routes.docs.fonts },
-    { name: "Contributing", path: routes.docs.contributing },
     { name: "MCP Server", path: routes.docs.mcpServer, isNew: true },
+    { name: "Contributing", path: routes.docs.contributing },
   ],
   Components: [
     { name: "Accordion", path: routes.docs.components.accordion },
@@ -89,7 +89,7 @@ const DocsLayout = () => {
                       {item.name}
                     </span>
                     {item.isNew && (
-                      <span className="flex gap-4 text-green-500 dark:text-green-300">
+                      <span className="flex gap-4 text-success">
                         <Sparkles size={"16px"} />
                       </span>
                     )}

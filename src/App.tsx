@@ -13,6 +13,7 @@ import DocsLayout from "./layouts/DocsLayout";
 const LazyHomepage = React.lazy(() => import("./pages/Homepage"));
 const LazyNotFound = React.lazy(() => import("./pages/NotFound"));
 const LazyShowcase = React.lazy(() => import("./pages/Showcase"));
+const LazyColors = React.lazy(() => import("./pages/Colors"));
 
 const contentModules = import.meta.glob("./content/*.mdx");
 
@@ -67,6 +68,14 @@ const RoutesComponent = () => (
           element={
             <Suspense fallback={<SuspenseLoader />}>
               <LazyShowcase />
+            </Suspense>
+          }
+        />
+        <Route
+          path={routes.colors}
+          element={
+            <Suspense fallback={<SuspenseLoader />}>
+              <LazyColors />
             </Suspense>
           }
         />

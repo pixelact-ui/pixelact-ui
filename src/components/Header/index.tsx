@@ -16,25 +16,30 @@ interface NavigationItem {
   name: string;
   path: string;
   disabled?: boolean;
+  isNew?: boolean;
 }
 
 const navigationItems: NavigationItem[] = [
   { name: "Docs", path: routes.docs.installation },
   { name: "Components", path: routes.docs.components.accordion },
+  { name: "Colors", path: routes.colors, isNew: true },
   { name: "Showcase", path: routes.showcase },
 ];
 const mobileNavigationItems: { name: string; items: NavigationItem[] }[] = [
   {
     name: "",
-    items: [{ name: "Showcase", path: routes.showcase }],
+    items: [
+      { name: "Colors", path: routes.colors },
+      { name: "Showcase", path: routes.showcase },
+    ],
   },
   {
     name: "Documentation",
     items: [
       { name: "Installation", path: routes.docs.installation },
       { name: "Fonts", path: routes.docs.fonts },
-      { name: "Contributing", path: routes.docs.contributing },
       { name: "MCP Server", path: routes.docs.mcpServer },
+      { name: "Contributing", path: routes.docs.contributing },
     ],
   },
   {
@@ -166,7 +171,7 @@ const Header = () => {
                   <DrawerHeader className="overflow-y-auto">
                     {mobileNavigationItems.map((section) => (
                       <div key={section.name}>
-                        <div className="mb-2 text-lg text-left text-foreground">
+                        <div className="mb-2 mt-4 text-lg text-left text-foreground">
                           {section.name}
                         </div>
                         <ul className="flex flex-col space-y-3 text-left">
@@ -214,9 +219,12 @@ const Header = () => {
                       ) : (
                         <NavLink
                           to={item.path}
-                          className={cn("text-foreground")}
+                          className={cn("text-foreground relative")}
                         >
                           {item.name}
+                          {item.isNew && (
+                            <div className="absolute -top-1 -right-2 w-2 h-2 bg-success rounded-full" />
+                          )}
                         </NavLink>
                       )}
                     </div>

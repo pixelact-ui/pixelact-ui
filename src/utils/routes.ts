@@ -32,6 +32,7 @@ interface Routes {
       spinner: string;
     };
   };
+  colors: string;
   showcase: string;
   notFound: string;
 }
@@ -70,6 +71,7 @@ const routes: Routes = {
       spinner: "/docs/spinner",
     }
   },
+  colors: "/colors",
   showcase: "/showcase",
   notFound: "*",
 };
