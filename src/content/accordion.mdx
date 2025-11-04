@@ -133,35 +133,3 @@ export function MultipleOpenAccordion() {
     </AccordionItem>
   </Accordion>
 </CodePreview>
-
-### Pixel font on AccordionContent
-
-To use the pixel font in the AccordionContent, simply pass the **`font`** prop with the value **`"pixel"`**:
-
-<CodePreview
-  language="tsx"
-  code={`import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/pixelact-ui/accordion";
-
-export function Accordion() {
-  return (
-    <Accordion type="single" collapsible>
-      <AccordionItem value="item-1">
-        <AccordionTrigger>Getting Started</AccordionTrigger>
-        <AccordionContent>
-          Install components using the shadcn CLI and start building retro interfaces with pixel-perfect styling.
-        </AccordionContent>
-      </AccordionItem>
-    </Accordion>
-  );
-}
-`}
->
-  <Accordion type="single" className="w-full md:mx-16" collapsible>
-    <AccordionItem value="item-1">
-      <AccordionTrigger>Getting Started</AccordionTrigger>
-      <AccordionContent font="pixel">
-        Install components using the shadcn CLI and start building retro interfaces with pixel-perfect styling.
-      </AccordionContent>
-    </AccordionItem>
-  </Accordion>
-</CodePreview>
