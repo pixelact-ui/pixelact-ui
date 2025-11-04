@@ -106,7 +106,7 @@ const DocsLayout = () => {
 
       <main
         className={cn(
-          "p-4 xl:p-12 w-full xl:min-w-[1000px] border-r-2 border-dashed border-foreground/20",
+          "relative p-4 xl:p-12 w-full xl:min-w-[1000px] border-r-2 border-dashed border-foreground/20",
           isSmallDevice && "mt-16"
         )}
       >

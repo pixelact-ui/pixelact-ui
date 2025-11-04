@@ -3,12 +3,12 @@ import "highlight.js/styles/github-dark.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { routes } from "@/src/utils";
 import Layout from "./layouts/Layout";
-import Spinner from "./components/Spinner";
 import mdxComponents from "./components/MdxComponents";
 import { PostHogProvider } from "posthog-js/react";
 import posthog from "posthog-js";
 import CookiesBanner from "./components/CookiesBanner";
 import DocsLayout from "./layouts/DocsLayout";
+import { Spinner } from "@/components/ui/pixelact-ui/spinner";
 
 const LazyHomepage = React.lazy(() => import("./pages/Homepage"));
 const LazyNotFound = React.lazy(() => import("./pages/NotFound"));
@@ -16,6 +16,12 @@ const LazyShowcase = React.lazy(() => import("./pages/Showcase"));
 const LazyColors = React.lazy(() => import("./pages/Colors"));
 
 const contentModules = import.meta.glob("./content/*.mdx");
+
+const SuspenseLoader = () => (
+  <div className="absolute top-0 flex items-center justify-center h-full w-full">
+    <Spinner className="text-foreground" />
+  </div>
+);
 
 const contentRoutes = Object.entries(contentModules).map(([path, loader]) => {
   const name = path.match(/\.\/content\/(.*)\.mdx$/)?.[1];
@@ -26,18 +32,12 @@ const contentRoutes = Object.entries(contentModules).map(([path, loader]) => {
   return {
     path: `/docs/${name}`,
     element: (
-      <Suspense fallback={<Spinner />}>
+      <Suspense fallback={<SuspenseLoader />}>
         <Component components={mdxComponents} />
       </Suspense>
     ),
   };
 });
-
-const SuspenseLoader = () => (
-  <div className="absolute top-0 bg-background flex items-center justify-center h-full w-full">
-    <Spinner />
-  </div>
-);
 
 const RoutesComponent = () => (
   <BrowserRouter>
