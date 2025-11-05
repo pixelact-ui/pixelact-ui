@@ -68,6 +68,7 @@ const mobileNavigationItems: { name: string; items: NavigationItem[] }[] = [
       { name: "Select", path: routes.docs.components.select },
       { name: "Spinner", path: routes.docs.components.spinner },
       { name: "Text Area", path: routes.docs.components.textarea },
+      { name: "Toast", path: routes.docs.components.toast },
       { name: "Tooltip", path: routes.docs.components.tooltip },
       { name: "More coming soon...", path: "/", disabled: true },
     ],

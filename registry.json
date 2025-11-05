@@ -458,6 +458,25 @@
           "target": "components/ui/pixelact-ui/spinner.tsx"
         }
       ]
+    },
+    {
+      "name": "toast",
+      "type": "registry:component",
+      "title": "Pixelact Toast",
+      "description": "A simple toast component.",
+      "registryDependencies": ["toast", "sonner"],
+      "files": [
+        {
+          "path": "components/ui/pixelact-ui/toast.tsx",
+          "type": "registry:component",
+          "target": "components/ui/pixelact-ui/toast.tsx"
+        },
+        {
+          "path": "components/ui/sonner.tsx",
+          "type": "registry:component",
+          "target": "components/ui/sonner.tsx"
+        }
+      ]
     }
   ]
 }

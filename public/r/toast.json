@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toast",
+  "type": "registry:component",
+  "title": "Pixelact Toast",
+  "description": "A simple toast component.",
+  "registryDependencies": [
+    "toast",
+    "sonner"
+  ],
+  "files": [
+    {
+      "path": "components/ui/pixelact-ui/toast.tsx",
+      "content": "import { toast as sonnerToast } from \"sonner\";\r\nimport \"@/components/ui/pixelact-ui/styles/styles.css\";\r\n\r\nexport function toast(toast: string) {\r\n  return sonnerToast.custom((id) => <Toast id={id} title={toast} />);\r\n}\r\n\r\ninterface ToastProps {\r\n  id: string | number;\r\n  title: string;\r\n}\r\n\r\nfunction Toast(props: ToastProps) {\r\n  const { title } = props;\r\n\r\n  return (\r\n    <div className=\"flex items-center shadow-(--pixel-box-shadow) box-shadow-margin bg-background w-full md:max-w-[364px p-4\">\r\n      <p className=\"text-sm text-foreground pixel-font\">{title}</p>\r\n    </div>\r\n  );\r\n}\r\n\r\nexport { Toast };\r\n",
+      "type": "registry:component",
+      "target": "components/ui/pixelact-ui/toast.tsx"
+    },
+    {
+      "path": "components/ui/sonner.tsx",
+      "content": "import {\n  CircleCheckIcon,\n  InfoIcon,\n  Loader2Icon,\n  OctagonXIcon,\n  TriangleAlertIcon,\n} from \"lucide-react\";\nimport { useTheme } from \"next-themes\";\nimport { Toaster as Sonner, type ToasterProps } from \"sonner\";\n\nconst Toaster = ({ ...props }: ToasterProps) => {\n  const { theme = \"system\" } = useTheme();\n\n  return (\n    <Sonner\n      theme={theme as ToasterProps[\"theme\"]}\n      className=\"toaster group\"\n      icons={{\n        success: <CircleCheckIcon className=\"size-4\" />,\n        info: <InfoIcon className=\"size-4\" />,\n        warning: <TriangleAlertIcon className=\"size-4\" />,\n        error: <OctagonXIcon className=\"size-4\" />,\n        loading: <Loader2Icon className=\"size-4 animate-spin\" />,\n      }}\n      style={\n        {\n          \"--normal-bg\": \"var(--popover)\",\n          \"--normal-text\": \"var(--popover-foreground)\",\n          \"--normal-border\": \"var(--border)\",\n          \"--border-radius\": \"var(--radius)\",\n        } as React.CSSProperties\n      }\n      {...props}\n    />\n  );\n};\n\nexport { Toaster };\n",
+      "type": "registry:component",
+      "target": "components/ui/sonner.tsx"
+    }
+  ]
+}

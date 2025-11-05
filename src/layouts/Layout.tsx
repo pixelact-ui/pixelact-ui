@@ -1,5 +1,6 @@
 import Header from "@/src/components/Header";
 import { Outlet } from "react-router-dom";
+import { Toaster } from "sonner";
 
 const Layout = () => {
   return (
@@ -11,6 +12,7 @@ const Layout = () => {
           <p className="pixel-font">© 2025 Pixelact UI</p>
         </footer>
       </div>
+      <Toaster position="top-center" />
     </div>
   );
 };

@@ -1,0 +1,59 @@
+import { Toaster } from "sonner";
+import { toast } from "@/components/ui/pixelact-ui/toast";
+import { Button } from "@/components/ui/pixelact-ui/button";
+
+## Toast
+
+A pixel art styled toast notification component built on top of <code>sonner</code> Toast. Features retro styling, pixel font, and full support for all underlying toast props. Useful for brief messages and alerts.
+
+### Installation
+
+Add the Toast component to your project using the shadcn CLI:
+
+```bash
+npx shadcn add @pixelact-ui/toast
+```
+
+This will automatically install the component and its dependencies to your project.
+
+### Add the Toaster component
+
+<CodePreview
+    codeOnly
+    language="tsx"
+    code={`export default function RootLayout() {
+  return (
+      <main>
+        {/* Your layout components */}
+        <Toaster />
+      </main>
+  )
+}`}
+/>
+
+### Usage
+
+```tsx
+import { toast } from "@/components/ui/pixelact-ui/toast"
+```
+
+```tsx
+toast("Pixelact UI Toast!");
+```
+
+
+### Example
+
+<CodePreview
+    language="tsx"
+    code={`import { toast } from "@/components/ui/pixelact-ui/toast";
+
+ export function ToastExample() {
+    return (
+        <Button onClick={() => toast("Pixelact UI Toast!")}>Show Toast</Button>
+    );
+}
+`}
+>
+    <Button onClick={() => toast("Pixelact UI Toast!")}>Show Toast</Button>
+</CodePreview>

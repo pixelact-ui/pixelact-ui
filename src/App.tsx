@@ -138,7 +138,7 @@ function App() {
     posthog.init(import.meta.env.VITE_PUBLIC_POSTHOG_KEY, {
       api_host: import.meta.env.VITE_PUBLIC_POSTHOG_HOST,
       disable_session_recording: true,
-      debug: import.meta.env.MODE === "development",
+      // debug: import.meta.env.MODE === "development",
       capture_exceptions: true,
     });
     setPosthogClient(posthog);

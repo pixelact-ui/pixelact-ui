@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { cn } from "@/lib/utils";
 import { Pre } from "./Pre";
 import hljs from "highlight.js";
@@ -10,6 +10,7 @@ interface CodePreviewProps {
   language?: string;
   className?: string;
   contentClassName?: string;
+  codeOnly?: boolean;
 }
 
 export function CodePreview({
@@ -18,71 +19,78 @@ export function CodePreview({
   language = "tsx",
   className,
   contentClassName,
+  codeOnly = false,
 }: CodePreviewProps) {
   const [activeTab, setActiveTab] = useState<"preview" | "code">("preview");
   const codeRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    if (activeTab === "code" && codeRef.current) {
+    if ((activeTab === "code" || codeOnly) && codeRef.current) {
       hljs.highlightElement(codeRef.current);
     }
-  }, [activeTab, code]);
+  }, [activeTab, code, codeOnly, codeRef]);
+
+  const Tabs = useCallback(() => {
+    return !codeOnly && activeTab === "preview" ? (
+      <div
+        className={cn(
+          "p-6 bg-background border border-foreground",
+          contentClassName
+        )}
+      >
+        <div className="flex items-center justify-center min-h-[150px]">
+          {children}
+        </div>
+      </div>
+    ) : (
+      <div className="relative">
+        <Pre className="m-0 border-none rounded-none">
+          <code
+            ref={codeRef}
+            className={`language-${language} block p-6 text-sm overflow-x-auto`}
+          >
+            {code}
+          </code>
+        </Pre>
+      </div>
+    );
+  }, [activeTab, children, code, codeOnly, contentClassName, language]);
 
   return (
     <div className={cn("mb-6", className)}>
       {/* Tab Navigation */}
-      <div className="flex mb-4">
-        <button
-          onClick={() => setActiveTab("preview")}
-          className={cn(
-            "px-4 py-2 text-sm pixel-font transition-colors cursor-pointer",
-            "hover:bg-foreground/10 hover:text-foreground",
-            activeTab === "preview"
-              ? "bg-foreground text-background"
-              : "bg-background text-foreground"
-          )}
-        >
-          Preview
-        </button>
-        <button
-          onClick={() => setActiveTab("code")}
-          className={cn(
-            "px-4 py-2 text-sm pixel-font transition-colors cursor-pointer",
-            "hover:bg-foreground/10",
-            activeTab === "code"
-              ? "bg-foreground text-background"
-              : "bg-background text-foreground"
-          )}
-        >
-          Code
-        </button>
-      </div>
+      {!codeOnly && (
+        <div className="flex mb-4">
+          <button
+            onClick={() => setActiveTab("preview")}
+            className={cn(
+              "px-4 py-2 text-sm pixel-font transition-colors cursor-pointer",
+              "hover:bg-foreground/10 hover:text-foreground",
+              activeTab === "preview"
+                ? "bg-foreground text-background"
+                : "bg-background text-foreground"
+            )}
+          >
+            Preview
+          </button>
+          <button
+            onClick={() => setActiveTab("code")}
+            className={cn(
+              "px-4 py-2 text-sm pixel-font transition-colors cursor-pointer",
+              "hover:bg-foreground/10",
+              activeTab === "code"
+                ? "bg-foreground text-background"
+                : "bg-background text-foreground"
+            )}
+          >
+            Code
+          </button>
+        </div>
+      )}
 
       {/* Tab Content */}
       <div className={cn("min-h-[200px]")}>
-        {activeTab === "preview" ? (
-          <div
-            className={cn(
-              "p-6 bg-background border border-foreground",
-              contentClassName
-            )}
-          >
-            <div className="flex items-center justify-center min-h-[150px]">
-              {children}
-            </div>
-          </div>
-        ) : (
-          <div className="relative">
-            <Pre className="m-0 border-none rounded-none">
-              <code
-                ref={codeRef}
-                className={`language-${language} block p-6 text-sm overflow-x-auto`}
-              >
-                {code}
-              </code>
-            </Pre>
-          </div>
-        )}
+        <Tabs />
       </div>
     </div>
   );

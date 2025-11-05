@@ -44,6 +44,7 @@ const navItems: {
     { name: "Select", path: routes.docs.components.select },
     { name: "Spinner", path: routes.docs.components.spinner, isNew: true },
     { name: "Text Area", path: routes.docs.components.textarea },
+    { name: "Toast", path: routes.docs.components.toast, isNew: true },
     { name: "Tooltip", path: routes.docs.components.tooltip },
     { name: "More coming soon", path: "/", workInProgress: true },
   ],

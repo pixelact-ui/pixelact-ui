@@ -30,6 +30,7 @@ interface Routes {
       tooltip: string;
       menubar: string;
       spinner: string;
+      toast: string;
     };
   };
   colors: string;
@@ -69,6 +70,7 @@ const routes: Routes = {
       tooltip: "/docs/tooltip",
       menubar: "/docs/menubar",
       spinner: "/docs/spinner",
+      toast: "/docs/toast",
     }
   },
   colors: "/colors",
