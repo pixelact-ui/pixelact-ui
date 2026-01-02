@@ -22,7 +22,7 @@ interface NavigationItem {
 const navigationItems: NavigationItem[] = [
   { name: "Docs", path: routes.docs.installation },
   { name: "Components", path: routes.docs.components.accordion },
-  { name: "Colors", path: routes.colors, isNew: true },
+  { name: "Colors", path: routes.colors },
   { name: "Showcase", path: routes.showcase },
 ];
 const mobileNavigationItems: { name: string; items: NavigationItem[] }[] = [
@@ -60,6 +60,7 @@ const mobileNavigationItems: { name: string; items: NavigationItem[] }[] = [
       { name: "Command", path: routes.docs.components.command },
       { name: "Context Menu", path: routes.docs.components.contextMenu },
       { name: "Dialog", path: routes.docs.components.dialog },
+      { name: "Drawer", path: routes.docs.components.drawer },
       { name: "Hover Card", path: routes.docs.components.hoverCard },
       { name: "Input", path: routes.docs.components.input },
       { name: "Label", path: routes.docs.components.label },

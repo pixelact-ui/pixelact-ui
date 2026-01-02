@@ -477,6 +477,25 @@
           "target": "components/ui/sonner.tsx"
         }
       ]
+    },
+    {
+      "name": "drawer",
+      "type": "registry:component",
+      "title": "Pixelact Drawer",
+      "description": "A pixel art styled drawer component built on top of vaul Drawer.",
+      "registryDependencies": ["drawer"],
+      "files": [
+        {
+          "path": "components/ui/pixelact-ui/drawer.tsx",
+          "type": "registry:component",
+          "target": "components/ui/pixelact-ui/drawer.tsx"
+        },
+        {
+          "path": "components/ui/pixelact-ui/styles/styles.css",
+          "type": "registry:style",
+          "target": "components/ui/pixelact-ui/styles/styles.css"
+        }
+      ]
     }
   ]
 }

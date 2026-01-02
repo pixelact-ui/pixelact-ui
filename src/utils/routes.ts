@@ -31,6 +31,7 @@ interface Routes {
       menubar: string;
       spinner: string;
       toast: string;
+      drawer: string;
     };
   };
   colors: string;
@@ -71,6 +72,7 @@ const routes: Routes = {
       menubar: "/docs/menubar",
       spinner: "/docs/spinner",
       toast: "/docs/toast",
+      drawer: "/docs/drawer",
     }
   },
   colors: "/colors",

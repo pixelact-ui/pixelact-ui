@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "toast",
-  "type": "registry:component",
   "title": "Pixelact Toast",
   "description": "A simple toast component.",
   "registryDependencies": [
@@ -11,7 +10,7 @@
   "files": [
     {
       "path": "components/ui/pixelact-ui/toast.tsx",
-      "content": "import { toast as sonnerToast } from \"sonner\";\r\nimport \"@/components/ui/pixelact-ui/styles/styles.css\";\r\n\r\nexport function toast(toast: string) {\r\n  return sonnerToast.custom((id) => <Toast id={id} title={toast} />);\r\n}\r\n\r\ninterface ToastProps {\r\n  id: string | number;\r\n  title: string;\r\n}\r\n\r\nfunction Toast(props: ToastProps) {\r\n  const { title } = props;\r\n\r\n  return (\r\n    <div className=\"flex items-center shadow-(--pixel-box-shadow) box-shadow-margin bg-background w-full md:max-w-[364px p-4\">\r\n      <p className=\"text-sm text-foreground pixel-font\">{title}</p>\r\n    </div>\r\n  );\r\n}\r\n\r\nexport { Toast };\r\n",
+      "content": "import { toast as sonnerToast } from \"sonner\";\r\nimport \"@/components/ui/pixelact-ui/styles/styles.css\";\r\n\r\nexport function toast(toast: string) {\r\n  return sonnerToast.custom((id) => <Toast id={id} title={toast} />);\r\n}\r\n\r\ninterface ToastProps {\r\n  id: string | number;\r\n  title: string;\r\n}\r\n\r\nfunction Toast(props: ToastProps) {\r\n  const { title } = props;\r\n\r\n  return (\r\n    <div className=\"flex items-center shadow-(--pixel-box-shadow) box-shadow-margin bg-background w-full md:max-w-[364px] p-4\">\r\n      <p className=\"text-sm text-foreground pixel-font\">{title}</p>\r\n    </div>\r\n  );\r\n}\r\n\r\nexport { Toast };\r\n",
       "type": "registry:component",
       "target": "components/ui/pixelact-ui/toast.tsx"
     },
@@ -21,5 +20,6 @@
       "type": "registry:component",
       "target": "components/ui/sonner.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

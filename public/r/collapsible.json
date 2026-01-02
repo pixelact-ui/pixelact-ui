@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "collapsible",
-  "type": "registry:component",
   "title": "Pixelact Collapsible",
   "description": "A simple collapsible component.",
   "registryDependencies": [
@@ -20,5 +19,6 @@
       "type": "registry:style",
       "target": "components/ui/pixelact-ui/styles/styles.css"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

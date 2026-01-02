@@ -1,0 +1,48 @@
+import { Drawer, DrawerTrigger, DrawerContent, DrawerHeader, DrawerTitle, DrawerDescription, DrawerFooter, DrawerClose } from "@/components/ui/pixelact-ui/drawer";
+import { Button } from "@/components/ui/pixelact-ui/button";
+
+## Drawer
+
+A pixel art styled drawer component built on top of <code>vaul</code> Drawer.
+
+### Installation
+
+Add the Drawer component to your project using the shadcn CLI:
+
+```bash
+npx shadcn add @pixelact-ui/drawer
+```
+
+This will automatically install the component and its dependencies to your project.
+
+### Basic Drawer
+
+<CodePreview
+    language="tsx"
+    code={`import { Drawer, DrawerTrigger, DrawerContent } from "@/components/ui/pixelact-ui/drawer";
+import { Button } from "@/components/ui/pixelact-ui/button";
+
+export function BasicDrawer() {
+  return (
+    <Drawer>
+      <DrawerTrigger asChild>
+        <Button>Open Drawer</Button>
+      </DrawerTrigger>
+      <DrawerContent>
+        <p>This is a basic drawer content.</p>
+      </DrawerContent>
+    </Drawer>
+  );
+}`}
+>
+    <Drawer>
+      <DrawerTrigger asChild>
+        <Button>Open Drawer</Button>
+      </DrawerTrigger>
+      <DrawerContent>
+        <div className="h-40 flex items-center justify-center flex-col gap-4">
+        <p className="text-foreground text-xl">This is a basic drawer content.</p>
+        </div>
+      </DrawerContent>
+    </Drawer>
+</CodePreview>
