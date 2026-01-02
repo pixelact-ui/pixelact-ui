@@ -1,0 +1,59 @@
+import { Empty, EmptyHeader, EmptyTitle, EmptyDescription, EmptyContent, EmptyMedia } from "@/components/ui/pixelact-ui/empty";
+import { Button } from "@/components/ui/pixelact-ui/button";
+
+## Empty
+
+A pixel art styled empty state component. Features retro styling, pixel font, and customizable variants. Useful for displaying empty states in lists, tables, or pages.
+
+### Installation
+
+Add the Empty component to your project using the shadcn CLI:
+
+```bash
+npx shadcn add @pixelact-ui/empty
+```
+
+This will automatically install the component and its dependencies to your project.
+
+### Basic Empty
+
+<CodePreview
+    language="tsx"
+    code={`import { Empty, EmptyHeader, EmptyTitle, EmptyDescription, EmptyContent } from "@/components/ui/pixelact-ui/empty";
+import { Button } from "@/components/ui/pixelact-ui/button";
+
+export function EmptyWithHeader() {
+  return (
+    <Empty>
+      <EmptyHeader>
+        <EmptyTitle>Nothing here yet</EmptyTitle>
+        <EmptyDescription>
+          Start by creating your first item.
+        </EmptyDescription>
+      </EmptyHeader>
+      <EmptyContent>
+        <Button>Create Item</Button>
+      </EmptyContent>
+    </Empty>
+  );
+}`}
+>
+    <Empty>
+      <EmptyHeader>
+      <EmptyMedia className="p-1">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-folder-plus-icon lucide-folder-plus">
+            <path className="text-foreground" d="M12 10v6"/>
+            <path className="text-foreground" d="M9 13h6"/>
+            <path className="text-foreground" d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/>
+        </svg>
+      </EmptyMedia>
+        <EmptyTitle>Nothing here yet</EmptyTitle>
+        <EmptyDescription>
+          Start by creating your first item.
+        </EmptyDescription>
+      </EmptyHeader>
+      <EmptyContent>
+        <Button>Create Item</Button>
+      </EmptyContent>
+    </Empty>
+</CodePreview>

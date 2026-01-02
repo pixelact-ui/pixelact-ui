@@ -496,6 +496,25 @@
           "target": "components/ui/pixelact-ui/styles/styles.css"
         }
       ]
+    },
+    {
+      "name": "empty",
+      "type": "registry:component",
+      "title": "Pixelact Empty",
+      "description": "A pixel art styled empty state component.",
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/ui/pixelact-ui/empty.tsx",
+          "type": "registry:component",
+          "target": "components/ui/pixelact-ui/empty.tsx"
+        },
+        {
+          "path": "components/ui/pixelact-ui/styles/styles.css",
+          "type": "registry:style",
+          "target": "components/ui/pixelact-ui/styles/styles.css"
+        }
+      ]
     }
   ]
 }

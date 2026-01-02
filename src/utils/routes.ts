@@ -32,6 +32,7 @@ interface Routes {
       spinner: string;
       toast: string;
       drawer: string;
+      empty: string;
     };
   };
   colors: string;
@@ -73,6 +74,7 @@ const routes: Routes = {
       spinner: "/docs/spinner",
       toast: "/docs/toast",
       drawer: "/docs/drawer",
+      empty: "/docs/empty",
     }
   },
   colors: "/colors",
