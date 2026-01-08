@@ -515,6 +515,25 @@
           "target": "components/ui/pixelact-ui/styles/styles.css"
         }
       ]
+    },
+    {
+      "name": "kbd",
+      "type": "registry:component",
+      "title": "Pixelact Kbd",
+      "description": "A pixel art styled keyboard key component.",
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/ui/pixelact-ui/kbd.tsx",
+          "type": "registry:component",
+          "target": "components/ui/pixelact-ui/kbd.tsx"
+        },
+        {
+          "path": "components/ui/pixelact-ui/styles/styles.css",
+          "type": "registry:style",
+          "target": "components/ui/pixelact-ui/styles/styles.css"
+        }
+      ]
     }
   ]
 }

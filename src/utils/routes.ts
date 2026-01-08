@@ -33,6 +33,7 @@ interface Routes {
       toast: string;
       drawer: string;
       empty: string;
+      kbd: string;
     };
   };
   colors: string;
@@ -75,6 +76,7 @@ const routes: Routes = {
       toast: "/docs/toast",
       drawer: "/docs/drawer",
       empty: "/docs/empty",
+      kbd: "/docs/kbd",
     }
   },
   colors: "/colors",

@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "kbd",
+  "title": "Pixelact Kbd",
+  "description": "A pixel art styled keyboard key component.",
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "components/ui/pixelact-ui/kbd.tsx",
+      "content": "import { cn } from \"@/lib/utils\";\r\n\r\nimport \"@/components/ui/pixelact-ui/styles/styles.css\";\r\n\r\nfunction Kbd({ className, ...props }: React.ComponentProps<\"kbd\">) {\r\n  return (\r\n    <kbd\r\n      data-slot=\"kbd\"\r\n      className={cn(\r\n        \"pixel-font\",\r\n        \"bg-muted text-muted-foreground pointer-events-none inline-flex h-5 w-fit min-w-5 items-center justify-center gap-1 p-2 font-sans text-xs select-none\",\r\n        \"[&_svg:not([class*='size-'])]:size-3\",\r\n        \"in-data-[slot=tooltip-content]:bg-background/20 in-data-[slot=tooltip-content]:text-background dark:in-data-[slot=tooltip-content]:bg-background/10\",\r\n        className\r\n      )}\r\n      {...props}\r\n    />\r\n  );\r\n}\r\n\r\nfunction KbdGroup({ className, ...props }: React.ComponentProps<\"div\">) {\r\n  return (\r\n    <kbd\r\n      data-slot=\"kbd-group\"\r\n      className={cn(\"inline-flex items-center gap-1\", className)}\r\n      {...props}\r\n    />\r\n  );\r\n}\r\n\r\nexport { Kbd, KbdGroup };\r\n",
+      "type": "registry:component",
+      "target": "components/ui/pixelact-ui/kbd.tsx"
+    },
+    {
+      "path": "components/ui/pixelact-ui/styles/styles.css",
+      "content": "@import url(\"https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap\");\r\n\r\n:root {\r\n  --box-shadow-width: 4px;\r\n  --pixel-box-shadow: calc(-1 * (var(--box-shadow-width))) 0 0 0 black,\r\n    var(--box-shadow-width) 0 0 0 black, 0 var(--box-shadow-width) 0 0 black,\r\n    0 calc(-1 * (var(--box-shadow-width))) 0 0 black;\r\n  --pixel-box-shadow-destructive: calc(-1 * (var(--box-shadow-width))) 0 0 0\r\n      var(--destructive),\r\n    var(--box-shadow-width) 0 0 0 var(--destructive),\r\n    0 var(--box-shadow-width) 0 0 var(--destructive),\r\n    0 calc(-1 * (var(--box-shadow-width))) 0 0 var(--destructive);\r\n  --default-inner-border-color: rgb(200, 200, 200);\r\n}\r\n\r\n.dark {\r\n  --pixel-box-shadow: calc(-1 * (var(--box-shadow-width))) 0 0 0 var(--ring),\r\n    var(--box-shadow-width) 0 0 0 var(--ring),\r\n    0 var(--box-shadow-width) 0 0 var(--ring),\r\n    0 calc(-1 * (var(--box-shadow-width))) 0 0 var(--ring);\r\n}\r\n\r\n.pixel-font {\r\n  font-family: \"Press Start 2P\", system-ui, -apple-system, sans-serif;\r\n  line-height: 1.5;\r\n  letter-spacing: 0.5px;\r\n}\r\n\r\n.box-shadow-margin {\r\n  margin: var(--box-shadow-width);\r\n}\r\n",
+      "type": "registry:style",
+      "target": "components/ui/pixelact-ui/styles/styles.css"
+    }
+  ],
+  "type": "registry:component"
+}

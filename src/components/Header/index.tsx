@@ -18,7 +18,7 @@ const fetchGithubStars = async () => {
     "https://api.github.com/repos/pixelact-ui/pixelact-ui"
   );
   const data = await response.json();
-  return data.stargazers_count;
+  return data?.stargazers_count;
 };
 
 const iconsClassName = "hover:opacity-80 active:scale-90";

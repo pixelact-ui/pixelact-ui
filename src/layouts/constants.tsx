@@ -34,6 +34,7 @@ export const navItems: {
     { name: "Empty", path: routes.docs.components.empty, isNew: true },
     { name: "Hover Card", path: routes.docs.components.hoverCard },
     { name: "Input", path: routes.docs.components.input },
+    { name: "Kbd", path: routes.docs.components.kbd, isNew: true },
     { name: "Label", path: routes.docs.components.label },
     { name: "Menubar", path: routes.docs.components.menubar },
     { name: "Popover", path: routes.docs.components.popover },

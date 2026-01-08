@@ -55,6 +55,7 @@ export const mobileNavigationItems: {
       { name: "Empty", path: routes.docs.components.empty },
       { name: "Hover Card", path: routes.docs.components.hoverCard },
       { name: "Input", path: routes.docs.components.input },
+      { name: "Kbd", path: routes.docs.components.kbd },
       { name: "Label", path: routes.docs.components.label },
       { name: "Menubar", path: routes.docs.components.menubar },
       { name: "Popover", path: routes.docs.components.popover },

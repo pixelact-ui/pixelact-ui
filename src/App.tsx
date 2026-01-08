@@ -18,7 +18,7 @@ const LazyColors = React.lazy(() => import("./pages/Colors"));
 const contentModules = import.meta.glob("./content/*.mdx");
 
 const SuspenseLoader = () => (
-  <div className="absolute top-0 flex items-center justify-center h-full w-full">
+  <div className="flex items-center justify-center w-full flex-1">
     <Spinner className="text-foreground" />
   </div>
 );

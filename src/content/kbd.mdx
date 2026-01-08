@@ -1,0 +1,55 @@
+import { Kbd, KbdGroup } from "@/components/ui/pixelact-ui/kbd";
+
+## Kbd
+
+A pixel art styled keyboard shortcut component.
+
+### Installation
+
+Add the Kbd component to your project using the shadcn CLI:
+
+```bash
+npx shadcn add @pixelact-ui/kbd
+```
+
+This will automatically install the component and its dependencies to your project.
+
+### Basic
+<CodePreview
+    language="tsx"
+    code={`import { Kbd } from "@/components/ui/pixelact-ui/kbd";
+export function KbdExample() {
+  return (
+    <div className="flex flex-col gap-2">
+      <p> Press <Kbd>Space</Kbd> to jump.</p>
+      <p> Press <Kbd>Enter</Kbd> to submit.</p>
+    </div>
+  );
+}`}
+>
+<div className="flex flex-col gap-2">
+    <p className="text-foreground"> Press <Kbd>Space</Kbd> to jump.</p>
+    <p className="text-foreground"> Press <Kbd>Enter</Kbd> to submit.</p>
+</div>
+</CodePreview>
+
+### Group
+
+<CodePreview
+    language="tsx"
+    code={`import { Kbd, KbdGroup } from "@/components/ui/pixelact-ui/kbd";
+
+export function KbdGroupExample() {
+  return (
+    <KbdGroup className="flex flex-col gap-2">
+      <Kbd>Ctrl + C</Kbd>
+      <Kbd>Ctrl + V</Kbd>
+    </KbdGroup>
+  );
+}`}
+>
+    <KbdGroup className="flex flex-col gap-2">
+      <Kbd>Ctrl + C</Kbd>
+      <Kbd>Ctrl + V</Kbd>
+    </KbdGroup>
+</CodePreview>
