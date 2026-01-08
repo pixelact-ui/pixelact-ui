@@ -13,7 +13,7 @@ const Homepage: React.FC = () => {
         isSmallDevice && "mt-16"
       )}
     >
-      <div className="max-w-[1400px] mx-auto border-x-2 border-dashed border-foreground/20">
+      <div className="max-w-350 mx-auto border-x-2 border-dashed border-foreground/20">
         <Hero />
         <ComponentsShowcase />
       </div>

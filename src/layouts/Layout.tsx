@@ -8,7 +8,7 @@ const Layout = () => {
       <Header />
       <Outlet />
       <div className="border-t-2 border-dashed border-foreground/20  w-full">
-        <footer className="h-16 flex items-center px-4 bg-background text-foreground text-xs max-w-[1400px] mx-auto border-x-2 border-dashed border-foreground/20 ">
+        <footer className="h-16 flex items-center px-4 bg-background text-foreground text-xs max-w-350 mx-auto border-x-2 border-dashed border-foreground/20 ">
           <p className="pixel-font">© 2025 Pixelact UI</p>
         </footer>
       </div>
