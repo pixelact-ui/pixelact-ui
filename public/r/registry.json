@@ -464,7 +464,7 @@
       "type": "registry:component",
       "title": "Pixelact Toast",
       "description": "A simple toast component.",
-      "registryDependencies": ["toast", "sonner"],
+      "registryDependencies": ["sonner"],
       "files": [
         {
           "path": "components/ui/pixelact-ui/toast.tsx",
