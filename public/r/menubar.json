@@ -4,9 +4,7 @@
   "type": "registry:component",
   "title": "Pixelact Menubar",
   "description": "A simple menubar component.",
-  "registryDependencies": [
-    "menubar"
-  ],
+  "registryDependencies": [],
   "files": [
     {
       "path": "components/ui/pixelact-ui/menubar.tsx",

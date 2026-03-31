@@ -5,7 +5,7 @@
   "title": "Pixelact Carousel",
   "description": "A simple carousel component.",
   "registryDependencies": [
-    "carousel"
+    "button"
   ],
   "files": [
     {

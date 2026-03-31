@@ -4,9 +4,7 @@
   "type": "registry:component",
   "title": "Pixelact Hover Card",
   "description": "A simple hover card component.",
-  "registryDependencies": [
-    "hover-card"
-  ],
+  "registryDependencies": [],
   "files": [
     {
       "path": "components/ui/pixelact-ui/hover-card.tsx",

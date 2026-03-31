@@ -4,9 +4,7 @@
   "type": "registry:component",
   "title": "Pixelact Textarea",
   "description": "A simple textarea component.",
-  "registryDependencies": [
-    "textarea"
-  ],
+  "registryDependencies": [],
   "files": [
     {
       "path": "components/ui/pixelact-ui/textarea.tsx",

@@ -4,9 +4,7 @@
   "type": "registry:component",
   "title": "Pixelact Spinner",
   "description": "A simple spinner component.",
-  "registryDependencies": [
-    "spinner"
-  ],
+  "registryDependencies": [],
   "files": [
     {
       "path": "components/ui/pixelact-ui/spinner.tsx",

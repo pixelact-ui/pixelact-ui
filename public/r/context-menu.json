@@ -4,9 +4,7 @@
   "type": "registry:component",
   "title": "Pixelact Context Menu",
   "description": "A simple context menu component.",
-  "registryDependencies": [
-    "context-menu"
-  ],
+  "registryDependencies": [],
   "files": [
     {
       "path": "components/ui/pixelact-ui/context-menu.tsx",

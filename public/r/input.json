@@ -4,9 +4,7 @@
   "type": "registry:component",
   "title": "Pixelact Input",
   "description": "A simple input component.",
-  "registryDependencies": [
-    "input"
-  ],
+  "registryDependencies": [],
   "files": [
     {
       "path": "components/ui/pixelact-ui/input.tsx",

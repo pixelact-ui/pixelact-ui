@@ -4,9 +4,7 @@
   "type": "registry:component",
   "title": "Pixelact Avatar",
   "description": "A simple avatar component.",
-  "registryDependencies": [
-    "avatar"
-  ],
+  "registryDependencies": [],
   "files": [
     {
       "path": "components/ui/pixelact-ui/avatar.tsx",

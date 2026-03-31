@@ -4,9 +4,7 @@
   "type": "registry:component",
   "title": "Pixelact Checkbox",
   "description": "A simple checkbox component.",
-  "registryDependencies": [
-    "checkbox"
-  ],
+  "registryDependencies": [],
   "files": [
     {
       "path": "components/ui/pixelact-ui/checkbox.tsx",

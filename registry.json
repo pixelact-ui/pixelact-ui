@@ -65,7 +65,7 @@
       "type": "registry:component",
       "title": "Pixelact Avatar",
       "description": "A simple avatar component.",
-      "registryDependencies": ["avatar"],
+      "registryDependencies": [],
       "files": [
         {
           "path": "components/ui/pixelact-ui/avatar.tsx",
@@ -184,7 +184,7 @@
       "type": "registry:component",
       "title": "Pixelact Carousel",
       "description": "A simple carousel component.",
-      "registryDependencies": ["carousel"],
+      "registryDependencies": ["button"],
       "files": [
         {
           "path": "components/ui/pixelact-ui/carousel.tsx",
@@ -203,7 +203,7 @@
       "type": "registry:component",
       "title": "Pixelact Checkbox",
       "description": "A simple checkbox component.",
-      "registryDependencies": ["checkbox"],
+      "registryDependencies": [],
       "files": [
         {
           "path": "components/ui/pixelact-ui/checkbox.tsx",
@@ -222,7 +222,7 @@
       "type": "registry:component",
       "title": "Pixelact Collapsible",
       "description": "A simple collapsible component.",
-      "registryDependencies": ["collapsible"],
+      "registryDependencies": [],
       "files": [
         {
           "path": "components/ui/pixelact-ui/collapsible.tsx",
@@ -260,7 +260,7 @@
       "type": "registry:component",
       "title": "Pixelact Input",
       "description": "A simple input component.",
-      "registryDependencies": ["input"],
+      "registryDependencies": [],
       "files": [
         {
           "path": "components/ui/pixelact-ui/input.tsx",
@@ -279,7 +279,7 @@
       "type": "registry:component",
       "title": "Pixelact Textarea",
       "description": "A simple textarea component.",
-      "registryDependencies": ["textarea"],
+      "registryDependencies": [],
       "files": [
         {
           "path": "components/ui/pixelact-ui/textarea.tsx",
@@ -374,7 +374,7 @@
       "type": "registry:component",
       "title": "Pixelact Context Menu",
       "description": "A simple context menu component.",
-      "registryDependencies": ["context-menu"],
+      "registryDependencies": [],
       "files": [
         {
           "path": "components/ui/pixelact-ui/context-menu.tsx",
@@ -393,7 +393,7 @@
       "type": "registry:component",
       "title": "Pixelact Hover Card",
       "description": "A simple hover card component.",
-      "registryDependencies": ["hover-card"],
+      "registryDependencies": [],
       "files": [
         {
           "path": "components/ui/pixelact-ui/hover-card.tsx",
@@ -431,7 +431,7 @@
       "type": "registry:component",
       "title": "Pixelact Menubar",
       "description": "A simple menubar component.",
-      "registryDependencies": ["menubar"],
+      "registryDependencies": [],
       "files": [
         {
           "path": "components/ui/pixelact-ui/menubar.tsx",
@@ -450,7 +450,7 @@
       "type": "registry:component",
       "title": "Pixelact Spinner",
       "description": "A simple spinner component.",
-      "registryDependencies": ["spinner"],
+      "registryDependencies": [],
       "files": [
         {
           "path": "components/ui/pixelact-ui/spinner.tsx",

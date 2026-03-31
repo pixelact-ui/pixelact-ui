@@ -4,9 +4,7 @@
   "type": "registry:component",
   "title": "Pixelact Collapsible",
   "description": "A simple collapsible component.",
-  "registryDependencies": [
-    "collapsible"
-  ],
+  "registryDependencies": [],
   "files": [
     {
       "path": "components/ui/pixelact-ui/collapsible.tsx",
