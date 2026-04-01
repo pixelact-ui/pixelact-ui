@@ -51,7 +51,7 @@
     "react": "^19.0.0",
     "react-day-picker": "^9.8.1",
     "react-dom": "^19.0.0",
-    "react-router-dom": "^7.5.3",
+    "react-router-dom": "^7.13.0",
     "rehype-highlight": "^7.0.2",
     "sonner": "^2.0.7",
     "tailwind-merge": "^3.2.0",
