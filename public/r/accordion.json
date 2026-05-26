@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "accordion",
-  "type": "registry:component",
   "title": "Pixelact Accordion",
   "description": "A simple accordion component.",
   "registryDependencies": [
@@ -20,5 +19,6 @@
       "type": "registry:style",
       "target": "components/ui/pixelact-ui/styles/styles.css"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

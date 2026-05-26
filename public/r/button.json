@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "button",
-  "type": "registry:component",
   "title": "Pixelact Button",
   "description": "A simple button component.",
   "registryDependencies": [
@@ -26,5 +25,6 @@
       "type": "registry:style",
       "target": "components/ui/pixelact-ui/styles/styles.css"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

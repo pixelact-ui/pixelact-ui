@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "empty",
-  "type": "registry:component",
   "title": "Pixelact Empty",
   "description": "A pixel art styled empty state component.",
   "registryDependencies": [],
@@ -18,5 +17,6 @@
       "type": "registry:style",
       "target": "components/ui/pixelact-ui/styles/styles.css"
     }
-  ]
+  ],
+  "type": "registry:component"
 }

@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "toast",
-  "type": "registry:component",
   "title": "Pixelact Toast",
   "description": "A simple toast component.",
   "registryDependencies": [
@@ -20,5 +19,6 @@
       "type": "registry:component",
       "target": "components/ui/sonner.tsx"
     }
-  ]
+  ],
+  "type": "registry:component"
 }
